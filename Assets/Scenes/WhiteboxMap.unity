@@ -1494,7 +1494,6 @@ GameObject:
   - component: {fileID: 1536102662}
   - component: {fileID: 1536102665}
   - component: {fileID: 1536102664}
-  - component: {fileID: 1536102663}
   m_Layer: 0
   m_Name: Park (1)
   m_TagString: Untagged
@@ -1511,33 +1510,12 @@ Transform:
   m_GameObject: {fileID: 1536102661}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 157.2368, y: 0.3, z: 10.4}
+  m_LocalPosition: {x: 157.2368, y: -0.39999998, z: 10.4}
   m_LocalScale: {x: 49.918564, y: 1, z: 25.481197}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2127420235}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1536102663
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1536102661}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1536102664
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1717,7 +1695,6 @@ GameObject:
   - component: {fileID: 1770822077}
   - component: {fileID: 1770822080}
   - component: {fileID: 1770822079}
-  - component: {fileID: 1770822078}
   m_Layer: 0
   m_Name: Park (2)
   m_TagString: Untagged
@@ -1734,33 +1711,12 @@ Transform:
   m_GameObject: {fileID: 1770822076}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 170.5, y: 0.3, z: 100.0634}
+  m_LocalPosition: {x: 170.5, y: -0.4, z: 100.0634}
   m_LocalScale: {x: 45.99651, y: 1, z: 37.954247}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2127420235}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1770822078
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1770822076}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1770822079
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1828,7 +1784,6 @@ GameObject:
   - component: {fileID: 1903253292}
   - component: {fileID: 1903253295}
   - component: {fileID: 1903253294}
-  - component: {fileID: 1903253293}
   m_Layer: 0
   m_Name: Park
   m_TagString: Untagged
@@ -1845,33 +1800,12 @@ Transform:
   m_GameObject: {fileID: 1903253291}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 45.4225, y: 0.3, z: 43.9}
+  m_LocalPosition: {x: 45.4225, y: -0.39999998, z: 43.9}
   m_LocalScale: {x: 49.918564, y: 1, z: 25.481197}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2127420235}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1903253293
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1903253291}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1903253294
 MeshRenderer:
   m_ObjectHideFlags: 0
