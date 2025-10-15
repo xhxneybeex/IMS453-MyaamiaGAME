@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
 
     CharacterController controller;
     public float speed = 3f;
+    public bool movementEnabled = true;
 
     private float prevX;
     private float prevZ;
@@ -33,7 +34,10 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Movement();
+        if (movementEnabled)
+        {
+            Movement();
+        }
     }
 
     void Movement()
