@@ -13,12 +13,13 @@ public class DialogueManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        dialogueUI.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
+        CheckForEPress();
         // If dialogue is active...
         if (dialogueActive)
         {
@@ -43,7 +44,7 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider collision)
+  /*  private void OnTriggerEnter(Collider collision)
     {
         // If the player entered the zone...
         if (collision.CompareTag("Player"))
@@ -51,9 +52,9 @@ public class DialogueManager : MonoBehaviour
             // Enable conversation
             interactionEnabled = true;
         }  
-    }
+    } */
 
-    private void OnTriggerExit(Collider collision)
+   /* private void OnTriggerExit(Collider collision)
     {
         // If the player exits the zone...
         if (collision.CompareTag("Player"))
@@ -61,7 +62,7 @@ public class DialogueManager : MonoBehaviour
             // Disable conversation
             interactionEnabled = false;
         }
-    }
+    } */
 
     private void ToggleDialogue(bool active)
     {
@@ -72,5 +73,20 @@ public class DialogueManager : MonoBehaviour
         dialogue.text = myLines[currentFlag];
         // Enable UI
         dialogueUI.SetActive(active);
+    }
+
+    public void StartDialogue(string character) {
+        Debug.Log("it just checked for e press");
+        if (character.Equals("Larry") && CheckForEPress() == true) {
+            dialogueUI.SetActive(true);
+        }
+    }
+
+    public bool CheckForEPress() {
+        if (Input.GetKeyDown(KeyCode.E)) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }

@@ -878,6 +878,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34423b226754fb040aaadbf6719d383d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneController
+  exitScreen: {fileID: 8530000814434792313, guid: aa305e36ee3141e459069f0c209ffa2f, type: 3}
 --- !u!1 &2114622586
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,6 +4,8 @@ public class Giveitem : MonoBehaviour
 {
 
     [SerializeField] public InventoryManager InventoryManager;
+    [SerializeField] public DialogueManager DialogueManager;
+    public int timesWalkedUpTo = 0;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     void Awake()
@@ -23,7 +25,12 @@ public class Giveitem : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("");
-        InventoryManager.MugText.text = "kociihsaapowi minehkwaakani";
+        timesWalkedUpTo += 1;
+        Debug.Log("times walked up to equals " + timesWalkedUpTo);
+        if (timesWalkedUpTo > 1) {
+            InventoryManager.MugText.text = "kociihsaapowi minehkwaakani";
+        } else {
+            DialogueManager.StartDialogue("Larry");
+        }
     }
 }
