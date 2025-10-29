@@ -7,10 +7,12 @@ public class SceneController : MonoBehaviour
 {
     public static bool is2DScene = false;
     public GameObject exitScreen;
+    public GameObject settingsScreen;
 
     void Start()
     {
         exitScreen.SetActive(false);
+        settingsScreen.SetActive(false);
     }
 
     // Update is called once per frame
@@ -47,7 +49,18 @@ public class SceneController : MonoBehaviour
         Application.Quit();
     }
 
-    public void NoExit() {
+    public void NoExit()
+    {
         exitScreen.SetActive(false);
+    }
+
+    public void OpenSettings()
+    {
+        settingsScreen.SetActive(true);
+    }
+    
+    public void CloseSettings()
+    {
+        settingsScreen.SetActive(false);
     }
 }

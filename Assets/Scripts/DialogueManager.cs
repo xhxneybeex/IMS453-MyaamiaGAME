@@ -8,6 +8,7 @@ public class DialogueManager : MonoBehaviour
 
     private bool interactionEnabled = false;
     private bool dialogueActive = false;
+    public bool enterClicked = false;
     private int currentFlag = 0;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -19,74 +20,76 @@ public class DialogueManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        CheckForEPress();
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            Debug.Log("enter was clicked");
+            enterClicked = true;
+        } else if (dialogueUI.activeInHierarchy == true && Input.GetKeyDown(KeyCode.E))
+        {
+            dialogueUI.SetActive(false);
+        }
         // If dialogue is active...
-        if (dialogueActive)
-        {
-            // If the player presses E...
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                // Close dialogue
-                ToggleDialogue(false);
-            }
-        } else
-        {
-            // If interaction is enabled...
-            if (interactionEnabled)
-            {
-                // If the player presses E...
-                if (Input.GetKeyDown(KeyCode.E))
-                {
-                    // Open dialogue
-                    ToggleDialogue(true);
-                }
-            }
-        }
+        /*  if (dialogueActive)
+          {
+              // If the player presses E...
+              if (Input.GetKeyDown(KeyCode.E))
+              {
+                  // Close dialogue
+                  ToggleDialogue(false);
+              }
+          } else
+          {
+              // If interaction is enabled...
+              if (interactionEnabled)
+              {
+                  // If the player presses E...
+                  if (Input.GetKeyDown(KeyCode.E))
+                  {
+                      // Open dialogue
+                      ToggleDialogue(true);
+                  }
+              }
+          } */
     }
 
-  /*  private void OnTriggerEnter(Collider collision)
-    {
-        // If the player entered the zone...
-        if (collision.CompareTag("Player"))
-        {
-            // Enable conversation
-            interactionEnabled = true;
-        }  
-    } */
+    /*  private void OnTriggerEnter(Collider collision)
+      {
+          // If the player entered the zone...
+          if (collision.CompareTag("Player"))
+          {
+              // Enable conversation
+              interactionEnabled = true;
+          }  
+      } */
 
-   /* private void OnTriggerExit(Collider collision)
-    {
-        // If the player exits the zone...
-        if (collision.CompareTag("Player"))
-        {
-            // Disable conversation
-            interactionEnabled = false;
-        }
-    } */
+    /* private void OnTriggerExit(Collider collision)
+     {
+         // If the player exits the zone...
+         if (collision.CompareTag("Player"))
+         {
+             // Disable conversation
+             interactionEnabled = false;
+         }
+     } */
 
-    private void ToggleDialogue(bool active)
-    {
-        dialogueActive = active;
-        // Disable movement
-        GameObject.Find("Player").GetComponent<PlayerController>().movementEnabled = !active;
-        // Update dialogue text
-        dialogue.text = myLines[currentFlag];
-        // Enable UI
-        dialogueUI.SetActive(active);
-    }
+    /*  private void ToggleDialogue(bool active)
+      {
+          dialogueActive = active;
+          // Disable movement
+          GameObject.Find("Player").GetComponent<PlayerController>().movementEnabled = !active;
+          // Update dialogue text
+          dialogue.text = myLines[currentFlag];
+          // Enable UI
+          dialogueUI.SetActive(active);
+      } */
 
-    public void StartDialogue(string character) {
+    public void StartDialogue(string character)
+    {
         Debug.Log("it just checked for e press");
-        if (character.Equals("Larry") && CheckForEPress() == true) {
+        if (character.Equals("Larry")) //&& enterClicked == true
+        {
             dialogueUI.SetActive(true);
         }
     }
 
-    public bool CheckForEPress() {
-        if (Input.GetKeyDown(KeyCode.E)) {
-            return true;
-        } else {
-            return false;
-        }
-    }
 }
