@@ -30,7 +30,9 @@ public class Giveitem : MonoBehaviour
         if (timesWalkedUpTo > 1) {
             InventoryManager.MugText.text = "kociihsaapowi minehkwaakani";
         } else {
-            DialogueManager.StartDialogue("Larry");
+            DialogueManager.interactionEnabled = true;
+            Debug.Log("you can interact with Larry now");
+            //DialogueManager.StartDialogue("Larry");
         }
     }
 }

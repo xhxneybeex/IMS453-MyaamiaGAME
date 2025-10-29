@@ -6,7 +6,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private GameObject dialogueUI;
     [SerializeField] private TMPro.TextMeshProUGUI dialogue;
 
-    private bool interactionEnabled = false;
+    public bool interactionEnabled = false;
     private bool dialogueActive = false;
     public bool enterClicked = false;
     private int currentFlag = 0;
@@ -20,10 +20,11 @@ public class DialogueManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) && interactionEnabled == true)
         {
             Debug.Log("enter was clicked");
             enterClicked = true;
+            StartDialogue("Larry");
         } else if (dialogueUI.activeInHierarchy == true && Input.GetKeyDown(KeyCode.E))
         {
             dialogueUI.SetActive(false);
