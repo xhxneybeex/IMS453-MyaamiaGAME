@@ -29,9 +29,10 @@ public class ItemPickup : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (Physics.Raycast(camera.transform.position, camera.transform.TransformDirection(Vector3.forward), out hit, Mathf.Max(5)))
+        if (Physics.Raycast(camera.transform.position, camera.transform.TransformDirection(Vector3.up), out hit, Mathf.Max(5)))
         {
             Pickup();
+            Debug.Log("");
         }
     }
 }

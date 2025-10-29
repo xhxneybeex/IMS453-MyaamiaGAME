@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 239637334}
   - component: {fileID: 239637333}
   m_Layer: 5
-  m_Name: Lamp
+  m_Name: Mug
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -285,7 +285,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
   InventoryHUD: {fileID: 1430470960}
-  LampText: {fileID: 239637333}
+  MugText: {fileID: 239637333}
   Items: []
 --- !u!4 &253253657
 Transform:
@@ -721,6 +721,7 @@ MonoBehaviour:
   player_left: {fileID: -1539762851, guid: 67cf2ad036e63d84ca1e1210da9b0575, type: 3}
   player_right: {fileID: 808804991, guid: 67cf2ad036e63d84ca1e1210da9b0575, type: 3}
   player_up: {fileID: 1532149786, guid: 67cf2ad036e63d84ca1e1210da9b0575, type: 3}
+  sceneController: {fileID: 0}
 --- !u!4 &492071055
 Transform:
   m_ObjectHideFlags: 0
@@ -1336,7 +1337,7 @@ GameObject:
   - component: {fileID: 1428331349}
   - component: {fileID: 1428331348}
   m_Layer: 0
-  m_Name: Directional Light (1)
+  m_Name: Directional Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

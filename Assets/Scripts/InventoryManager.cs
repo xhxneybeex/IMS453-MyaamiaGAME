@@ -10,13 +10,14 @@ public class InventoryManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public GameObject InventoryHUD;
 
-    public TextMeshProUGUI LampText;
+    public TextMeshProUGUI MugText;
+    public Image MugSprite;
 
     public static InventoryManager Instance;
 
     public List<Item> Items = new List<Item>();
 
-    bool LampCollected = false;
+    bool MugCollected = false;
 
     //public InventoryItemController iic;
 
@@ -28,24 +29,28 @@ public class InventoryManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
-        LampText.gameObject.SetActive(false);
+        MugText.gameObject.SetActive(false);
+        MugSprite.gameObject.SetActive(false);
     }
 
     public void OpenInventory()
     {
+        Debug.Log("AAAA");
         checkForCollected();
         if (InventoryHUD.activeInHierarchy)
         {
             InventoryHUD.SetActive(false);
-            LampText.gameObject.SetActive(false);
+            MugText.gameObject.SetActive(false);
+            MugSprite.gameObject.SetActive(false);
             
         } 
         else if (!InventoryHUD.activeInHierarchy)
         {
             InventoryHUD.SetActive(true);
-            if (LampCollected == true)
+            if (MugCollected == true)
             {
-                LampText.gameObject.SetActive(true);
+                MugText.gameObject.SetActive(true);
+                MugSprite.gameObject.SetActive(true);
             }
         }
 
@@ -66,9 +71,9 @@ public class InventoryManager : MonoBehaviour
     {
         foreach (Item i in Items)
         {
-            if (i.id == 0)
+            if (i.id == 5)
             {
-                LampCollected = true;
+                MugCollected = true;
             }
         }
     }
