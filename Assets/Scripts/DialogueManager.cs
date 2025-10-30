@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class DialogueManager : MonoBehaviour
 {
+    [SerializeField] public InventoryManager inventoryManager;
     [SerializeField] private string[] myLines;
     [SerializeField] private GameObject dialogueUI;
     [SerializeField] private TMPro.TextMeshProUGUI dialogue;
@@ -10,6 +11,8 @@ public class DialogueManager : MonoBehaviour
     private bool dialogueActive = false;
     public bool enterClicked = false;
     private int currentFlag = 0;
+
+    public string currentLine = "Oh, hi. Isn’t it so hard getting up in the morning? I always need something to wake me up. I really need my kociihsaapowi minehkwaakani, but it takes so much energy to get up. Could you bring it to me? I think I left it on the atoohpooni?";
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -87,8 +90,15 @@ public class DialogueManager : MonoBehaviour
     public void StartDialogue(string character)
     {
         Debug.Log("it just checked for e press");
-        if (character.Equals("Larry")) //&& enterClicked == true
+        if (character.Equals("Larry") && inventoryManager.MugCollected == false) //&& enterClicked == true
         {
+            dialogue.text = currentLine;
+            dialogueUI.SetActive(true);
+            interactionEnabled = false;
+        } else if (character.Equals("Larry") && inventoryManager.MugCollected == true)
+        {
+            currentLine = "Thanks so much! Now I can get moving.";
+            dialogue.text = currentLine;
             dialogueUI.SetActive(true);
             interactionEnabled = false;
         }

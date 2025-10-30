@@ -27,7 +27,7 @@ public class Giveitem : MonoBehaviour
     {
         timesWalkedUpTo += 1;
         Debug.Log("times walked up to equals " + timesWalkedUpTo);
-        if (timesWalkedUpTo > 1) {
+        if (InventoryManager.MugSprite.gameObject.activeInHierarchy) {
             InventoryManager.MugText.text = "kociihsaapowi minehkwaakani";
         } else {
             DialogueManager.interactionEnabled = true;

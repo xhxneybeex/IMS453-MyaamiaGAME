@@ -17,7 +17,7 @@ public class InventoryManager : MonoBehaviour
 
     public List<Item> Items = new List<Item>();
 
-    bool MugCollected = false;
+    public bool MugCollected = false;
 
     //public InventoryItemController iic;
 
