@@ -882,6 +882,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34423b226754fb040aaadbf6719d383d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  exitScreen: {fileID: 1038897157}
+  settingsScreen: {fileID: 1331738971}
 --- !u!1 &1012711660
 GameObject:
   m_ObjectHideFlags: 0
@@ -986,6 +988,11 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1038897157 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 136207163258083361, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
+  m_PrefabInstance: {fileID: 370841694123326433}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1196424281
 GameObject:
   m_ObjectHideFlags: 0
@@ -1293,6 +1300,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1243892597}
   m_Mesh: {fileID: -8302102485596996044, guid: 5eec398925452ee41821813c62435909, type: 3}
+--- !u!1 &1331738971 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6718016846109878348, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
+  m_PrefabInstance: {fileID: 370841694123326433}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1401027485 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7358165642102762454, guid: 0bd90a3a55c8fc5409aa9bd2f79e8667, type: 3}
@@ -1803,10 +1815,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 77254128766095720, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1081075830641038826, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1891,6 +1899,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5532572381448474137, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 898285027}
+    - target: {fileID: 5790528271716137490, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 898285027}
+    - target: {fileID: 8039618731745013249, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 898285027}
+    - target: {fileID: 8354218934582806588, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 898285027}
     - target: {fileID: 8838794914346975184, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
       propertyPath: m_Name
       value: Canvas
