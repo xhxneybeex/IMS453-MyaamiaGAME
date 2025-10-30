@@ -769,7 +769,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Coffee Cup
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -834,12 +834,70 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -341.53702, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &8371201833862529706
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7481706903909510038}
+  - component: {fileID: 503026303024866662}
+  m_Layer: 5
+  m_Name: DialogueManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &7481706903909510038
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8371201833862529706}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2797264601173513885}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 134.01, y: -14.9100065}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &503026303024866662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8371201833862529706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dbfdba78d61ba142b7df59c3b0d72da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueManager
+  inventoryManager: {fileID: 0}
+  myLines: []
+  dialogueUI: {fileID: 5543260356806633142}
+  dialogue: {fileID: 5784668444511319707}
+  interactionEnabled: 0
+  enterClicked: 0
+  currentLine: "Oh, hi. Isn\u2019t it so hard getting up in the morning? I always
+    need something to wake me up. I really need my kociihsaapowi minehkwaakani, but
+    it takes so much energy to get up. Could you bring it to me? I think I left it
+    on the atoohpooni?"
 --- !u!1 &8838794914346975184
 GameObject:
   m_ObjectHideFlags: 0
@@ -876,6 +934,7 @@ RectTransform:
   - {fileID: 63929352022589970}
   - {fileID: 3960671608343422826}
   - {fileID: 737245172607138757}
+  - {fileID: 7481706903909510038}
   - {fileID: 5719677476617754092}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1037,18 +1096,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 821877134698662298, guid: 35df36f1a9b5b754cb797db923df569c, type: 3}
       propertyPath: m_Name
-      value: DialogueManager
+      value: DialogueHolder
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 9182004019083369081, guid: 35df36f1a9b5b754cb797db923df569c, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35df36f1a9b5b754cb797db923df569c, type: 3}
+--- !u!1 &5543260356806633142 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 821877134698662298, guid: 35df36f1a9b5b754cb797db923df569c, type: 3}
+  m_PrefabInstance: {fileID: 5155065809857163052}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &5719677476617754092 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 642353757397891776, guid: 35df36f1a9b5b754cb797db923df569c, type: 3}
   m_PrefabInstance: {fileID: 5155065809857163052}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5784668444511319707 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1715093312308648375, guid: 35df36f1a9b5b754cb797db923df569c, type: 3}
+  m_PrefabInstance: {fileID: 5155065809857163052}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1001 &8611798632040049496
 PrefabInstance:
   m_ObjectHideFlags: 0
