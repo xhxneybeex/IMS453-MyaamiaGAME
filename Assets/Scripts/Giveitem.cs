@@ -25,12 +25,12 @@ public class Giveitem : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        DialogueManager.interactionEnabled = true;
         timesWalkedUpTo += 1;
         Debug.Log("times walked up to equals " + timesWalkedUpTo);
         if (InventoryManager.MugSprite.gameObject.activeInHierarchy) {
             InventoryManager.MugText.text = "kociihsaapowi minehkwaakani";
         } else {
-            DialogueManager.interactionEnabled = true;
             Debug.Log("you can interact with Larry now");
             //DialogueManager.StartDialogue("Larry");
         }
