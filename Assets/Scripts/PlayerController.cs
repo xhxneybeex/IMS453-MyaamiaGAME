@@ -6,107 +6,84 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
 
-    CharacterController controller;
+    private CharacterController controller;
+    private Animator animator;
+
     public float speed = 3f;
     public bool movementEnabled = true;
 
-    private float prevX;
-    private float prevZ;
-    private float prevY;
-
-    [SerializeField] private Sprite player_down;
-    [SerializeField] private Sprite player_left;
-    [SerializeField] private Sprite player_right;
-    [SerializeField] private Sprite player_up;
-    private SpriteRenderer playerSprite;
+    private Vector2 lastMoveDir = Vector2.down; // default facing down
     [SerializeField] private SceneController sceneController;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
         controller = GetComponent<CharacterController>();
-        playerSprite = GetComponentInChildren<SpriteRenderer>();
+        animator = GetComponentInChildren<Animator>();
         sceneController = GetComponent<SceneController>();
     }
 
-    private void Start()
-    {
-        prevX = transform.position.x;
-        prevZ = transform.position.z;
-        prevY = transform.position.y;
-    }
-
-    // Update is called once per frame
     void Update()
     {
         if (movementEnabled)
         {
-            if (SceneController.is2DScene == false)
-            {
+            if (!SceneController.is2DScene)
                 Movement3D();
-            } 
-            else if (SceneController.is2DScene == true)
-            {
-                Movement2D();
-            }
-            
+            else
+                Movement2D(); // still supports 2D fallback
         }
     }
 
     void Movement3D()
     {
-        Vector3 movement = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical")).normalized; //.normalize stops player from moving faster diagonally
+        Vector3 movement = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical")).normalized;
 
         controller.Move(movement * speed * Time.deltaTime);
 
-        if (transform.position.z > prevZ)
+        bool isMoving = Mathf.Abs(movement.x) > 0.01f || Mathf.Abs(movement.z) > 0.01f;
+
+        if (isMoving)
         {
-            playerSprite.sprite = player_up;
-        }
-        if (transform.position.x > prevX)
-        {
-            playerSprite.sprite = player_right;
+            lastMoveDir = new Vector2(movement.x, movement.z);
         }
 
-        if (transform.position.x < prevX)
-        {
-            playerSprite.sprite = player_left;
-        }
-        if (transform.position.z < prevZ)
-        {
-            playerSprite.sprite = player_down;
-        }
+        float animX = isMoving ? movement.x : lastMoveDir.x;
+        float animY = isMoving ? movement.z : lastMoveDir.y;
 
-        prevX = transform.position.x;
-        prevZ = transform.position.z;
+        animator.SetFloat("MoveX", animX);
+        animator.SetFloat("MoveY", animY);
+        animator.SetBool("IsMoving", isMoving);
+
+        // Optional debug:
+        Debug.Log($"animX={animX}, animY={animY}, isMoving={isMoving}");
     }
 
     void Movement2D()
     {
-        Vector3 movement = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), 0).normalized; //.normalize stops player from moving faster diagonally
+        // Read input
+        Vector3 movement = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), 0).normalized;
 
+        // Move the player
         controller.Move(movement * speed * Time.deltaTime);
 
-        if (transform.position.y > prevY)
+        // Determine if moving
+        bool isMoving = movement.sqrMagnitude > 0.01f;
+
+        // Remember the last facing direction so we keep looking the same way when idle
+        if (isMoving)
         {
-            playerSprite.sprite = player_up;
-        }
-        if (transform.position.x > prevX)
-        {
-            playerSprite.sprite = player_right;
+            lastMoveDir = new Vector2(movement.x, movement.y);
         }
 
-        if (transform.position.x < prevX)
-        {
-            playerSprite.sprite = player_left;
-        }
-        if (transform.position.y < prevY)
-        {
-            playerSprite.sprite = player_down;
-        }
+        // Feed animator parameters
+        float animX = isMoving ? movement.x : lastMoveDir.x;
+        float animY = isMoving ? movement.y : lastMoveDir.y;
 
-        prevX = transform.position.x;
-        prevY = transform.position.y;
+        animator.SetFloat("MoveX", animX);
+        animator.SetFloat("MoveY", animY);
+        animator.SetBool("IsMoving", isMoving);
+
+        // Stop animating when idle (so feet stop)
+        animator.speed = isMoving ? 1f : 0f;
     }
 }
 

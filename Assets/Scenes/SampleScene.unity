@@ -935,10 +935,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   speed: 10
   movementEnabled: 1
-  player_down: {fileID: -1158518771, guid: 67cf2ad036e63d84ca1e1210da9b0575, type: 3}
-  player_left: {fileID: -1539762851, guid: 67cf2ad036e63d84ca1e1210da9b0575, type: 3}
-  player_right: {fileID: 808804991, guid: 67cf2ad036e63d84ca1e1210da9b0575, type: 3}
-  player_up: {fileID: 1532149786, guid: 67cf2ad036e63d84ca1e1210da9b0575, type: 3}
   sceneController: {fileID: 898285027}
 --- !u!143 &1012711663
 CharacterController:
@@ -1003,6 +999,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1196424282}
   - component: {fileID: 1196424283}
+  - component: {fileID: 1196424284}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -1083,6 +1080,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1196424284
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1196424281}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ef6007275a4846a448e93ffd4a42570a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1196611799
 PrefabInstance:
   m_ObjectHideFlags: 0
