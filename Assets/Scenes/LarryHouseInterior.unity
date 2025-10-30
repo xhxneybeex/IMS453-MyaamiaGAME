@@ -2145,7 +2145,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   speed: 5
   movementEnabled: 1
-  sceneController: {fileID: 0}
+  sceneController: {fileID: 1996621068}
 --- !u!4 &981541259
 Transform:
   m_ObjectHideFlags: 0
