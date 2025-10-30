@@ -90,6 +90,7 @@ public class DialogueManager : MonoBehaviour
         if (character.Equals("Larry")) //&& enterClicked == true
         {
             dialogueUI.SetActive(true);
+            interactionEnabled = false;
         }
     }
 
