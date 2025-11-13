@@ -47,7 +47,10 @@ TagManager:
   - name: Rugs
     uniqueID: 290018937
     locked: 0
-  - name: Furniture
+  - name: Furniture1
+    uniqueID: 2950918371
+    locked: 0
+  - name: Furniture2
     uniqueID: 1669651183
     locked: 0
   - name: Items
