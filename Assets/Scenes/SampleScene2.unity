@@ -119,17 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &29722594 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7541442886327853120, guid: 88bdf5943942e29459753f5835c5267c, type: 3}
-  m_PrefabInstance: {fileID: 8977144027230982670}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 464b621adc005bb439c3e033431abcfb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
 --- !u!1 &207677124 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ea3fb2b4b9b6b0c4881e9d22e52b8914, type: 3}
@@ -1914,10 +1903,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4100370279377696085, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
-      propertyPath: inventoryManager
-      value: 
-      objectReference: {fileID: 29722594}
     - target: {fileID: 5532572381448474137, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
