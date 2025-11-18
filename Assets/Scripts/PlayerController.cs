@@ -67,7 +67,7 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("IsMoving", isMoving);
 
         // Optional debug:
-        Debug.Log($"animX={animX}, animY={animY}, isMoving={isMoving}");
+        //Debug.Log($"animX={animX}, animY={animY}, isMoving={isMoving}");
     }
 
     void Movement2D()

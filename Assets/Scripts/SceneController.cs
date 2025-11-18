@@ -35,7 +35,8 @@ public class SceneController : MonoBehaviour
 
         if (this.name == "Rug Door")
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene("SampleScene");
+            UnityEngine.SceneManagement.SceneManager.LoadScene("SampleScene2");
+            Debug.Log("MMMM");
             is2DScene = false;
         }
     }
