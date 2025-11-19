@@ -3,6 +3,8 @@ using UnityEngine;
 public class DialogueManager : MonoBehaviour
 {
     [SerializeField] public InventoryManager inventoryManager;
+
+    [SerializeField] public Giveitem itemGiving;
     [SerializeField] private string[] myLines;
     [SerializeField] private GameObject dialogueUI;
     [SerializeField] private TMPro.TextMeshProUGUI dialogue;
@@ -25,9 +27,10 @@ public class DialogueManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && interactionEnabled == true)
         {
-            Debug.Log("enter was clicked");
+            Debug.Log("e was clicked");
             enterClicked = true;
-            StartDialogue("Larry");
+            //if ()
+            StartDialogue(itemGiving.currentChar.ToString());
         } else if (dialogueUI.activeInHierarchy == true && Input.GetKeyDown(KeyCode.E))
         {
             dialogueUI.SetActive(false);
@@ -89,7 +92,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(string character)
     {
-        Debug.Log("it just checked for e press");
+        Debug.Log("it just checked for e press for " + character);
         if (character.Equals("Larry") && inventoryManager.MugCollected == false) //&& enterClicked == true
         {
             dialogue.text = currentLine;
@@ -98,6 +101,31 @@ public class DialogueManager : MonoBehaviour
         } else if (character.Equals("Larry") && inventoryManager.MugCollected == true)
         {
             currentLine = "Thanks so much! Now I can get moving.";
+            dialogue.text = currentLine;
+            dialogueUI.SetActive(true);
+            interactionEnabled = false;
+        } else if (character.Equals("Mom") && inventoryManager.GlovesCollected == false) //&& enterClicked == true
+        {
+            currentLine = "You can play outside for a little while, but be careful! No going out without your alencihkana.";
+            dialogue.text = currentLine;
+            dialogueUI.SetActive(true);
+            interactionEnabled = false;
+        } else if (character.Equals("Mom") && inventoryManager.GlovesCollected == true)
+        {
+            currentLine = "That should help keep you warm!";
+            dialogue.text = currentLine;
+            dialogueUI.SetActive(true);
+            interactionEnabled = false;
+        }
+        else if (character.Equals("Dad") && inventoryManager.GlovesCollected == false) //&& enterClicked == true
+        {
+            currentLine = "Make sure you’re bundled up in your keehpakiikinki naapinaakani (winter coat) before you go outside, kiddo! It’s a cold one!";
+            dialogue.text = currentLine;
+            dialogueUI.SetActive(true);
+            interactionEnabled = false;
+        } else if (character.Equals("Dad") && inventoryManager.GlovesCollected == true)
+        {
+            currentLine = "Now you’re ready to brave the cold!";
             dialogue.text = currentLine;
             dialogueUI.SetActive(true);
             interactionEnabled = false;
