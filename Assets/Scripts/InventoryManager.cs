@@ -9,6 +9,7 @@ public class InventoryManager : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public GameObject InventoryHUD;
+    public GameObject Notification;
 
     public TextMeshProUGUI MugText;
     public Image MugSprite;
@@ -42,19 +43,22 @@ public class InventoryManager : MonoBehaviour
             InventoryHUD.SetActive(false);
             MugText.gameObject.SetActive(false);
             MugSprite.gameObject.SetActive(false);
+            if (Notification.activeInHierarchy)
+            {
+                Notification.gameObject.SetActive(false);
+            }
             
         } 
         else if (!InventoryHUD.activeInHierarchy)
         {
             InventoryHUD.SetActive(true);
+            
             if (MugCollected == true)
             {
                 MugText.gameObject.SetActive(true);
                 MugSprite.gameObject.SetActive(true);
             }
         }
-
-
     }
     void Start()
     {

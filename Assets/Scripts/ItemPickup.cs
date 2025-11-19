@@ -18,7 +18,7 @@ public class ItemPickup : MonoBehaviour
     private void Awake()
     {
         playerController = GetComponent<PlayerController>();
-        audioMan = GameObject.Find("AudioManager").GetComponent<AudioManager>();
+        //audioMan = GameObject.Find("AudioManager").GetComponent<AudioManager>();
         camera = Camera.main;
 
 
