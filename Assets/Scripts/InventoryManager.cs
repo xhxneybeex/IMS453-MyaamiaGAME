@@ -13,6 +13,7 @@ public class InventoryManager : MonoBehaviour
     public GameObject polaroidL;
     public GameObject polaroidR;
     public TextMeshProUGUI MugText;
+    public TextMeshProUGUI tasks;
     public Image MugSprite;
 
     public TextMeshProUGUI GlovesText;

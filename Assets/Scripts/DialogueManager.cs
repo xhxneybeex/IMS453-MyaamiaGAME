@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
 
@@ -9,6 +10,8 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private string[] myLines;
     [SerializeField] private GameObject dialogueUI;
     [SerializeField] private TMPro.TextMeshProUGUI dialogue;
+    private TMPro.TextMeshProUGUI tasks;
+    
     [SerializeField] GameObject Mom;
     [SerializeField] public GameObject Dad;
 
@@ -19,12 +22,14 @@ public class DialogueManager : MonoBehaviour
 
     public string currentLine = "Oh, hi. Isn’t it so hard getting up in the morning? I always need something to wake me up. I really need my kociihsaapowi minehkwaakani, but it takes so much energy to get up. Could you bring it to me? I think I left it on the atoohpooni?";
 
+    public string tasksInBook  = "";
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         dialogueUI.SetActive(false);
         Dad.SetActive(false);
         Mom.SetActive(false);
+        inventoryManager.tasks = tasks;
     }
 
     // Update is called once per frame
@@ -119,6 +124,8 @@ public class DialogueManager : MonoBehaviour
             Dad.SetActive(false);
             Mom.SetActive(true);
             currentLine = "You can play outside for a little while, but be careful! No going out without your alencihkana.";
+            tasksInBook += "\n mom needs me to find my alencihkana";
+            tasks.text = tasksInBook;
             dialogue.text = currentLine;
             dialogueUI.SetActive(true);
             interactionEnabled = false;
@@ -137,6 +144,8 @@ public class DialogueManager : MonoBehaviour
             Dad.SetActive(true);
             Mom.SetActive(false);
             currentLine = "Make sure you’re bundled up in your keehpakiikinki naapinaakani before you go outside, kiddo! It’s a cold one!";
+            tasksInBook += "\n dad needs me to find my keehpakiikinki naapinaakani";
+            tasks.text = tasksInBook;
             dialogue.text = currentLine;
             dialogueUI.SetActive(true);
             interactionEnabled = false;
