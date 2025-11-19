@@ -29,7 +29,7 @@ public class DialogueManager : MonoBehaviour
         dialogueUI.SetActive(false);
         Dad.SetActive(false);
         Mom.SetActive(false);
-        inventoryManager.tasks = tasks;
+        tasksInBook = inventoryManager.tasks.ToString();
     }
 
     // Update is called once per frame

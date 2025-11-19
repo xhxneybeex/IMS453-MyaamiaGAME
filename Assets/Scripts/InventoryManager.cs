@@ -13,7 +13,7 @@ public class InventoryManager : MonoBehaviour
     public GameObject polaroidL;
     public GameObject polaroidR;
     public TextMeshProUGUI MugText;
-    public TextMeshProUGUI tasks;
+    public GameObject tasks;
     public Image MugSprite;
 
     public TextMeshProUGUI GlovesText;
@@ -43,6 +43,7 @@ public class InventoryManager : MonoBehaviour
     {
         checkForCollected();
         Instance = this;
+        tasks.SetActive(false);
         MugText.gameObject.SetActive(false);
         MugSprite.gameObject.SetActive(false);
         GlovesText.gameObject.SetActive(false);
@@ -79,6 +80,7 @@ public class InventoryManager : MonoBehaviour
 
     public void TasksTab()
     {
+        tasks.SetActive(true);
         Debug.Log("on tasks pages");
         polaroidL.SetActive(false);
         polaroidR.SetActive(false);
