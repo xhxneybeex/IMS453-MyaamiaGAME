@@ -29,12 +29,10 @@ public class ItemPickup : MonoBehaviour
 
     private void OnMouseDown()
     {
-        Ray ray = camera.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, out hit, 50))
-        {
+        
             Pickup();
             Debug.Log("iT WORKED");
-        }
+        
         
         /*if (Physics.Raycast(camera.transform.position, camera.transform.TransformDirection(Vector3.up), out hit, Mathf.Max(5)))
         {
