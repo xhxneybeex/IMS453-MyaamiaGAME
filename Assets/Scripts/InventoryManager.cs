@@ -13,16 +13,11 @@ public class InventoryManager : MonoBehaviour
     public TextMeshProUGUI MugText;
     public Image MugSprite;
 
-    public TextMeshProUGUI GlovesText;
-    public Image GlovesSprite;
-
-
     public static InventoryManager Instance;
 
     public List<Item> Items = new List<Item>();
 
     public bool MugCollected = false;
-    public bool GlovesCollected = false;
 
     //public InventoryItemController iic;
 
@@ -36,8 +31,6 @@ public class InventoryManager : MonoBehaviour
         Instance = this;
         MugText.gameObject.SetActive(false);
         MugSprite.gameObject.SetActive(false);
-        GlovesText.gameObject.SetActive(false);
-        GlovesSprite.gameObject.SetActive(false);
     }
 
     public void OpenInventory()
@@ -58,12 +51,6 @@ public class InventoryManager : MonoBehaviour
             {
                 MugText.gameObject.SetActive(true);
                 MugSprite.gameObject.SetActive(true);
-            }
-
-            if (GlovesCollected == true)
-            {
-                GlovesText.gameObject.SetActive(true);
-                GlovesSprite.gameObject.SetActive(true);
             }
         }
 
@@ -87,12 +74,6 @@ public class InventoryManager : MonoBehaviour
             if (i.id == 5)
             {
                 MugCollected = true;
-            } else if (i.id == 6)
-            {
-                GlovesCollected = true;
-            }  else if (i.id == 7)
-            {
-                
             }
         }
     }

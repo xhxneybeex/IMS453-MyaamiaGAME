@@ -26,17 +26,9 @@ public class AudioManager : MonoBehaviour
         // TRACKS:
         // 0: WIP A Town Waiting to Bloom
         // 1: WIP A Town in Bloom
-        if (track != -1)
-        {
-            music.Stop();
-            music.clip = musicTracks[track];
-            music.Play();
-        } else
-        {
-            // Use -1 to stop
-            music.Stop();
-        }
-        
+        music.Stop();
+        music.clip = musicTracks[track];
+        music.Play();
     }
 
     public void PlaySFX(int track)
@@ -44,18 +36,8 @@ public class AudioManager : MonoBehaviour
         // TRACKS:
         // 0: Item Get
         // 1: Word Learned
-        if (track != -1)
-        {
-            sfx.clip = sfxTracks[track];
-            sfx.Play();
-        } else
-        {
-            // Use -1 to stop
-            sfx.Stop();
-        }
-        
+        sfx.clip = sfxTracks[track];
+        sfx.Play();
     }
     
 }
-
-//Hi
