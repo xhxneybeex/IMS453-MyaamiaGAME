@@ -28,11 +28,12 @@ public class Giveitem : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         DialogueManager.interactionEnabled = true;
-        if (this.gameObject.name.ToString() == "Mom")
+        if (this.gameObject.name.ToString() == "MomSomewhere")
         {
+            Debug.Log(this.gameObject.name.ToString());
             timesWalkedUpTo += 1;
             Debug.Log("times walked up to equals " + timesWalkedUpTo);
-            if (InventoryManager.MugSprite.gameObject.activeInHierarchy)
+            if (InventoryManager.GlovesSprite.gameObject.activeInHierarchy)
             {
                 InventoryManager.GlovesText.text = "alencihkana";
             }
@@ -42,11 +43,12 @@ public class Giveitem : MonoBehaviour
                 currentChar = "Mom";
             }
         }
-        else if (this.gameObject.name.ToString() == "Dad")
+        else if (this.gameObject.name.ToString() == "DadSomewhere")
         {
+            Debug.Log(this.gameObject.name.ToString());
             timesWalkedUpTo += 1;
             Debug.Log("times walked up to equals " + timesWalkedUpTo);
-            if (InventoryManager.MugSprite.gameObject.activeInHierarchy)
+            if (InventoryManager.CoatSprite.gameObject.activeInHierarchy)
             {
                 InventoryManager.CoatText.text = "keehpakiikinki naapinaakani";
             }

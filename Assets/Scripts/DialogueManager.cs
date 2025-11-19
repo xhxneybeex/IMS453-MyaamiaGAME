@@ -1,3 +1,4 @@
+using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
 
 public class DialogueManager : MonoBehaviour
@@ -8,6 +9,8 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private string[] myLines;
     [SerializeField] private GameObject dialogueUI;
     [SerializeField] private TMPro.TextMeshProUGUI dialogue;
+    [SerializeField] GameObject Mom;
+    [SerializeField] public GameObject Dad;
 
     public bool interactionEnabled = false;
     private bool dialogueActive = false;
@@ -20,6 +23,8 @@ public class DialogueManager : MonoBehaviour
     void Start()
     {
         dialogueUI.SetActive(false);
+        Dad.SetActive(false);
+        Mom.SetActive(false);
     }
 
     // Update is called once per frame
@@ -31,7 +36,9 @@ public class DialogueManager : MonoBehaviour
             enterClicked = true;
             //if ()
             StartDialogue(itemGiving.currentChar.ToString());
-        } else if (dialogueUI.activeInHierarchy == true && Input.GetKeyDown(KeyCode.E))
+            Debug.Log(itemGiving.currentChar.ToString());
+        }
+        else if (dialogueUI.activeInHierarchy == true && Input.GetKeyDown(KeyCode.E))
         {
             dialogueUI.SetActive(false);
         }
@@ -95,23 +102,31 @@ public class DialogueManager : MonoBehaviour
         Debug.Log("it just checked for e press for " + character);
         if (character.Equals("Larry") && inventoryManager.MugCollected == false) //&& enterClicked == true
         {
+            // person = 
             dialogue.text = currentLine;
             dialogueUI.SetActive(true);
             interactionEnabled = false;
-        } else if (character.Equals("Larry") && inventoryManager.MugCollected == true)
+        }
+        else if (character.Equals("Larry") && inventoryManager.MugCollected == true)
         {
             currentLine = "Thanks so much! Now I can get moving.";
             dialogue.text = currentLine;
             dialogueUI.SetActive(true);
             interactionEnabled = false;
-        } else if (character.Equals("Mom") && inventoryManager.GlovesCollected == false) //&& enterClicked == true
+        }
+        else if (character.Equals("Mom") && inventoryManager.GlovesCollected == false) //&& enterClicked == true
         {
+            Dad.SetActive(false);
+            Mom.SetActive(true);
             currentLine = "You can play outside for a little while, but be careful! No going out without your alencihkana.";
             dialogue.text = currentLine;
             dialogueUI.SetActive(true);
             interactionEnabled = false;
-        } else if (character.Equals("Mom") && inventoryManager.GlovesCollected == true)
+        }
+        else if (character.Equals("Mom") && inventoryManager.GlovesCollected == true)
         {
+            Dad.SetActive(false);
+            Mom.SetActive(true);
             currentLine = "That should help keep you warm!";
             dialogue.text = currentLine;
             dialogueUI.SetActive(true);
@@ -119,12 +134,17 @@ public class DialogueManager : MonoBehaviour
         }
         else if (character.Equals("Dad") && inventoryManager.GlovesCollected == false) //&& enterClicked == true
         {
-            currentLine = "Make sure you’re bundled up in your keehpakiikinki naapinaakani (winter coat) before you go outside, kiddo! It’s a cold one!";
+            Dad.SetActive(true);
+            Mom.SetActive(false);
+            currentLine = "Make sure you’re bundled up in your keehpakiikinki naapinaakani before you go outside, kiddo! It’s a cold one!";
             dialogue.text = currentLine;
             dialogueUI.SetActive(true);
             interactionEnabled = false;
-        } else if (character.Equals("Dad") && inventoryManager.GlovesCollected == true)
+        }
+        else if (character.Equals("Dad") && inventoryManager.GlovesCollected == true)
         {
+            Dad.SetActive(true);
+            Mom.SetActive(false);
             currentLine = "Now you’re ready to brave the cold!";
             dialogue.text = currentLine;
             dialogueUI.SetActive(true);
