@@ -72,16 +72,17 @@ public class InventoryManager : MonoBehaviour
                 MugSprite.gameObject.SetActive(true);
             }
 
-            else if (GlovesCollected == true)
+            if (GlovesCollected == true)
             {
                 GlovesText.gameObject.SetActive(true);
                 GlovesSprite.gameObject.SetActive(true);
             }
 
-            else if (CoatCollected == true)
+            if (CoatCollected == true)
             {
                 CoatText.gameObject.SetActive(true);
                 CoatSprite.gameObject.SetActive(true);
+                Debug.Log("this else if ran");
             }
         }
 
