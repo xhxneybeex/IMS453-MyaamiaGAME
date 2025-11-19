@@ -38,6 +38,7 @@ public class InventoryManager : MonoBehaviour
 
     private void Awake()
     {
+        checkForCollected();
         Instance = this;
         MugText.gameObject.SetActive(false);
         MugSprite.gameObject.SetActive(false);
@@ -80,7 +81,7 @@ public class InventoryManager : MonoBehaviour
             else if (CoatCollected == true)
             {
                 CoatText.gameObject.SetActive(true);
-                CoatText.gameObject.SetActive(true);
+                CoatSprite.gameObject.SetActive(true);
             }
         }
 
@@ -104,10 +105,16 @@ public class InventoryManager : MonoBehaviour
             if (i.id == 5)
             {
                 MugCollected = true;
-            } else if (i.id == 6)
+                Debug.Log("mug was collected");
+            } 
+            
+            if (i.id == 6)
             {
                 GlovesCollected = true;
-            }  else if (i.id == 7)
+                Debug.Log("gloves were collected"); //it's running this when the coat is collected...?
+            }  
+            
+            if (i.id == 7)
             {
                 CoatCollected = true;
                 Debug.Log("coat was collected");
