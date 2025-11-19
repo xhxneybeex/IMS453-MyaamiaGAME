@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
@@ -12,7 +13,18 @@ public class AudioManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        switch (SceneManager.GetActiveScene().name)
+        {
+            case "Winter_Exterior":
+                PlayTrack(0); // WIP A Town Waiting to Bloom
+                break;
+            case "Summer_Exterior":
+                PlayTrack(1); // WIP A Town in Bloom
+                break;
+            default:
+                PlayTrack(2); // WIP Living Space
+                break;
+        }
     }
 
     // Update is called once per frame

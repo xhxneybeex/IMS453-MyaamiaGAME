@@ -747,6 +747,63 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   exitScreen: {fileID: 1038897157}
   settingsScreen: {fileID: 1331738971}
+--- !u!1001 &912452611
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7281265258193102866, guid: ae8381ce8ffa92649967371e0c3ec46d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.0765
+      objectReference: {fileID: 0}
+    - target: {fileID: 7281265258193102866, guid: ae8381ce8ffa92649967371e0c3ec46d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.87748
+      objectReference: {fileID: 0}
+    - target: {fileID: 7281265258193102866, guid: ae8381ce8ffa92649967371e0c3ec46d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 6.39612
+      objectReference: {fileID: 0}
+    - target: {fileID: 7281265258193102866, guid: ae8381ce8ffa92649967371e0c3ec46d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7281265258193102866, guid: ae8381ce8ffa92649967371e0c3ec46d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7281265258193102866, guid: ae8381ce8ffa92649967371e0c3ec46d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7281265258193102866, guid: ae8381ce8ffa92649967371e0c3ec46d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7281265258193102866, guid: ae8381ce8ffa92649967371e0c3ec46d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7281265258193102866, guid: ae8381ce8ffa92649967371e0c3ec46d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7281265258193102866, guid: ae8381ce8ffa92649967371e0c3ec46d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8583443870981329626, guid: ae8381ce8ffa92649967371e0c3ec46d, type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ae8381ce8ffa92649967371e0c3ec46d, type: 3}
 --- !u!1 &1038897157 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 136207163258083361, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
@@ -1818,3 +1875,4 @@ SceneRoots:
   - {fileID: 8977144027230982670}
   - {fileID: 749319813}
   - {fileID: 1554625292409053684}
+  - {fileID: 912452611}
