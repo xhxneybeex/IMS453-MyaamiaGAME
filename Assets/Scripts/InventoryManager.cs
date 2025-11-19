@@ -16,6 +16,9 @@ public class InventoryManager : MonoBehaviour
     public TextMeshProUGUI GlovesText;
     public Image GlovesSprite;
 
+      public TextMeshProUGUI CoatText;
+    public Image CoatSprite;
+
 
     public static InventoryManager Instance;
 
@@ -23,6 +26,8 @@ public class InventoryManager : MonoBehaviour
 
     public bool MugCollected = false;
     public bool GlovesCollected = false;
+
+    public bool CoatCollected = false;
 
     //public InventoryItemController iic;
 
@@ -38,6 +43,8 @@ public class InventoryManager : MonoBehaviour
         MugSprite.gameObject.SetActive(false);
         GlovesText.gameObject.SetActive(false);
         GlovesSprite.gameObject.SetActive(false);
+        CoatText.gameObject.SetActive(false);
+        CoatSprite.gameObject.SetActive(false);
     }
 
     public void OpenInventory()
@@ -49,6 +56,10 @@ public class InventoryManager : MonoBehaviour
             InventoryHUD.SetActive(false);
             MugText.gameObject.SetActive(false);
             MugSprite.gameObject.SetActive(false);
+            GlovesText.gameObject.SetActive(false);
+            GlovesSprite.gameObject.SetActive(false);
+            CoatText.gameObject.SetActive(false);
+            CoatSprite.gameObject.SetActive(false);
             
         } 
         else if (!InventoryHUD.activeInHierarchy)
@@ -64,6 +75,12 @@ public class InventoryManager : MonoBehaviour
             {
                 GlovesText.gameObject.SetActive(true);
                 GlovesSprite.gameObject.SetActive(true);
+            }
+
+            if (CoatCollected == true)
+            {
+                CoatText.gameObject.SetActive(true);
+                CoatText.gameObject.SetActive(true);
             }
         }
 
@@ -92,8 +109,8 @@ public class InventoryManager : MonoBehaviour
                 GlovesCollected = true;
             }  else if (i.id == 7)
             {
-                
-            }
+                CoatCollected = true;
+            } 
         }
     }
 }

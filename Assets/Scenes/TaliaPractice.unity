@@ -652,6 +652,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 77254128766095720, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 124058621806451894, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 163
+      objectReference: {fileID: 0}
     - target: {fileID: 503026303024866662, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
       propertyPath: inventoryManager
       value: 
@@ -847,6 +855,26 @@ PrefabInstance:
     - target: {fileID: 8822523927344928089, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
       propertyPath: m_SizeDelta.y
       value: 119.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8822523927344928089, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.98661333
+      objectReference: {fileID: 0}
+    - target: {fileID: 8822523927344928089, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.16307698
+      objectReference: {fileID: 0}
+    - target: {fileID: 8822523927344928089, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 155
+      objectReference: {fileID: 0}
+    - target: {fileID: 8822523927344928089, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 69
+      objectReference: {fileID: 0}
+    - target: {fileID: 8822523927344928089, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -18.771
       objectReference: {fileID: 0}
     - target: {fileID: 8838794914346975184, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
       propertyPath: m_Name
@@ -1260,7 +1288,7 @@ Transform:
   m_GameObject: {fileID: 1141629257}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.176, z: 0}
+  m_LocalPosition: {x: -7.1, y: -0.176, z: 0}
   m_LocalScale: {x: 30.738499, y: 30.738499, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1912,7 +1940,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 695b164290517ec46ad12e79b5236839, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
-  speed: 5
+  speed: 20
   movementEnabled: 1
   sceneController: {fileID: 0}
 --- !u!4 &1729707051
