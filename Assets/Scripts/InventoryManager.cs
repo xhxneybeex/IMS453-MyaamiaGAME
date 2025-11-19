@@ -94,6 +94,7 @@ public class InventoryManager : MonoBehaviour
 
     public void ItemsTab()
     {
+        tasks.SetActive(false);
         checkForCollected();
         Debug.Log("on items pages");
         polaroidL.SetActive(true);
