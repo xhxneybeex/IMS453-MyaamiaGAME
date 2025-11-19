@@ -5,7 +5,8 @@ public class Giveitem : MonoBehaviour
 
     [SerializeField] public InventoryManager InventoryManager;
     [SerializeField] public DialogueManager DialogueManager;
-    public int timesWalkedUpTo = 0;
+    public int timesWalkedUpToMom = 0;
+    public int timesWalkedUpToDad = 0;
 
     public string currentChar = "";
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -31,8 +32,8 @@ public class Giveitem : MonoBehaviour
         if (this.gameObject.name.ToString() == "MomSomewhere")
         {
             Debug.Log(this.gameObject.name.ToString());
-            timesWalkedUpTo += 1;
-            Debug.Log("times walked up to equals " + timesWalkedUpTo);
+            timesWalkedUpToMom += 1;
+            Debug.Log("times walked up to equals " + timesWalkedUpToMom);
             if (InventoryManager.GlovesSprite.gameObject.activeInHierarchy)
             {
                 InventoryManager.GlovesText.text = "alencihkana";
@@ -46,8 +47,8 @@ public class Giveitem : MonoBehaviour
         else if (this.gameObject.name.ToString() == "DadSomewhere")
         {
             Debug.Log(this.gameObject.name.ToString());
-            timesWalkedUpTo += 1;
-            Debug.Log("times walked up to equals " + timesWalkedUpTo);
+            timesWalkedUpToDad += 1;
+            Debug.Log("times walked up to equals " + timesWalkedUpToDad);
             if (InventoryManager.CoatSprite.gameObject.activeInHierarchy)
             {
                 InventoryManager.CoatText.text = "keehpakiikinki naapinaakani";

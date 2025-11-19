@@ -10,13 +10,15 @@ public class InventoryManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public GameObject InventoryHUD;
 
+    public GameObject polaroidL;
+    public GameObject polaroidR;
     public TextMeshProUGUI MugText;
     public Image MugSprite;
 
     public TextMeshProUGUI GlovesText;
     public Image GlovesSprite;
 
-      public TextMeshProUGUI CoatText;
+    public TextMeshProUGUI CoatText;
     public Image CoatSprite;
 
 
@@ -48,10 +50,41 @@ public class InventoryManager : MonoBehaviour
         CoatSprite.gameObject.SetActive(false);
     }
 
-    public void OpenInventory()
+    public void OpenJournal()
     {
         Debug.Log("AAAA");
         checkForCollected();
+        if (!InventoryHUD.activeInHierarchy)
+        {
+            InventoryHUD.SetActive(true);
+            Debug.Log("inventory should be open :)");
+        }
+    }
+    void Start()
+    {
+        InventoryHUD.SetActive(false);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
+
+    public void TasksTab()
+    {
+        polaroidL.SetActive(false);
+        polaroidR.SetActive(false);
+        MugText.gameObject.SetActive(false);
+        MugSprite.gameObject.SetActive(false);
+        GlovesText.gameObject.SetActive(false);
+        GlovesSprite.gameObject.SetActive(false);
+        CoatText.gameObject.SetActive(false);
+        CoatSprite.gameObject.SetActive(false);
+    }
+
+    public void ItemsTab()
+    {
         if (InventoryHUD.activeInHierarchy)
         {
             InventoryHUD.SetActive(false);
@@ -61,8 +94,8 @@ public class InventoryManager : MonoBehaviour
             GlovesSprite.gameObject.SetActive(false);
             CoatText.gameObject.SetActive(false);
             CoatSprite.gameObject.SetActive(false);
-            
-        } 
+
+        }
         else if (!InventoryHUD.activeInHierarchy)
         {
             InventoryHUD.SetActive(true);
@@ -85,18 +118,6 @@ public class InventoryManager : MonoBehaviour
                 Debug.Log("this else if ran");
             }
         }
-
-
-    }
-    void Start()
-    {
-        InventoryHUD.SetActive(false);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     void checkForCollected()
@@ -107,19 +128,19 @@ public class InventoryManager : MonoBehaviour
             {
                 MugCollected = true;
                 Debug.Log("mug was collected");
-            } 
-            
+            }
+
             if (i.id == 6)
             {
                 GlovesCollected = true;
                 Debug.Log("gloves were collected"); //it's running this when the coat is collected...?
-            }  
-            
+            }
+
             if (i.id == 7)
             {
                 CoatCollected = true;
                 Debug.Log("coat was collected");
-            } 
+            }
         }
     }
 }
