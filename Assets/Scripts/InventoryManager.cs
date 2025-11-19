@@ -53,11 +53,16 @@ public class InventoryManager : MonoBehaviour
     public void OpenJournal()
     {
         Debug.Log("AAAA");
-        checkForCollected();
         if (!InventoryHUD.activeInHierarchy)
         {
+            ItemsTab();
             InventoryHUD.SetActive(true);
             Debug.Log("inventory should be open :)");
+        }
+        else if (InventoryHUD.activeInHierarchy)
+        {
+            InventoryHUD.SetActive(false);
+            Debug.Log("inventory should be closed :)");
         }
     }
     void Start()
@@ -68,11 +73,12 @@ public class InventoryManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        checkForCollected();
     }
 
     public void TasksTab()
     {
+        Debug.Log("on tasks pages");
         polaroidL.SetActive(false);
         polaroidR.SetActive(false);
         MugText.gameObject.SetActive(false);
@@ -85,40 +91,30 @@ public class InventoryManager : MonoBehaviour
 
     public void ItemsTab()
     {
-        if (InventoryHUD.activeInHierarchy)
+        checkForCollected();
+        Debug.Log("on items pages");
+        polaroidL.SetActive(true);
+        polaroidR.SetActive(true);
+        if (MugCollected == true)
         {
-            InventoryHUD.SetActive(false);
-            MugText.gameObject.SetActive(false);
-            MugSprite.gameObject.SetActive(false);
-            GlovesText.gameObject.SetActive(false);
-            GlovesSprite.gameObject.SetActive(false);
-            CoatText.gameObject.SetActive(false);
-            CoatSprite.gameObject.SetActive(false);
-
+            MugText.gameObject.SetActive(true);
+            MugSprite.gameObject.SetActive(true);
         }
-        else if (!InventoryHUD.activeInHierarchy)
+
+        if (GlovesCollected == true)
         {
-            InventoryHUD.SetActive(true);
-            if (MugCollected == true)
-            {
-                MugText.gameObject.SetActive(true);
-                MugSprite.gameObject.SetActive(true);
-            }
+            GlovesText.gameObject.SetActive(true);
+            GlovesSprite.gameObject.SetActive(true);
+        }
 
-            if (GlovesCollected == true)
-            {
-                GlovesText.gameObject.SetActive(true);
-                GlovesSprite.gameObject.SetActive(true);
-            }
-
-            if (CoatCollected == true)
-            {
-                CoatText.gameObject.SetActive(true);
-                CoatSprite.gameObject.SetActive(true);
-                Debug.Log("this else if ran");
-            }
+        if (CoatCollected == true)
+        {
+            CoatText.gameObject.SetActive(true);
+            CoatSprite.gameObject.SetActive(true);
+            Debug.Log("this else if ran");
         }
     }
+
 
     void checkForCollected()
     {
