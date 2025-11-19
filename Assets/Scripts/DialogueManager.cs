@@ -1,3 +1,4 @@
+using System;
 using System.Threading.Tasks;
 using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
@@ -9,7 +10,11 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] public Giveitem itemGiving;
     [SerializeField] private string[] myLines;
     [SerializeField] private GameObject dialogueUI;
+    [SerializeField] private GameObject notificationIcon;
+    
     [SerializeField] private TMPro.TextMeshProUGUI dialogue;
+    [SerializeField] private TMPro.TextMeshProUGUI ToDoText;
+    
     private TMPro.TextMeshProUGUI tasks;
     
     [SerializeField] GameObject Mom;
@@ -19,6 +24,7 @@ public class DialogueManager : MonoBehaviour
     private bool dialogueActive = false;
     public bool enterClicked = false;
     private int currentFlag = 0;
+    public String characterNotif = "Larry";
 
     public string currentLine = "Oh, hi. Isn’t it so hard getting up in the morning? I always need something to wake me up. I really need my kociihsaapowi minehkwaakani, but it takes so much energy to get up. Could you bring it to me? I think I left it on the atoohpooni?";
 
@@ -30,6 +36,7 @@ public class DialogueManager : MonoBehaviour
         Dad.SetActive(false);
         Mom.SetActive(false);
         tasksInBook = inventoryManager.tasks.ToString();
+        Debug.Log(tasksInBook);
     }
 
     // Update is called once per frame
@@ -46,6 +53,7 @@ public class DialogueManager : MonoBehaviour
         else if (dialogueUI.activeInHierarchy == true && Input.GetKeyDown(KeyCode.E))
         {
             dialogueUI.SetActive(false);
+            ShowTextNotification(characterNotif);
         }
         // If dialogue is active...
         /*  if (dialogueActive)
@@ -125,6 +133,7 @@ public class DialogueManager : MonoBehaviour
             Mom.SetActive(true);
             currentLine = "You can play outside for a little while, but be careful! No going out without your alencihkana.";
             tasksInBook += "\n mom needs me to find my alencihkana";
+            characterNotif = "Mom";
             tasks.text = tasksInBook;
             dialogue.text = currentLine;
             dialogueUI.SetActive(true);
@@ -145,6 +154,7 @@ public class DialogueManager : MonoBehaviour
             Mom.SetActive(false);
             currentLine = "Make sure you’re bundled up in your keehpakiikinki naapinaakani before you go outside, kiddo! It’s a cold one!";
             tasksInBook += "\n dad needs me to find my keehpakiikinki naapinaakani";
+            characterNotif = "Dad";
             tasks.text = tasksInBook;
             dialogue.text = currentLine;
             dialogueUI.SetActive(true);
@@ -158,6 +168,17 @@ public class DialogueManager : MonoBehaviour
             dialogue.text = currentLine;
             dialogueUI.SetActive(true);
             interactionEnabled = false;
+        }
+    }
+
+    public void ShowTextNotification(String character)
+    {
+        if (character.Equals("Dad"))
+        {
+            ToDoText.text = "To Do: Find your keehpakiikinki naapinaakani";
+        } else if (character.Equals("Mom"))
+        {
+            ToDoText.text = "To Do: Find your alencihkana";
         }
     }
 

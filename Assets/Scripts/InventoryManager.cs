@@ -4,11 +4,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Playables;
 
 public class InventoryManager : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public GameObject InventoryHUD;
+    public GameObject Notification;
 
     public GameObject polaroidL;
     public GameObject polaroidR;
@@ -60,6 +62,10 @@ public class InventoryManager : MonoBehaviour
             ItemsTab();
             InventoryHUD.SetActive(true);
             Debug.Log("inventory should be open :)");
+            if (Notification.activeInHierarchy)
+            {
+                Notification.gameObject.SetActive(false);
+            }
         }
         else if (InventoryHUD.activeInHierarchy)
         {
