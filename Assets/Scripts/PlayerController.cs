@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
         controller = GetComponent<CharacterController>();
         animator = GetComponentInChildren<Animator>();
         sceneController = GetComponent<SceneController>();
+        SceneController.is2DScene = true;
     }
 
     void Update()
