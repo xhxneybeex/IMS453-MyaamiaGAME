@@ -71,13 +71,13 @@ public class InventoryManager : MonoBehaviour
                 MugSprite.gameObject.SetActive(true);
             }
 
-            if (GlovesCollected == true)
+            else if (GlovesCollected == true)
             {
                 GlovesText.gameObject.SetActive(true);
                 GlovesSprite.gameObject.SetActive(true);
             }
 
-            if (CoatCollected == true)
+            else if (CoatCollected == true)
             {
                 CoatText.gameObject.SetActive(true);
                 CoatText.gameObject.SetActive(true);
@@ -110,6 +110,7 @@ public class InventoryManager : MonoBehaviour
             }  else if (i.id == 7)
             {
                 CoatCollected = true;
+                Debug.Log("coat was collected");
             } 
         }
     }
