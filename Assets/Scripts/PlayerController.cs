@@ -8,7 +8,6 @@ public class PlayerController : MonoBehaviour
 
     private CharacterController controller;
     private Animator animator;
-    private AudioSource myAudio;
 
     public float speed = 3f;
     public bool movementEnabled = true;
@@ -21,7 +20,6 @@ public class PlayerController : MonoBehaviour
         controller = GetComponent<CharacterController>();
         animator = GetComponentInChildren<Animator>();
         sceneController = GetComponent<SceneController>();
-        myAudio = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -46,20 +44,9 @@ public class PlayerController : MonoBehaviour
         if (isMoving)
         {
             lastMoveDir = new Vector2(movement.x, movement.z);
-            // Enable steps SFX
-            if (!myAudio.isPlaying)
-            {
-                myAudio.Play();
-            }
-        } else
-        {
-            if (myAudio.isPlaying)
-            {
-                myAudio.Stop();
-            }
         }
 
-            float animX = isMoving ? movement.x : lastMoveDir.x;
+        float animX = isMoving ? movement.x : lastMoveDir.x;
         float animY = isMoving ? movement.z : lastMoveDir.y;
 
         animator.SetFloat("MoveX", animX);
@@ -67,7 +54,7 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("IsMoving", isMoving);
 
         // Optional debug:
-        //Debug.Log($"animX={animX}, animY={animY}, isMoving={isMoving}");
+        Debug.Log($"animX={animX}, animY={animY}, isMoving={isMoving}");
     }
 
     void Movement2D()
@@ -85,16 +72,6 @@ public class PlayerController : MonoBehaviour
         if (isMoving)
         {
             lastMoveDir = new Vector2(movement.x, movement.y);
-            if (!myAudio.isPlaying)
-            {
-                myAudio.Play();
-            }
-        } else
-        {
-            if (myAudio.isPlaying)
-            {
-                myAudio.Stop();
-            }
         }
 
         // Feed animator parameters
