@@ -26,6 +26,8 @@ public class AudioManager : MonoBehaviour
         // TRACKS:
         // 0: WIP A Town Waiting to Bloom
         // 1: WIP A Town in Bloom
+        // 2: WIP Living Space
+
         if (track != -1)
         {
             music.Stop();

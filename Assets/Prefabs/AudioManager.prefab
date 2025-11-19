@@ -245,6 +245,7 @@ MonoBehaviour:
   musicTracks:
   - {fileID: 8300000, guid: 1cbf9416fdca04a4483e97c913a0c055, type: 3}
   - {fileID: 8300000, guid: 57132400d1f92604589d61175088880d, type: 3}
+  - {fileID: 8300000, guid: bb220735a6ab6a441b464f9f2bed02e6, type: 3}
   sfxTracks:
   - {fileID: 8300000, guid: 02eaeef803fbe59419b65efcd3ae8de6, type: 3}
   - {fileID: 8300000, guid: ff9d587be0814444286d52ddfdb36775, type: 3}
