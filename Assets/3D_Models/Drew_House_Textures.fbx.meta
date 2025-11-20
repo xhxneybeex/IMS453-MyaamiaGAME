@@ -3,7 +3,22 @@ guid: 3399c152ce260f246b9c69d375599134
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: House_4_Wood_Panel
+    second: {fileID: 2800000, guid: 6a90d6117818024419270d74ff7cb4b4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: House_Door_4_001
+    second: {fileID: 2800000, guid: f30158778b4f6604a8a2a9099243fff5, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: House_Wall_4_001
+    second: {fileID: 2800000, guid: 8493c6bda57455341bf9d265233213a1, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0

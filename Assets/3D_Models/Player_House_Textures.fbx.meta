@@ -3,7 +3,27 @@ guid: 6d82de3cb6a83ba44a8470caa154be49
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: House_Door_3_001
+    second: {fileID: 2800000, guid: 3ff0fbcda5fd7ba48945226aed74674e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: House_Roof_3_001
+    second: {fileID: 2800000, guid: c9712463f6ac15e42b19522ae5e78d95, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: House_Wall_3_001
+    second: {fileID: 2800000, guid: 4ea0cbec18cf7144fafee635028cc2bd, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: House_Window_With_Shutters_3_001
+    second: {fileID: 2800000, guid: 50c4efbc75daf2c468dcb2938e1035c5, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
