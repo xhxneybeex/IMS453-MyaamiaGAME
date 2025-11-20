@@ -925,9 +925,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
-        m_MethodName: OpenJournal
+      - m_Target: {fileID: 2698501385895745563}
+        m_TargetAssemblyTypeName: UI, Assembly-CSharp
+        m_MethodName: ToggleJournal
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2299,6 +2299,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60986a3ed797471499c2911a05eb03cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UI
+  journalMenu: {fileID: 77254128766095720}
   pauseMenu: {fileID: 136207163258083361}
   settingsMenu: {fileID: 938503258368012512}
 --- !u!1 &8881398604422343706

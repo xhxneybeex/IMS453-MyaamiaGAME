@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class UI : MonoBehaviour
 {
+    [SerializeField] private GameObject journalMenu;
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private GameObject settingsMenu;
 
@@ -34,5 +35,10 @@ public class UI : MonoBehaviour
     public void ToggleSettings()
     {
         settingsMenu.SetActive(!settingsMenu.activeSelf);
+    }
+
+    public void ToggleJournal()
+    {
+        journalMenu.SetActive(!journalMenu.activeSelf);
     }
 }
