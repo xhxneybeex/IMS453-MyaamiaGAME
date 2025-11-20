@@ -2188,6 +2188,7 @@ GameObject:
   - component: {fileID: 4039547249865667260}
   - component: {fileID: 7553847831326459693}
   - component: {fileID: 7136657329546165512}
+  - component: {fileID: 2698501385895745563}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2286,6 +2287,20 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &2698501385895745563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8838794914346975184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60986a3ed797471499c2911a05eb03cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI
+  pauseMenu: {fileID: 136207163258083361}
+  settingsMenu: {fileID: 938503258368012512}
 --- !u!1 &8881398604422343706
 GameObject:
   m_ObjectHideFlags: 0
@@ -2684,13 +2699,49 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2797264601173513885}
     m_Modifications:
+    - target: {fileID: 320710917083341668, guid: aa305e36ee3141e459069f0c209ffa2f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2698501385895745563}
+    - target: {fileID: 320710917083341668, guid: aa305e36ee3141e459069f0c209ffa2f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ExitToMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 320710917083341668, guid: aa305e36ee3141e459069f0c209ffa2f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UI, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1734228485553898841, guid: aa305e36ee3141e459069f0c209ffa2f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2698501385895745563}
     - target: {fileID: 1734228485553898841, guid: aa305e36ee3141e459069f0c209ffa2f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OpenSettings
+      value: ToggleSettings
+      objectReference: {fileID: 0}
+    - target: {fileID: 1734228485553898841, guid: aa305e36ee3141e459069f0c209ffa2f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UI, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270789577036178753, guid: aa305e36ee3141e459069f0c209ffa2f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2698501385895745563}
+    - target: {fileID: 4270789577036178753, guid: aa305e36ee3141e459069f0c209ffa2f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TogglePause
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270789577036178753, guid: aa305e36ee3141e459069f0c209ffa2f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UI, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8530000814434792313, guid: aa305e36ee3141e459069f0c209ffa2f, type: 3}
       propertyPath: m_Name
       value: Pause
+      objectReference: {fileID: 0}
+    - target: {fileID: 8530000814434792313, guid: aa305e36ee3141e459069f0c209ffa2f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8601978997476567370, guid: aa305e36ee3141e459069f0c209ffa2f, type: 3}
       propertyPath: m_Pivot.x
@@ -2780,5 +2831,15 @@ PrefabInstance:
 --- !u!224 &63929352022589970 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8601978997476567370, guid: aa305e36ee3141e459069f0c209ffa2f, type: 3}
+  m_PrefabInstance: {fileID: 8611798632040049496}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &136207163258083361 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8530000814434792313, guid: aa305e36ee3141e459069f0c209ffa2f, type: 3}
+  m_PrefabInstance: {fileID: 8611798632040049496}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &938503258368012512 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8828597365647825848, guid: aa305e36ee3141e459069f0c209ffa2f, type: 3}
   m_PrefabInstance: {fileID: 8611798632040049496}
   m_PrefabAsset: {fileID: 0}
