@@ -5,6 +5,8 @@ using Unity.IO;
 
 public class SceneController : MonoBehaviour
 {
+    [SerializeField] private string sceneToLoad;
+    [SerializeField] private bool to2DScene = false;
     public static bool is2DScene = false;
     public GameObject exitScreen;
     public GameObject settingsScreen;
@@ -18,27 +20,14 @@ public class SceneController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && SceneManager.GetActiveScene().name != "StartMenu") {
-            //exitScreen.SetActive(true);
-        }
+        
     }
 
     private void OnTriggerEnter()
     {
         Debug.Log("AAAAA");
-        if (this.name == "Door")
-        {
-            UnityEngine.SceneManagement.SceneManager.LoadScene("LarryHouseInterior");
-            is2DScene = true;
-
-        }
-
-        if (this.name == "Rug Door")
-        {
-            SceneManager.LoadScene("Level_1_Exterior");
-            Debug.Log("MMMM");
-            is2DScene = false;
-        }
+        SceneManager.LoadScene(sceneToLoad);
+        is2DScene = to2DScene;
     }
 
     public void StartGame()
