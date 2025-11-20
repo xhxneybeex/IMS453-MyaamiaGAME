@@ -32,7 +32,7 @@ public class DialogueManager : MonoBehaviour
     public string currentChar = "";
 
     public bool dadTaskAdded = false;
-    public bool momTaskAdded = true;
+    public bool momTaskAdded = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -144,6 +144,7 @@ public class DialogueManager : MonoBehaviour
             {
                 tasksInBook += "\nmom needs me to find my alencihkana";
                 momTaskAdded = true;
+                Debug.Log("added mom's task");
             }
             
             characterNotif = "Mom";
@@ -172,6 +173,7 @@ public class DialogueManager : MonoBehaviour
             {
                 tasksInBook += "\ndad needs me to find my keehpakiikinki naapinaakani";
                 dadTaskAdded = true;
+                Debug.Log("added dad's task");
             }
             characterNotif = "Dad";
             tasks.text = tasksInBook;
