@@ -19,8 +19,13 @@ public class PlayerController : MonoBehaviour
     {
         controller = GetComponent<CharacterController>();
         animator = GetComponentInChildren<Animator>();
-        sceneController = GetComponent<SceneController>();
-        SceneController.is2DScene = true;
+        if (SceneManager.GetActiveScene().name == "Level_1_Exterior")
+        {
+            SceneController.is2DScene = false;
+        } else
+        {
+            SceneController.is2DScene = true;
+        }
     }
 
     void Update()
