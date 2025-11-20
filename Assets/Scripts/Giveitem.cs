@@ -8,7 +8,7 @@ public class Giveitem : MonoBehaviour
     public int timesWalkedUpToMom = 0;
     public int timesWalkedUpToDad = 0;
 
-    public string currentChar = "";
+    public static string currentChar = "";
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     void Awake()

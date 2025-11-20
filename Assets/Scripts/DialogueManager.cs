@@ -43,7 +43,7 @@ public class DialogueManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        currentChar = itemGiving.currentChar;
+        currentChar = Giveitem.currentChar;
         if (Input.GetKeyDown(KeyCode.E) && interactionEnabled == true)
         {
             Debug.Log("e was clicked");
@@ -153,7 +153,7 @@ public class DialogueManager : MonoBehaviour
             dialogueUI.SetActive(true);
             interactionEnabled = false;
         }
-        else if (character.Equals("Dad") && inventoryManager.GlovesCollected == false) //&& enterClicked == true
+        else if (character.Equals("Dad") && inventoryManager.CoatCollected == false) //&& enterClicked == true
         {
             dialogueUI.SetActive(true);
             Dad.SetActive(true);
@@ -167,7 +167,7 @@ public class DialogueManager : MonoBehaviour
             interactionEnabled = false;
             notificationIcon.SetActive(true);
         }
-        else if (character.Equals("Dad") && inventoryManager.GlovesCollected == true)
+        else if (character.Equals("Dad") && inventoryManager.CoatCollected == true)
         {
             Dad.SetActive(true);
             Mom.SetActive(false);
