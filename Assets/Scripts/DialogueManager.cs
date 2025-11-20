@@ -30,6 +30,9 @@ public class DialogueManager : MonoBehaviour
 
     public string tasksInBook  = "";
     public string currentChar = "";
+
+    public bool dadTaskAdded = false;
+    public bool momTaskAdded = true;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -136,7 +139,13 @@ public class DialogueManager : MonoBehaviour
             Dad.SetActive(false);
             Mom.SetActive(true);
             currentLine = "You can play outside for a little while, but be careful! No going out without your alencihkana.";
-            tasksInBook += "\nmom needs me to find my alencihkana";
+            
+            if (momTaskAdded == false)
+            {
+                tasksInBook += "\nmom needs me to find my alencihkana";
+                momTaskAdded = true;
+            }
+            
             characterNotif = "Mom";
             tasks.text = tasksInBook;
             dialogue.text = currentLine;
@@ -159,7 +168,11 @@ public class DialogueManager : MonoBehaviour
             Dad.SetActive(true);
             Mom.SetActive(false);
             currentLine = "Make sure you’re bundled up in your keehpakiikinki naapinaakani before you go outside, kiddo! It’s a cold one!";
-            tasksInBook += "\ndad needs me to find my keehpakiikinki naapinaakani";
+            if (dadTaskAdded == false)
+            {
+                tasksInBook += "\ndad needs me to find my keehpakiikinki naapinaakani";
+                dadTaskAdded = true;
+            }
             characterNotif = "Dad";
             tasks.text = tasksInBook;
             dialogue.text = currentLine;
