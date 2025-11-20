@@ -29,6 +29,7 @@ public class DialogueManager : MonoBehaviour
     public string currentLine = "Oh, hi. Isn’t it so hard getting up in the morning? I always need something to wake me up. I really need my kociihsaapowi minehkwaakani, but it takes so much energy to get up. Could you bring it to me? I think I left it on the atoohpooni?";
 
     public string tasksInBook  = "";
+    public string currentChar = "";
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -42,13 +43,14 @@ public class DialogueManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        currentChar = itemGiving.currentChar;
         if (Input.GetKeyDown(KeyCode.E) && interactionEnabled == true)
         {
             Debug.Log("e was clicked");
             enterClicked = true;
             //if ()
-            StartDialogue(itemGiving.currentChar.ToString());
-            Debug.Log(itemGiving.currentChar.ToString());
+            StartDialogue(currentChar);
+            Debug.Log("the current character is " + currentChar);
         }
         else if (dialogueUI.activeInHierarchy == true && Input.GetKeyDown(KeyCode.E))
         {
@@ -130,6 +132,7 @@ public class DialogueManager : MonoBehaviour
         }
         else if (character.Equals("Mom") && inventoryManager.GlovesCollected == false) //&& enterClicked == true
         {
+            dialogueUI.SetActive(true);
             Dad.SetActive(false);
             Mom.SetActive(true);
             currentLine = "You can play outside for a little while, but be careful! No going out without your alencihkana.";
@@ -152,6 +155,7 @@ public class DialogueManager : MonoBehaviour
         }
         else if (character.Equals("Dad") && inventoryManager.GlovesCollected == false) //&& enterClicked == true
         {
+            dialogueUI.SetActive(true);
             Dad.SetActive(true);
             Mom.SetActive(false);
             currentLine = "Make sure you’re bundled up in your keehpakiikinki naapinaakani before you go outside, kiddo! It’s a cold one!";

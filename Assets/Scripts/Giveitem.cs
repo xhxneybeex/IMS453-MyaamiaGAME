@@ -17,7 +17,8 @@ public class Giveitem : MonoBehaviour
     }
     void Start()
     {
-
+        currentChar = "Rose";
+        Debug.Log(currentChar);
     }
 
     // Update is called once per frame
@@ -56,7 +57,7 @@ public class Giveitem : MonoBehaviour
             else
             {
                 Debug.Log("you can interact with Dad now");
-                DialogueManager.StartDialogue("Dad");
+                //DialogueManager.StartDialogue("Dad");
                 currentChar = "Dad";
             }
         }
