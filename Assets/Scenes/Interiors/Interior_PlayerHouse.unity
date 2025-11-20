@@ -691,7 +691,11 @@ PrefabInstance:
     - target: {fileID: 1616063333943934778, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 821119752}
+      objectReference: {fileID: 1950634132}
+    - target: {fileID: 1616063333943934778, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ToggleJournal
+      objectReference: {fileID: 0}
     - target: {fileID: 2308146758381107725, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -5563,6 +5567,17 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.6359953, y: 1.4979408, z: 0.2}
   m_Center: {x: -0.031761825, y: 0.31662858, z: 0}
+--- !u!114 &1950634132 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2698501385895745563, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
+  m_PrefabInstance: {fileID: 295721674}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60986a3ed797471499c2911a05eb03cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI
 --- !u!1 &1996621065
 GameObject:
   m_ObjectHideFlags: 0
