@@ -41,6 +41,24 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Walls
+    uniqueID: 2066455709
+    locked: 0
+  - name: Rugs
+    uniqueID: 290018937
+    locked: 0
+  - name: Furniture1
+    uniqueID: 2950918371
+    locked: 0
+  - name: Furniture2
+    uniqueID: 1669651183
+    locked: 0
+  - name: Items
+    uniqueID: 3671207467
+    locked: 0
+  - name: Player
+    uniqueID: 3245620627
+    locked: 0
   m_RenderingLayers:
   - Default
   - Light Layer 1
