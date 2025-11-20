@@ -15,7 +15,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private TMPro.TextMeshProUGUI dialogue;
     [SerializeField] private TMPro.TextMeshProUGUI ToDoText;
     
-    private TMPro.TextMeshProUGUI tasks;
+    public TMPro.TextMeshProUGUI tasks;
     
     [SerializeField] GameObject Mom;
     [SerializeField] public GameObject Dad;
@@ -35,7 +35,7 @@ public class DialogueManager : MonoBehaviour
         dialogueUI.SetActive(false);
         Dad.SetActive(false);
         Mom.SetActive(false);
-        tasksInBook = inventoryManager.tasks.ToString();
+        tasksInBook = "";
         Debug.Log(tasksInBook);
     }
 
@@ -119,6 +119,7 @@ public class DialogueManager : MonoBehaviour
             dialogue.text = currentLine;
             dialogueUI.SetActive(true);
             interactionEnabled = false;
+            notificationIcon.SetActive(true);
         }
         else if (character.Equals("Larry") && inventoryManager.MugCollected == true)
         {
@@ -132,12 +133,13 @@ public class DialogueManager : MonoBehaviour
             Dad.SetActive(false);
             Mom.SetActive(true);
             currentLine = "You can play outside for a little while, but be careful! No going out without your alencihkana.";
-            tasksInBook += "\n mom needs me to find my alencihkana";
+            tasksInBook += "\nmom needs me to find my alencihkana";
             characterNotif = "Mom";
             tasks.text = tasksInBook;
             dialogue.text = currentLine;
             dialogueUI.SetActive(true);
             interactionEnabled = false;
+            notificationIcon.SetActive(true);
         }
         else if (character.Equals("Mom") && inventoryManager.GlovesCollected == true)
         {
@@ -153,12 +155,13 @@ public class DialogueManager : MonoBehaviour
             Dad.SetActive(true);
             Mom.SetActive(false);
             currentLine = "Make sure you’re bundled up in your keehpakiikinki naapinaakani before you go outside, kiddo! It’s a cold one!";
-            tasksInBook += "\n dad needs me to find my keehpakiikinki naapinaakani";
+            tasksInBook += "\ndad needs me to find my keehpakiikinki naapinaakani";
             characterNotif = "Dad";
             tasks.text = tasksInBook;
             dialogue.text = currentLine;
             dialogueUI.SetActive(true);
             interactionEnabled = false;
+            notificationIcon.SetActive(true);
         }
         else if (character.Equals("Dad") && inventoryManager.GlovesCollected == true)
         {
