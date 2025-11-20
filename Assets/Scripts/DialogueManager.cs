@@ -1,6 +1,4 @@
 using System;
-using System.Threading.Tasks;
-using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
 
 public class DialogueManager : MonoBehaviour
