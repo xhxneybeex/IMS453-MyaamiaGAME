@@ -11,15 +11,15 @@ public class SceneController : MonoBehaviour
 
     void Start()
     {
-        exitScreen.SetActive(false);
-        settingsScreen.SetActive(false);
+        //exitScreen.SetActive(false);
+        //settingsScreen.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape) && SceneManager.GetActiveScene().name != "StartMenu") {
-            exitScreen.SetActive(true);
+            //exitScreen.SetActive(true);
         }
     }
 
@@ -52,7 +52,7 @@ public class SceneController : MonoBehaviour
 
     public void NoExit()
     {
-        exitScreen.SetActive(false);
+      //  exitScreen.SetActive(false);
     }
 
     public void OpenSettings()
