@@ -135,8 +135,8 @@ public class DialogueManager : MonoBehaviour
             dialogueUI.SetActive(true);
             Dad.SetActive(false);
             Mom.SetActive(true);
-            currentLine = "You can play outside for a little while, but be careful! No going out without your alencihkana.";
-            tasksInBook += "\nmom needs me to find my alencihkana";
+            currentLine = "You can play outside for a little while, but be careful! No going out without your alencihkana.\n";
+            tasksInBook += "\nmom needs me to find my alencihkana\n";
             characterNotif = "Mom";
             tasks.text = tasksInBook;
             dialogue.text = currentLine;
@@ -159,7 +159,7 @@ public class DialogueManager : MonoBehaviour
             Dad.SetActive(true);
             Mom.SetActive(false);
             currentLine = "Make sure you’re bundled up in your keehpakiikinki naapinaakani before you go outside, kiddo! It’s a cold one!";
-            tasksInBook += "\ndad needs me to find my keehpakiikinki naapinaakani";
+            tasksInBook += "\ndad needs me to find my keehpakiikinki naapinaakani.\n";
             characterNotif = "Dad";
             tasks.text = tasksInBook;
             dialogue.text = currentLine;
