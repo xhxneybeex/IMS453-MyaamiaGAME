@@ -10,7 +10,10 @@ public class UI : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        if (journalMenu.activeSelf)
+        {
+            ToggleJournal();
+        }
     }
 
     // Update is called once per frame
