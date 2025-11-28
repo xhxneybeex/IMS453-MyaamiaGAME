@@ -2428,11 +2428,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5235659985364002322, guid: ded15ee3165b8bb48aa6d8b31d94ddb6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.34
+      value: -6.35
       objectReference: {fileID: 0}
     - target: {fileID: 5235659985364002322, guid: ded15ee3165b8bb48aa6d8b31d94ddb6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.4417315
+      value: 2.73
       objectReference: {fileID: 0}
     - target: {fileID: 5235659985364002322, guid: ded15ee3165b8bb48aa6d8b31d94ddb6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5262,7 +5262,6 @@ GameObject:
   - component: {fileID: 1647609802}
   - component: {fileID: 1647609803}
   - component: {fileID: 1647609804}
-  - component: {fileID: 1647609805}
   m_Layer: 0
   m_Name: GlovesTriggerArea
   m_TagString: Untagged
@@ -5279,7 +5278,7 @@ Transform:
   m_GameObject: {fileID: 1647609801}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -17.9, y: 1.4, z: 0}
+  m_LocalPosition: {x: -15.98, y: 3.74, z: -0.35}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5304,8 +5303,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 7.8158426, y: 3.524386, z: 88.67136}
-  m_Center: {x: -1.724998, y: -1.262193, z: -10.477564}
+  m_Size: {x: 7.8158426, y: 3.524386, z: 1.4143429}
+  m_Center: {x: -1.724998, y: -1.262193, z: 13.944287}
 --- !u!114 &1647609804
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5320,33 +5319,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ItemHints
   dm: {fileID: 357491882}
   glovesHintAdded: 0
---- !u!54 &1647609805
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1647609801}
-  serializedVersion: 5
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1001 &1649950589
 PrefabInstance:
   m_ObjectHideFlags: 0
