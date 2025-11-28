@@ -4877,18 +4877,6 @@ PrefabInstance:
       value: DadSomewhere
       objectReference: {fileID: 0}
     - target: {fileID: 901980188000862197, guid: aa3d257ff608a994a90f75ddea0604ba, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.28818628
-      objectReference: {fileID: 0}
-    - target: {fileID: 901980188000862197, guid: aa3d257ff608a994a90f75ddea0604ba, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.28818628
-      objectReference: {fileID: 0}
-    - target: {fileID: 901980188000862197, guid: aa3d257ff608a994a90f75ddea0604ba, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.28818628
-      objectReference: {fileID: 0}
-    - target: {fileID: 901980188000862197, guid: aa3d257ff608a994a90f75ddea0604ba, type: 3}
       propertyPath: m_LocalPosition.x
       value: -41.4
       objectReference: {fileID: 0}
@@ -4936,14 +4924,6 @@ PrefabInstance:
       propertyPath: InventoryManager
       value: 
       objectReference: {fileID: 821119752}
-    - target: {fileID: 5553361836114628533, guid: aa3d257ff608a994a90f75ddea0604ba, type: 3}
-      propertyPath: m_SortingLayer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 5553361836114628533, guid: aa3d257ff608a994a90f75ddea0604ba, type: 3}
-      propertyPath: m_SortingLayerID
-      value: -1049346669
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5272,18 +5252,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 1405412084}
     m_Modifications:
     - target: {fileID: 3214095372190019431, guid: 28f556e046c2a0048b8a02c8cff716ed, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.7802779
-      objectReference: {fileID: 0}
-    - target: {fileID: 3214095372190019431, guid: 28f556e046c2a0048b8a02c8cff716ed, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.7802779
-      objectReference: {fileID: 0}
-    - target: {fileID: 3214095372190019431, guid: 28f556e046c2a0048b8a02c8cff716ed, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.7802779
-      objectReference: {fileID: 0}
-    - target: {fileID: 3214095372190019431, guid: 28f556e046c2a0048b8a02c8cff716ed, type: 3}
       propertyPath: m_LocalPosition.x
       value: -57
       objectReference: {fileID: 0}
@@ -5326,14 +5294,6 @@ PrefabInstance:
     - target: {fileID: 4664898143772545830, guid: 28f556e046c2a0048b8a02c8cff716ed, type: 3}
       propertyPath: m_Name
       value: MomSomewhere
-      objectReference: {fileID: 0}
-    - target: {fileID: 7883586149580298621, guid: 28f556e046c2a0048b8a02c8cff716ed, type: 3}
-      propertyPath: m_SortingLayer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 7883586149580298621, guid: 28f556e046c2a0048b8a02c8cff716ed, type: 3}
-      propertyPath: m_SortingLayerID
-      value: -1049346669
       objectReference: {fileID: 0}
     - target: {fileID: 8870319421610826583, guid: 28f556e046c2a0048b8a02c8cff716ed, type: 3}
       propertyPath: DialogueManager

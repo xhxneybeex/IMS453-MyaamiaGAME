@@ -27,9 +27,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4664898143772545830}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -68.1, y: 6.2, z: 7.5}
-  m_LocalScale: {x: 4.518635, y: 4.518635, z: 4.518635}
+  m_LocalScale: {x: 5.635557, y: 5.635557, z: 5.635557}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -78,10 +78,10 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1049346669
+  m_SortingLayer: 6
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 142ffb8cea271f14f9ccad3d63962f28, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d2f2c2380873fc64bbdc8a8fee550ece, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -106,8 +106,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   InventoryManager: {fileID: 0}
   DialogueManager: {fileID: 0}
-  timesWalkedUpTo: 0
-  currentChar: 
+  timesWalkedUpToMom: 0
+  timesWalkedUpToDad: 0
 --- !u!65 &8423896372962601294
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -127,5 +127,5 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 4.9262514, y: 2.7803311, z: 331.3918}
-  m_Center: {x: -0.13326466, y: -0.43530285, z: 140.70222}
+  m_Size: {x: 0.43124145, y: 0.7765304, z: 331.39178}
+  m_Center: {x: 0.017600236, y: -0.029126411, z: 140.70222}
