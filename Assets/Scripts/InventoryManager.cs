@@ -24,6 +24,13 @@ public class InventoryManager : MonoBehaviour
     public TextMeshProUGUI CoatText;
     public Image CoatSprite;
 
+    public GameObject PlayGloves;
+
+    public GameObject PlayCoat;
+
+    public AudioSource gloves;
+    public AudioSource coat;
+
 
     public static InventoryManager Instance;
 
@@ -52,6 +59,8 @@ public class InventoryManager : MonoBehaviour
         GlovesSprite.gameObject.SetActive(false);
         CoatText.gameObject.SetActive(false);
         CoatSprite.gameObject.SetActive(false);
+        PlayCoat.gameObject.SetActive(false);
+        PlayGloves.gameObject.SetActive(false);
     }
 
     public void OpenJournal()
@@ -96,6 +105,8 @@ public class InventoryManager : MonoBehaviour
         GlovesSprite.gameObject.SetActive(false);
         CoatText.gameObject.SetActive(false);
         CoatSprite.gameObject.SetActive(false);
+        PlayCoat.gameObject.SetActive(false);
+        PlayGloves.gameObject.SetActive(false);
     }
 
     public void ItemsTab()
@@ -115,12 +126,14 @@ public class InventoryManager : MonoBehaviour
         {
             GlovesText.gameObject.SetActive(true);
             GlovesSprite.gameObject.SetActive(true);
+            PlayGloves.gameObject.SetActive(true);
         }
 
         if (CoatCollected == true)
         {
             CoatText.gameObject.SetActive(true);
             CoatSprite.gameObject.SetActive(true);
+            PlayCoat.gameObject.SetActive(true);
             Debug.Log("this else if ran");
         }
     }
@@ -149,4 +162,17 @@ public class InventoryManager : MonoBehaviour
             }
         }
     }
+
+    public void PlayGloveAudio()
+    {
+        gloves.Play();
+        Debug.Log("playing glove sound");
+    }
+
+     public void PlayCoatAudio()
+    {
+        coat.Play();
+        Debug.Log("playing coat sound");
+    }
 }
+

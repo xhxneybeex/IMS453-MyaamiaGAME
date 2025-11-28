@@ -688,14 +688,6 @@ PrefabInstance:
       propertyPath: inventoryManager
       value: 
       objectReference: {fileID: 821119752}
-    - target: {fileID: 1616063333943934778, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1950634132}
-    - target: {fileID: 1616063333943934778, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ToggleJournal
-      objectReference: {fileID: 0}
     - target: {fileID: 2308146758381107725, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -784,6 +776,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4126148221599635644, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 821119752}
+    - target: {fileID: 8073162052021953290, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 821119752}
     - target: {fileID: 8838794914346975184, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -2533,6 +2533,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1564733062}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!82 &654863833 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8916326843662069404, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
+  m_PrefabInstance: {fileID: 295721674}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &666638551
 GameObject:
   m_ObjectHideFlags: 0
@@ -2788,6 +2793,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1564733062}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &819332296 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 219903040361963513, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
+  m_PrefabInstance: {fileID: 295721674}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &820983599
 GameObject:
   m_ObjectHideFlags: 0
@@ -2894,9 +2904,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7541442886327853120, guid: 88bdf5943942e29459753f5835c5267c, type: 3}
+      propertyPath: coat
+      value: 
+      objectReference: {fileID: 654863833}
+    - target: {fileID: 7541442886327853120, guid: 88bdf5943942e29459753f5835c5267c, type: 3}
       propertyPath: tasks
       value: 
       objectReference: {fileID: 1353953451}
+    - target: {fileID: 7541442886327853120, guid: 88bdf5943942e29459753f5835c5267c, type: 3}
+      propertyPath: gloves
+      value: 
+      objectReference: {fileID: 846339788}
     - target: {fileID: 7541442886327853120, guid: 88bdf5943942e29459753f5835c5267c, type: 3}
       propertyPath: MugText
       value: 
@@ -2905,6 +2923,10 @@ PrefabInstance:
       propertyPath: CoatText
       value: 
       objectReference: {fileID: 2071414549}
+    - target: {fileID: 7541442886327853120, guid: 88bdf5943942e29459753f5835c5267c, type: 3}
+      propertyPath: PlayCoat
+      value: 
+      objectReference: {fileID: 1031877306}
     - target: {fileID: 7541442886327853120, guid: 88bdf5943942e29459753f5835c5267c, type: 3}
       propertyPath: MugSprite
       value: 
@@ -2925,6 +2947,10 @@ PrefabInstance:
       propertyPath: GlovesText
       value: 
       objectReference: {fileID: 988436968}
+    - target: {fileID: 7541442886327853120, guid: 88bdf5943942e29459753f5835c5267c, type: 3}
+      propertyPath: PlayGloves
+      value: 
+      objectReference: {fileID: 819332296}
     - target: {fileID: 7541442886327853120, guid: 88bdf5943942e29459753f5835c5267c, type: 3}
       propertyPath: GlovesSprite
       value: 
@@ -3043,6 +3069,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1564733062}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!82 &846339788 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4011230301512883841, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
+  m_PrefabInstance: {fileID: 295721674}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &979979632 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7301713695126894939, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
@@ -3245,6 +3276,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1564733062}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!1 &1031877306 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8606281337623211098, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
+  m_PrefabInstance: {fileID: 295721674}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1048292880
 GameObject:
   m_ObjectHideFlags: 0
@@ -6239,17 +6275,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.6359953, y: 1.4979408, z: 0.2}
   m_Center: {x: -0.031761825, y: 0.31662858, z: 0}
---- !u!114 &1950634132 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2698501385895745563, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
-  m_PrefabInstance: {fileID: 295721674}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60986a3ed797471499c2911a05eb03cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UI
 --- !u!1 &1996621065
 GameObject:
   m_ObjectHideFlags: 0
