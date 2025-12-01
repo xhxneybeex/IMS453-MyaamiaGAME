@@ -36,10 +36,13 @@ public class InventoryManager : MonoBehaviour
 
     public List<Item> Items = new List<Item>();
 
-    public bool MugCollected = false;
-    public bool GlovesCollected = false;
+    public static int currentTwoPages = 1;
 
-    public bool CoatCollected = false;
+    public static bool MugCollected = false;
+    public static bool GlovesCollected = false;
+
+    public static bool CoatCollected = false;
+
 
     //public InventoryItemController iic;
 
@@ -116,26 +119,9 @@ public class InventoryManager : MonoBehaviour
         Debug.Log("on items pages");
         polaroidL.SetActive(true);
         polaroidR.SetActive(true);
-        if (MugCollected == true)
-        {
-            MugText.gameObject.SetActive(true);
-            MugSprite.gameObject.SetActive(true);
-        }
-
-        if (GlovesCollected == true)
-        {
-            GlovesText.gameObject.SetActive(true);
-            GlovesSprite.gameObject.SetActive(true);
-            PlayGloves.gameObject.SetActive(true);
-        }
-
-        if (CoatCollected == true)
-        {
-            CoatText.gameObject.SetActive(true);
-            CoatSprite.gameObject.SetActive(true);
-            PlayCoat.gameObject.SetActive(true);
-            Debug.Log("this else if ran");
-        }
+        GlovesPolaroid();
+        CoatPolaroid();
+        MugPolaroid();
     }
 
 
@@ -169,10 +155,66 @@ public class InventoryManager : MonoBehaviour
         Debug.Log("playing glove sound");
     }
 
-     public void PlayCoatAudio()
+    public void PlayCoatAudio()
     {
         coat.Play();
         Debug.Log("playing coat sound");
+    }
+
+    public void PreviousPage()
+    {
+        if (currentTwoPages > 1 && currentTwoPages < 12)
+        {
+            currentTwoPages--;
+            if (currentTwoPages == 1)
+            {
+                GlovesPolaroid();
+                CoatPolaroid();
+            }
+        }
+    }
+
+    public void NextPage()
+    {
+        currentTwoPages++;
+        if (currentTwoPages > 1 && currentTwoPages < 12)
+        {
+            if (currentTwoPages == 1)
+            {
+                GlovesPolaroid();
+                CoatPolaroid();
+            }
+        }
+    }
+
+    public void GlovesPolaroid()
+    {
+        if (GlovesCollected == true)
+        {
+            GlovesText.gameObject.SetActive(true);
+            GlovesSprite.gameObject.SetActive(true);
+            PlayGloves.gameObject.SetActive(true);
+        }
+    }
+
+    public void CoatPolaroid()
+    {
+        if (GlovesCollected == true)
+        {
+            GlovesText.gameObject.SetActive(true);
+            GlovesSprite.gameObject.SetActive(true);
+            PlayGloves.gameObject.SetActive(true);
+        }
+    }
+
+    public void MugPolaroid()
+    {
+        if (GlovesCollected == true)
+        {
+            GlovesText.gameObject.SetActive(true);
+            GlovesSprite.gameObject.SetActive(true);
+            PlayGloves.gameObject.SetActive(true);
+        }
     }
 }
 
