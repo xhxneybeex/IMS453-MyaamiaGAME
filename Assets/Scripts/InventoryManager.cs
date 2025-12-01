@@ -10,7 +10,7 @@ public class InventoryManager : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public GameObject InventoryHUD;
-    public GameObject Notification;
+    public GameObject Notif;
 
     public GameObject polaroidL;
     public GameObject polaroidR;
@@ -59,17 +59,28 @@ public class InventoryManager : MonoBehaviour
         Debug.Log("AAAA");
         if (!InventoryHUD.activeInHierarchy)
         {
-            ItemsTab();
+            checkForCollected();
             InventoryHUD.SetActive(true);
             Debug.Log("inventory should be open :)");
-            if (Notification.activeInHierarchy)
+            if (Notif.activeInHierarchy)
             {
-                Notification.gameObject.SetActive(false);
+                Notif.gameObject.SetActive(false);
+                Debug.Log("Notification icon dissappears when inventory opens.");
+                TasksTab();
+            }
+            else
+            {
+                ItemsTab();
             }
         }
         else if (InventoryHUD.activeInHierarchy)
         {
             InventoryHUD.SetActive(false);
+            if (Notif.activeInHierarchy)
+            {
+                Notif.gameObject.SetActive(false);
+                Debug.Log("Notification icon should dissappear when inventory closes.");
+            }
             Debug.Log("inventory should be closed :)");
         }
     }
