@@ -113,7 +113,7 @@ public class DialogueManager : MonoBehaviour
     public void StartDialogue(string character)
     {
         Debug.Log("it just checked for e press for " + character);
-        if (character.Equals("Larry") && inventoryManager.MugCollected == false) //&& enterClicked == true
+        if (character.Equals("Larry") && InventoryManager.MugCollected == false) //&& enterClicked == true
         {
             // person = 
             dialogue.text = currentLine;
@@ -121,14 +121,14 @@ public class DialogueManager : MonoBehaviour
             interactionEnabled = false;
             notificationIcon.SetActive(true);
         }
-        else if (character.Equals("Larry") && inventoryManager.MugCollected == true)
+        else if (character.Equals("Larry") && InventoryManager.MugCollected == true)
         {
             currentLine = "Thanks so much! Now I can get moving.";
             dialogue.text = currentLine;
             dialogueUI.SetActive(true);
             interactionEnabled = false;
         }
-        else if (character.Equals("Mom") && inventoryManager.GlovesCollected == false) //&& enterClicked == true
+        else if (character.Equals("Mom") && InventoryManager.GlovesCollected == false) //&& enterClicked == true
         {
             dialogueUI.SetActive(true);
             Dad.SetActive(false);
@@ -142,7 +142,7 @@ public class DialogueManager : MonoBehaviour
             interactionEnabled = false;
             notificationIcon.SetActive(true);
         }
-        else if (character.Equals("Mom") && inventoryManager.GlovesCollected == true)
+        else if (character.Equals("Mom") && InventoryManager.GlovesCollected == true)
         {
             Dad.SetActive(false);
             Mom.SetActive(true);
@@ -151,7 +151,7 @@ public class DialogueManager : MonoBehaviour
             dialogueUI.SetActive(true);
             interactionEnabled = false;
         }
-        else if (character.Equals("Dad") && inventoryManager.CoatCollected == false) //&& enterClicked == true
+        else if (character.Equals("Dad") && InventoryManager.CoatCollected == false) //&& enterClicked == true
         {
             dialogueUI.SetActive(true);
             Dad.SetActive(true);
@@ -165,7 +165,7 @@ public class DialogueManager : MonoBehaviour
             interactionEnabled = false;
             notificationIcon.SetActive(true);
         }
-        else if (character.Equals("Dad") && inventoryManager.CoatCollected == true)
+        else if (character.Equals("Dad") && InventoryManager.CoatCollected == true)
         {
             Dad.SetActive(true);
             Mom.SetActive(false);

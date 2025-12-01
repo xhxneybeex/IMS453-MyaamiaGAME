@@ -11,6 +11,7 @@ public class InventoryManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public GameObject InventoryHUD;
     public GameObject Notification;
+    public UI ui;
 
     public GameObject polaroidL;
     public GameObject polaroidR;
@@ -66,34 +67,59 @@ public class InventoryManager : MonoBehaviour
         PlayGloves.gameObject.SetActive(false);
     }
 
-    public void OpenJournal()
-    {
-        Debug.Log("AAAA");
-        if (!InventoryHUD.activeInHierarchy)
-        {
-            ItemsTab();
-            InventoryHUD.SetActive(true);
-            Debug.Log("inventory should be open :)");
-            if (Notification.activeInHierarchy)
-            {
-                Notification.gameObject.SetActive(false);
-            }
-        }
-        else if (InventoryHUD.activeInHierarchy)
-        {
-            InventoryHUD.SetActive(false);
-            Debug.Log("inventory should be closed :)");
-        }
-    }
+    /* public void OpenJournal()
+     {
+
+
+         Debug.Log("AAAA");
+         if (!InventoryHUD.activeInHierarchy)
+         {
+             ItemsTab();
+             InventoryHUD.SetActive(true);
+             Debug.Log("inventory should be open :)");
+
+             if (currentTwoPages == 1 && UI.journalActive == true)
+             {
+                 Debug.Log("should be showing gloves and/or coat rn");
+                 GlovesPolaroid();
+                 CoatPolaroid();
+             }
+
+             if (Notification.activeInHierarchy)
+             {
+                 Notification.gameObject.SetActive(false);
+             }
+         }
+         else if (InventoryHUD.activeInHierarchy)
+         {
+             InventoryHUD.SetActive(false);
+             Debug.Log("inventory should be closed :)");
+         }
+     } */
     void Start()
     {
         InventoryHUD.SetActive(false);
+        ui = GetComponent<UI>();
     }
 
     // Update is called once per frame
     void Update()
     {
         checkForCollected();
+
+        if (currentTwoPages == 1 && UI.journalActive == true)
+        {
+            Debug.Log("should be showing gloves and/or coat rn");
+            GlovesPolaroid();
+            CoatPolaroid();
+        }
+
+        if (Notification.activeInHierarchy)
+        {
+            Notification.gameObject.SetActive(false);
+        }
+
+
     }
 
     public void TasksTab()
@@ -199,20 +225,20 @@ public class InventoryManager : MonoBehaviour
 
     public void CoatPolaroid()
     {
-        if (GlovesCollected == true)
+        if (CoatCollected == true)
         {
-            GlovesText.gameObject.SetActive(true);
-            GlovesSprite.gameObject.SetActive(true);
-            PlayGloves.gameObject.SetActive(true);
+            CoatText.gameObject.SetActive(true);
+            CoatSprite.gameObject.SetActive(true);
+            PlayCoat.gameObject.SetActive(true);
         }
     }
 
     public void MugPolaroid()
     {
-        if (GlovesCollected == true)
+        if (MugCollected == true)
         {
-            GlovesText.gameObject.SetActive(true);
-            GlovesSprite.gameObject.SetActive(true);
+            MugText.gameObject.SetActive(true);
+            MugSprite.gameObject.SetActive(true);
             PlayGloves.gameObject.SetActive(true);
         }
     }
