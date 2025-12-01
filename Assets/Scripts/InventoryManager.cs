@@ -13,6 +13,8 @@ public class InventoryManager : MonoBehaviour
     public GameObject Notification;
     public UI ui;
 
+    public GameObject left;
+    public GameObject right;
     public GameObject polaroidL;
     public GameObject polaroidR;
     public TextMeshProUGUI MugText;
@@ -132,6 +134,8 @@ public class InventoryManager : MonoBehaviour
         Debug.Log("on tasks pages");
         polaroidL.SetActive(false);
         polaroidR.SetActive(false);
+        left.SetActive(false);
+        right.SetActive(false);
         MugText.gameObject.SetActive(false);
         MugSprite.gameObject.SetActive(false);
         GlovesText.gameObject.SetActive(false);
@@ -149,6 +153,8 @@ public class InventoryManager : MonoBehaviour
         Debug.Log("on items pages");
         polaroidL.SetActive(true);
         polaroidR.SetActive(true);
+        left.SetActive(true);
+        right.SetActive(true);
         GlovesPolaroid();
         CoatPolaroid();
         MugPolaroid();
@@ -201,6 +207,10 @@ public class InventoryManager : MonoBehaviour
             {
                 GlovesPolaroid();
                 CoatPolaroid();
+            } else
+            {
+                GlovesOff();
+                CoatOff();
             }
         }
     }
@@ -214,6 +224,11 @@ public class InventoryManager : MonoBehaviour
             {
                 GlovesPolaroid();
                 CoatPolaroid();
+            }
+            else
+            {
+                GlovesOff();
+                CoatOff();
             }
         }
     }
@@ -230,6 +245,14 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
+    public void GlovesOff()
+    {
+        GlovesText.gameObject.SetActive(false);
+        GlovesSprite.gameObject.SetActive(false);
+        PlayGloves.gameObject.SetActive(false);
+        gloveAud.SetActive(false);
+    }
+
     public void CoatPolaroid()
     {
         if (CoatCollected == true)
@@ -241,6 +264,14 @@ public class InventoryManager : MonoBehaviour
             coat.Stop();
 
         }
+    }
+
+    public void CoatOff()
+    {
+        CoatText.gameObject.SetActive(false);
+        CoatSprite.gameObject.SetActive(false);
+        PlayCoat.gameObject.SetActive(false);
+        coatAud.SetActive(false);
     }
 
     public void MugPolaroid()
