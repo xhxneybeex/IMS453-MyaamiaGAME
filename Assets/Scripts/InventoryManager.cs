@@ -29,6 +29,10 @@ public class InventoryManager : MonoBehaviour
 
     public GameObject PlayCoat;
 
+    public GameObject gloveAud;
+
+    public GameObject coatAud;
+
     public AudioSource gloves;
     public AudioSource coat;
 
@@ -177,6 +181,7 @@ public class InventoryManager : MonoBehaviour
 
     public void PlayGloveAudio()
     {
+        PlayGloves.SetActive(true);
         gloves.Play();
         Debug.Log("playing glove sound");
     }
@@ -220,6 +225,8 @@ public class InventoryManager : MonoBehaviour
             GlovesText.gameObject.SetActive(true);
             GlovesSprite.gameObject.SetActive(true);
             PlayGloves.gameObject.SetActive(true);
+            gloveAud.SetActive(true);
+            gloves.Stop();
         }
     }
 
@@ -230,6 +237,9 @@ public class InventoryManager : MonoBehaviour
             CoatText.gameObject.SetActive(true);
             CoatSprite.gameObject.SetActive(true);
             PlayCoat.gameObject.SetActive(true);
+            coatAud.SetActive(true);
+            coat.Stop();
+
         }
     }
 
