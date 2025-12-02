@@ -11,7 +11,10 @@ public class InventoryManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public GameObject InventoryHUD;
     public GameObject Notification;
+    public UI ui;
 
+    public GameObject left;
+    public GameObject right;
     public GameObject polaroidL;
     public GameObject polaroidR;
     public TextMeshProUGUI MugText;
@@ -24,15 +27,29 @@ public class InventoryManager : MonoBehaviour
     public TextMeshProUGUI CoatText;
     public Image CoatSprite;
 
+    public GameObject PlayGloves;
+
+    public GameObject PlayCoat;
+
+    public GameObject gloveAud;
+
+    public GameObject coatAud;
+
+    public AudioSource gloves;
+    public AudioSource coat;
+
 
     public static InventoryManager Instance;
 
     public List<Item> Items = new List<Item>();
 
-    public bool MugCollected = false;
-    public bool GlovesCollected = false;
+    public static int currentTwoPages = 1;
 
-    public bool CoatCollected = false;
+    public static bool MugCollected = false;
+    public static bool GlovesCollected = false;
+
+    public static bool CoatCollected = false;
+
 
     //public InventoryItemController iic;
 
@@ -52,36 +69,63 @@ public class InventoryManager : MonoBehaviour
         GlovesSprite.gameObject.SetActive(false);
         CoatText.gameObject.SetActive(false);
         CoatSprite.gameObject.SetActive(false);
+        PlayCoat.gameObject.SetActive(false);
+        PlayGloves.gameObject.SetActive(false);
     }
 
-    public void OpenJournal()
-    {
-        Debug.Log("AAAA");
-        if (!InventoryHUD.activeInHierarchy)
-        {
-            ItemsTab();
-            InventoryHUD.SetActive(true);
-            Debug.Log("inventory should be open :)");
-            if (Notification.activeInHierarchy)
-            {
-                Notification.gameObject.SetActive(false);
-            }
-        }
-        else if (InventoryHUD.activeInHierarchy)
-        {
-            InventoryHUD.SetActive(false);
-            Debug.Log("inventory should be closed :)");
-        }
-    }
+    /* public void OpenJournal()
+     {
+
+
+         Debug.Log("AAAA");
+         if (!InventoryHUD.activeInHierarchy)
+         {
+             ItemsTab();
+             InventoryHUD.SetActive(true);
+             Debug.Log("inventory should be open :)");
+
+             if (currentTwoPages == 1 && UI.journalActive == true)
+             {
+                 Debug.Log("should be showing gloves and/or coat rn");
+                 GlovesPolaroid();
+                 CoatPolaroid();
+             }
+
+             if (Notification.activeInHierarchy)
+             {
+                 Notification.gameObject.SetActive(false);
+             }
+         }
+         else if (InventoryHUD.activeInHierarchy)
+         {
+             InventoryHUD.SetActive(false);
+             Debug.Log("inventory should be closed :)");
+         }
+     } */
     void Start()
     {
         InventoryHUD.SetActive(false);
+        ui = GetComponent<UI>();
     }
 
     // Update is called once per frame
     void Update()
     {
         checkForCollected();
+
+        if (currentTwoPages == 1 && UI.journalActive == true)
+        {
+            Debug.Log("should be showing gloves and/or coat rn");
+            GlovesPolaroid();
+            CoatPolaroid();
+        }
+
+        if (Notification.activeInHierarchy)
+        {
+            Notification.gameObject.SetActive(false);
+        }
+
+
     }
 
     public void TasksTab()
@@ -90,12 +134,16 @@ public class InventoryManager : MonoBehaviour
         Debug.Log("on tasks pages");
         polaroidL.SetActive(false);
         polaroidR.SetActive(false);
+        left.SetActive(false);
+        right.SetActive(false);
         MugText.gameObject.SetActive(false);
         MugSprite.gameObject.SetActive(false);
         GlovesText.gameObject.SetActive(false);
         GlovesSprite.gameObject.SetActive(false);
         CoatText.gameObject.SetActive(false);
         CoatSprite.gameObject.SetActive(false);
+        PlayCoat.gameObject.SetActive(false);
+        PlayGloves.gameObject.SetActive(false);
     }
 
     public void ItemsTab()
@@ -105,24 +153,11 @@ public class InventoryManager : MonoBehaviour
         Debug.Log("on items pages");
         polaroidL.SetActive(true);
         polaroidR.SetActive(true);
-        if (MugCollected == true)
-        {
-            MugText.gameObject.SetActive(true);
-            MugSprite.gameObject.SetActive(true);
-        }
-
-        if (GlovesCollected == true)
-        {
-            GlovesText.gameObject.SetActive(true);
-            GlovesSprite.gameObject.SetActive(true);
-        }
-
-        if (CoatCollected == true)
-        {
-            CoatText.gameObject.SetActive(true);
-            CoatSprite.gameObject.SetActive(true);
-            Debug.Log("this else if ran");
-        }
+        left.SetActive(true);
+        right.SetActive(true);
+        GlovesPolaroid();
+        CoatPolaroid();
+        MugPolaroid();
     }
 
 
@@ -149,4 +184,104 @@ public class InventoryManager : MonoBehaviour
             }
         }
     }
+
+    public void PlayGloveAudio()
+    {
+        PlayGloves.SetActive(true);
+        gloves.Play();
+        Debug.Log("playing glove sound");
+    }
+
+    public void PlayCoatAudio()
+    {
+        coat.Play();
+        Debug.Log("playing coat sound");
+    }
+
+    public void PreviousPage()
+    {
+        if (currentTwoPages > 1 && currentTwoPages < 12)
+        {
+            currentTwoPages--;
+            if (currentTwoPages == 1)
+            {
+                GlovesPolaroid();
+                CoatPolaroid();
+            } else
+            {
+                GlovesOff();
+                CoatOff();
+            }
+        }
+    }
+
+    public void NextPage()
+    {
+        currentTwoPages++;
+        if (currentTwoPages > 1 && currentTwoPages < 12)
+        {
+            if (currentTwoPages == 1)
+            {
+                GlovesPolaroid();
+                CoatPolaroid();
+            }
+            else
+            {
+                GlovesOff();
+                CoatOff();
+            }
+        }
+    }
+
+    public void GlovesPolaroid()
+    {
+        if (GlovesCollected == true)
+        {
+            GlovesText.gameObject.SetActive(true);
+            GlovesSprite.gameObject.SetActive(true);
+            PlayGloves.gameObject.SetActive(true);
+            gloveAud.SetActive(true);
+            gloves.Stop();
+        }
+    }
+
+    public void GlovesOff()
+    {
+        GlovesText.gameObject.SetActive(false);
+        GlovesSprite.gameObject.SetActive(false);
+        PlayGloves.gameObject.SetActive(false);
+        gloveAud.SetActive(false);
+    }
+
+    public void CoatPolaroid()
+    {
+        if (CoatCollected == true)
+        {
+            CoatText.gameObject.SetActive(true);
+            CoatSprite.gameObject.SetActive(true);
+            PlayCoat.gameObject.SetActive(true);
+            coatAud.SetActive(true);
+            coat.Stop();
+
+        }
+    }
+
+    public void CoatOff()
+    {
+        CoatText.gameObject.SetActive(false);
+        CoatSprite.gameObject.SetActive(false);
+        PlayCoat.gameObject.SetActive(false);
+        coatAud.SetActive(false);
+    }
+
+    public void MugPolaroid()
+    {
+        if (MugCollected == true)
+        {
+            MugText.gameObject.SetActive(true);
+            MugSprite.gameObject.SetActive(true);
+            PlayGloves.gameObject.SetActive(true);
+        }
+    }
 }
+
