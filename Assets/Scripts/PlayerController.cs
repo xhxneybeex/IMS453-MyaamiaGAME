@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
     {
         controller = GetComponent<CharacterController>();
         animator = GetComponentInChildren<Animator>();
-        if ((SceneManager.GetActiveScene().name == "Level_1_Exterior") || (SceneManager.GetActiveScene().name == "Level_2_Exterior"))
+        if ((SceneManager.GetActiveScene().name == "Level_1_Exterior") || (SceneManager.GetActiveScene().name == "Level_2_Exterior") || (SceneManager.GetActiveScene().name == "Town_Exterior"))
         {
             SceneController.is2DScene = false;
         } else
