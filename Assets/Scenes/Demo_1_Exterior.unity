@@ -777,8 +777,49 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6193871268688886045, guid: 88bdf5943942e29459753f5835c5267c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 780908766}
   m_SourcePrefab: {fileID: 100100000, guid: 88bdf5943942e29459753f5835c5267c, type: 3}
+--- !u!1 &780908765 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6193871268688886045, guid: 88bdf5943942e29459753f5835c5267c, type: 3}
+  m_PrefabInstance: {fileID: 780908764}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &780908766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 780908765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 464b621adc005bb439c3e033431abcfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
+  InventoryHUD: {fileID: 0}
+  Notification: {fileID: 0}
+  ui: {fileID: 0}
+  left: {fileID: 0}
+  right: {fileID: 0}
+  polaroidL: {fileID: 0}
+  polaroidR: {fileID: 0}
+  MugText: {fileID: 0}
+  tasks: {fileID: 0}
+  MugSprite: {fileID: 0}
+  GlovesText: {fileID: 0}
+  GlovesSprite: {fileID: 0}
+  CoatText: {fileID: 0}
+  CoatSprite: {fileID: 0}
+  PlayGloves: {fileID: 0}
+  PlayCoat: {fileID: 0}
+  gloveAud: {fileID: 0}
+  coatAud: {fileID: 0}
+  gloves: {fileID: 0}
+  coat: {fileID: 0}
+  Items: []
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
