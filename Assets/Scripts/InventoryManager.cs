@@ -145,7 +145,7 @@ public class InventoryManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        checkForCollected();
+        //checkForCollected();
 
         if (currentTwoPages == 1 && UI.journalActive == true)
         {

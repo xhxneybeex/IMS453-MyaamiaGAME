@@ -28,6 +28,9 @@ public class DialogueManager : MonoBehaviour
 
     public string tasksInBook  = "";
     public string currentChar = "";
+
+    public bool talkedToMom = false;
+    public bool talkedToDad = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -134,13 +137,17 @@ public class DialogueManager : MonoBehaviour
             Dad.SetActive(false);
             Mom.SetActive(true);
             currentLine = "You can play outside for a little while, but be careful! No going out without your alencihkana.\n";
-            tasksInBook += "\nmom needs me to find my alencihkana\n";
+            if (talkedToMom == false)
+            {
+                tasksInBook += "\nmom needs me to find my alencihkana\n";
+                notificationIcon.SetActive(true);
+            }
             characterNotif = "Mom";
             tasks.text = tasksInBook;
             dialogue.text = currentLine;
             dialogueUI.SetActive(true);
             interactionEnabled = false;
-            notificationIcon.SetActive(true);
+            talkedToMom = true;
         }
         else if (character.Equals("Mom") && InventoryManager.GlovesCollected == true)
         {
@@ -157,13 +164,17 @@ public class DialogueManager : MonoBehaviour
             Dad.SetActive(true);
             Mom.SetActive(false);
             currentLine = "Make sure you’re bundled up in your keehpakiikinki naapinaakani before you go outside, kiddo! It’s a cold one!";
-            tasksInBook += "\ndad needs me to find my keehpakiikinki naapinaakani.\n";
+            if (talkedToDad == false)
+            {
+                tasksInBook += "\ndad needs me to find my keehpakiikinki naapinaakani.\n";
+                notificationIcon.SetActive(true);
+            }
             characterNotif = "Dad";
             tasks.text = tasksInBook;
             dialogue.text = currentLine;
             dialogueUI.SetActive(true);
             interactionEnabled = false;
-            notificationIcon.SetActive(true);
+            talkedToDad = true;
         }
         else if (character.Equals("Dad") && InventoryManager.CoatCollected == true)
         {
