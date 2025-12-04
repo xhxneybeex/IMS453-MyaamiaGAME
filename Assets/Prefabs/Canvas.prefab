@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1118348650083043827
 RectTransform:
   m_ObjectHideFlags: 0
@@ -703,7 +703,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -320.99997, y: 226.99997}
+  m_AnchoredPosition: {x: -334.2, y: 226.99997}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6674815474777805543
@@ -736,15 +736,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'To-Do: '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: fee102305de4d0440b3a294757a3566a, type: 2}
+  m_sharedMaterial: {fileID: 2458763840689805232, guid: fee102305de4d0440b3a294757a3566a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -761,13 +761,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 32
+  m_fontSizeBase: 32
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -1483,8 +1483,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: no current or past tasks
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 46eca3fe242e8cc46aa31eba8bdb19f9, type: 2}
+  m_sharedMaterial: {fileID: -4937991177600866142, guid: 46eca3fe242e8cc46aa31eba8bdb19f9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1508,8 +1508,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
-  m_fontSizeBase: 18
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4051,7 +4051,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1715093312308648375, guid: 35df36f1a9b5b754cb797db923df569c, type: 3}
       propertyPath: m_text
+      value: jkbbbkjbjk
+      objectReference: {fileID: 0}
+    - target: {fileID: 1715093312308648375, guid: 35df36f1a9b5b754cb797db923df569c, type: 3}
+      propertyPath: m_fontSize
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 1715093312308648375, guid: 35df36f1a9b5b754cb797db923df569c, type: 3}
+      propertyPath: m_margin.y
+      value: 4.2268295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1715093312308648375, guid: 35df36f1a9b5b754cb797db923df569c, type: 3}
+      propertyPath: m_fontAsset
       value: 
+      objectReference: {fileID: 11400000, guid: fee102305de4d0440b3a294757a3566a, type: 2}
+    - target: {fileID: 1715093312308648375, guid: 35df36f1a9b5b754cb797db923df569c, type: 3}
+      propertyPath: m_fontStyle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1715093312308648375, guid: 35df36f1a9b5b754cb797db923df569c, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 1715093312308648375, guid: 35df36f1a9b5b754cb797db923df569c, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2458763840689805232, guid: fee102305de4d0440b3a294757a3566a, type: 2}
+    - target: {fileID: 1715093312308648375, guid: 35df36f1a9b5b754cb797db923df569c, type: 3}
+      propertyPath: m_characterSpacing
+      value: 20.09
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9182004019083369081, guid: 35df36f1a9b5b754cb797db923df569c, type: 3}
