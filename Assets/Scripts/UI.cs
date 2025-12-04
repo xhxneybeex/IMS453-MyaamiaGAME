@@ -8,6 +8,8 @@ public class UI : MonoBehaviour
     [SerializeField] private GameObject settingsMenu;
     [SerializeField] private GameObject inventoryManager;
 
+    public static bool journalActive = false;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -44,6 +46,7 @@ public class UI : MonoBehaviour
     public void ToggleJournal()
     {
         //journalMenu.SetActive(!journalMenu.activeSelf);
+        //journalActive = !journalActive;
         inventoryManager.GetComponent<InventoryManager>().OpenJournal();
     }
 }

@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
     {
         controller = GetComponent<CharacterController>();
         animator = GetComponentInChildren<Animator>();
-        if ((SceneManager.GetActiveScene().name == "Level_1_Exterior") || (SceneManager.GetActiveScene().name == "Level_2_Exterior"))
+        if ((SceneManager.GetActiveScene().name == "Level_1_Exterior") || (SceneManager.GetActiveScene().name == "Level_2_Exterior") || (SceneManager.GetActiveScene().name == "Town_Exterior"))
         {
             SceneController.is2DScene = false;
         } else
@@ -61,6 +61,9 @@ public class PlayerController : MonoBehaviour
 
         // Optional debug:
         Debug.Log($"animX={animX}, animY={animY}, isMoving={isMoving}");
+
+        Camera.main.transform.localRotation = Quaternion.Euler(20f, 0f, 0f);
+        Camera.main.transform.localPosition = new Vector3(0f, 3.1f, -7.63f);
     }
 
     void Movement2D()
@@ -90,6 +93,8 @@ public class PlayerController : MonoBehaviour
 
         // Stop animating when idle (so feet stop)
         animator.speed = isMoving ? 1f : 0f;
+        Camera.main.transform.localPosition = new Vector3(0f, 0f, -7.63f);
+        Camera.main.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
     }
 }
 

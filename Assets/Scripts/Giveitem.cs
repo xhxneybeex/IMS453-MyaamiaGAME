@@ -62,4 +62,9 @@ public class Giveitem : MonoBehaviour
             }
         }
     }
+    private void OnTriggerExit()
+    {
+        DialogueManager.interactionEnabled = false;
+        Debug.Log("You can no longer start dialogue");
+    }
 }

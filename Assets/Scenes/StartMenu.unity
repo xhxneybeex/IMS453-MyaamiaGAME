@@ -505,6 +505,67 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
+--- !u!1001 &859604333
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1678017394843746008, guid: ae8381ce8ffa92649967371e0c3ec46d, type: 3}
+      propertyPath: trackOnEntry
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7281265258193102866, guid: ae8381ce8ffa92649967371e0c3ec46d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.73822
+      objectReference: {fileID: 0}
+    - target: {fileID: 7281265258193102866, guid: ae8381ce8ffa92649967371e0c3ec46d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7281265258193102866, guid: ae8381ce8ffa92649967371e0c3ec46d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5.94217
+      objectReference: {fileID: 0}
+    - target: {fileID: 7281265258193102866, guid: ae8381ce8ffa92649967371e0c3ec46d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7281265258193102866, guid: ae8381ce8ffa92649967371e0c3ec46d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7281265258193102866, guid: ae8381ce8ffa92649967371e0c3ec46d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7281265258193102866, guid: ae8381ce8ffa92649967371e0c3ec46d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7281265258193102866, guid: ae8381ce8ffa92649967371e0c3ec46d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7281265258193102866, guid: ae8381ce8ffa92649967371e0c3ec46d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7281265258193102866, guid: ae8381ce8ffa92649967371e0c3ec46d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8583443870981329626, guid: ae8381ce8ffa92649967371e0c3ec46d, type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ae8381ce8ffa92649967371e0c3ec46d, type: 3}
 --- !u!1 &933615633
 GameObject:
   m_ObjectHideFlags: 0
@@ -564,8 +625,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Pihkateewi
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b925be5e0022c544a8f99dfa00e5f338, type: 2}
-  m_sharedMaterial: {fileID: -3548097959321749894, guid: b925be5e0022c544a8f99dfa00e5f338, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -923,6 +984,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34423b226754fb040aaadbf6719d383d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneController
+  sceneToLoad: 
+  to2DScene: 0
   exitScreen: {fileID: 8530000814434792313, guid: aa305e36ee3141e459069f0c209ffa2f, type: 3}
   settingsScreen: {fileID: 4054312576594662219, guid: 5f85d0bb6abbdea4884045599c74c45c, type: 3}
 --- !u!1 &2114622586
@@ -984,8 +1047,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Start
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b925be5e0022c544a8f99dfa00e5f338, type: 2}
-  m_sharedMaterial: {fileID: -3548097959321749894, guid: b925be5e0022c544a8f99dfa00e5f338, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1069,3 +1132,4 @@ SceneRoots:
   - {fileID: 470502624}
   - {fileID: 357578654}
   - {fileID: 278562879}
+  - {fileID: 859604333}

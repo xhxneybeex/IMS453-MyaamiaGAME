@@ -12,18 +12,24 @@ public class ItemPickup : MonoBehaviour
 
     private RaycastHit hit;
 
+    [SerializeField] public static bool thisHasBeenCollected = false;
+
 
     private void Awake()
     {
         playerController = GetComponent<PlayerController>();
         camera = Camera.main;
-
-
+        if (thisHasBeenCollected == true)
+        {
+            InventoryManager.Instance.Add(Item);
+            Destroy(gameObject);
+        }
     }
 
     void Pickup()
     {
         InventoryManager.Instance.Add(Item);
+        thisHasBeenCollected = true;
         Destroy(gameObject);
     }
 
