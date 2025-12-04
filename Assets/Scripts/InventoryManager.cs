@@ -65,6 +65,14 @@ public class InventoryManager : MonoBehaviour
         checkForCollected();
         Instance = this;
         tasks.SetActive(false);
+        MugText.gameObject.SetActive(false);
+        MugSprite.gameObject.SetActive(false);
+        GlovesText.gameObject.SetActive(false);
+        GlovesSprite.gameObject.SetActive(false);
+        CoatText.gameObject.SetActive(false);
+        CoatSprite.gameObject.SetActive(false);
+        PlayCoat.gameObject.SetActive(false);
+        PlayGloves.gameObject.SetActive(false);
     }
 
     /*public void OpenJournal()
@@ -101,7 +109,7 @@ public class InventoryManager : MonoBehaviour
         {
             InventoryHUD.SetActive(true);
             Debug.Log("inventory should be open :)");
-
+            
             if (Notif.activeInHierarchy)
             {
                 Notif.gameObject.SetActive(false);
@@ -113,9 +121,9 @@ public class InventoryManager : MonoBehaviour
                 ItemsTab();
                 if (currentTwoPages == 1 && UI.journalActive == true)
                 {
-                    Debug.Log("should be showing gloves and/or coat rn");
-                    GlovesPolaroid();
-                    CoatPolaroid();
+                 Debug.Log("should be showing gloves and/or coat rn");
+                 GlovesPolaroid();
+                 CoatPolaroid();
                 }
             }
         }
@@ -192,46 +200,18 @@ public class InventoryManager : MonoBehaviour
             {
                 MugCollected = true;
                 Debug.Log("mug was collected");
-                MugText.gameObject.SetActive(true);
-                MugSprite.gameObject.SetActive(true);
-
-
-            }
-            else
-            {
-                MugText.gameObject.SetActive(false);
-                MugSprite.gameObject.SetActive(false);
             }
 
             if (i.id == 6)
             {
                 GlovesCollected = true;
                 Debug.Log("gloves were collected"); //it's running this when the coat is collected...?
-                GlovesText.gameObject.SetActive(true);
-                GlovesSprite.gameObject.SetActive(true);
-                PlayGloves.gameObject.SetActive(true);
-
-            }
-            else
-            {
-                GlovesText.gameObject.SetActive(false);
-                GlovesSprite.gameObject.SetActive(false);
-                PlayGloves.gameObject.SetActive(false);
             }
 
             if (i.id == 7)
             {
                 CoatCollected = true;
-                CoatText.gameObject.SetActive(true);
-                CoatSprite.gameObject.SetActive(true);
-                PlayCoat.gameObject.SetActive(true);
                 Debug.Log("coat was collected");
-            }
-            else
-            {
-                CoatText.gameObject.SetActive(false);
-                CoatSprite.gameObject.SetActive(false);
-                PlayCoat.gameObject.SetActive(false);
             }
         }
     }
@@ -258,8 +238,7 @@ public class InventoryManager : MonoBehaviour
             {
                 GlovesPolaroid();
                 CoatPolaroid();
-            }
-            else
+            } else
             {
                 GlovesOff();
                 CoatOff();

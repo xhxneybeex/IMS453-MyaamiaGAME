@@ -3,6 +3,7 @@ using UnityEngine;
 public class ItemPickup : MonoBehaviour
 {
     public Item Item;
+    public InventoryManager inventoryM;
 
     public GameObject player;
 
@@ -14,36 +15,59 @@ public class ItemPickup : MonoBehaviour
 
     [SerializeField] public static bool thisHasBeenCollected = false;
 
+    public bool isGloves;
+    public bool isCoat;
+
 
     private void Awake()
     {
         playerController = GetComponent<PlayerController>();
         camera = Camera.main;
-        if (thisHasBeenCollected == true)
+        if (InventoryManager.CoatCollected == true && isCoat == true)
         {
-            InventoryManager.Instance.Add(Item);
-            Destroy(gameObject);
+            gameObject.SetActive(false);
+        }
+        else if (InventoryManager.GlovesCollected == true && isGloves == true)
+        {
+            gameObject.SetActive(false);
+        } else
+        {
+            gameObject.SetActive(true);
         }
     }
 
-    void Pickup()
+
+void Pickup()
+{
+    InventoryManager.Instance.Add(Item);
+    thisHasBeenCollected = true;
+
+    if (isGloves)
     {
-        InventoryManager.Instance.Add(Item);
-        thisHasBeenCollected = true;
-        Destroy(gameObject);
+        InventoryManager.GlovesCollected = true;
+        Debug.Log("gloves collected was set to true");
+    }
+    else if (isCoat)
+    {
+        InventoryManager.CoatCollected = true;
+        Debug.Log("coat collected was set to true");
     }
 
-    private void OnMouseDown()
+
+    gameObject.SetActive(false);
+}
+
+private void OnMouseDown()
+{
+
+    Pickup();
+    Debug.Log("iT WORKED");
+
+
+    /*if (Physics.Raycast(camera.transform.position, camera.transform.TransformDirection(Vector3.up), out hit, Mathf.Max(5)))
     {
-        
-            Pickup();
-            Debug.Log("iT WORKED");
-        
-        
-        /*if (Physics.Raycast(camera.transform.position, camera.transform.TransformDirection(Vector3.up), out hit, Mathf.Max(5)))
-        {
-            Pickup();
-            Debug.Log("");
-        }*/
-    }
+        Pickup();
+        Debug.Log("");
+    }*/
+}
 }

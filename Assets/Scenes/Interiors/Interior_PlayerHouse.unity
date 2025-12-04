@@ -1257,6 +1257,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1722440165}
+    - target: {fileID: 5919365180574316937, guid: 622b7eb6dd688264dbf78193d844eeb9, type: 3}
+      propertyPath: inventoryM
+      value: 
+      objectReference: {fileID: 821119752}
     - target: {fileID: 6196594274587745681, guid: 622b7eb6dd688264dbf78193d844eeb9, type: 3}
       propertyPath: m_Name
       value: Coat
@@ -1794,8 +1798,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemPickup
   Item: {fileID: 11400000, guid: eaa417d811a8fb147a6ec3d7b70df76a, type: 2}
+  inventoryM: {fileID: 0}
   player: {fileID: 0}
   camera: {fileID: 0}
+  thisHasBeenCollected: 0
+  isGloves: 0
+  isCoat: 0
 --- !u!114 &493687392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4635,6 +4643,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1722440165}
+    - target: {fileID: 7096806264783955753, guid: 2e23aaeb54e18a543b5ebf636c3342b1, type: 3}
+      propertyPath: inventoryM
+      value: 
+      objectReference: {fileID: 821119752}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
