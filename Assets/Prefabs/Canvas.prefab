@@ -3952,7 +3952,7 @@ PrefabInstance:
     - target: {fileID: 434653983900467719, guid: 35df36f1a9b5b754cb797db923df569c, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 2810a7fd75f2eda4f9e85a74a8c1ae98, type: 3}
+      objectReference: {fileID: 21300000, guid: 5f905f7a2fa925a49a69c621c8da5e3e, type: 3}
     - target: {fileID: 642353757397891776, guid: 35df36f1a9b5b754cb797db923df569c, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4176,6 +4176,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4919281671475512641, guid: aabbb6398c9ce9b47974a74a0d52a224, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 38078ca122be56b42a676c486c6b83cf, type: 3}
     - target: {fileID: 6175998830267511959, guid: aabbb6398c9ce9b47974a74a0d52a224, type: 3}
       propertyPath: m_Name
       value: Mom
