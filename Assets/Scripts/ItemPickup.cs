@@ -12,6 +12,8 @@ public class ItemPickup : MonoBehaviour
 
     private RaycastHit hit;
 
+    [SerializeField] public static GameObject thisObject;
+
 
     private void Awake()
     {
@@ -25,7 +27,7 @@ public class ItemPickup : MonoBehaviour
     void Pickup()
     {
         InventoryManager.Instance.Add(Item);
-        Destroy(gameObject);
+        Destroy(thisObject);
     }
 
     private void OnMouseDown()
