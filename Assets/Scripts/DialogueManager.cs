@@ -19,9 +19,9 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] public GameObject Dad;
 
     public bool interactionEnabled = false;
-    private bool dialogueActive = false;
+    //private bool dialogueActive = false;
     public bool enterClicked = false;
-    private int currentFlag = 0;
+    //private int currentFlag = 0;
     public String characterNotif = "Larry";
 
     public string currentLine = "Oh, hi. Isn’t it so hard getting up in the morning? I always need something to wake me up. I really need my kociihsaapowi minehkwaakani, but it takes so much energy to get up. Could you bring it to me? I think I left it on the atoohpooni?";
@@ -57,6 +57,9 @@ public class DialogueManager : MonoBehaviour
         {
             dialogueUI.SetActive(false);
             ShowTextNotification(characterNotif);
+            tasks.text = tasksInBook;
+            Dad.SetActive(false);
+            Mom.SetActive(false);
         }
         // If dialogue is active...
         /*  if (dialogueActive)
@@ -139,11 +142,11 @@ public class DialogueManager : MonoBehaviour
             currentLine = "You can play outside for a little while, but be careful! No going out without your alencihkana.\n";
             if (talkedToMom == false)
             {
-                tasksInBook += "\nmom needs me to find my alencihkana\n";
+                tasksInBook += "Mom needs me to find my alencihkana\n";
                 notificationIcon.SetActive(true);
             }
             characterNotif = "Mom";
-            tasks.text = tasksInBook;
+            //tasks.text = tasksInBook;
             dialogue.text = currentLine;
             dialogueUI.SetActive(true);
             interactionEnabled = false;
@@ -154,6 +157,8 @@ public class DialogueManager : MonoBehaviour
             Dad.SetActive(false);
             Mom.SetActive(true);
             currentLine = "That should help keep you warm!";
+            tasksInBook = tasksInBook.Replace("Mom needs me to find my alencihkana\n", "");
+            tasksInBook = tasksInBook.Replace("You walked by the alencihkana\n", "");
             dialogue.text = currentLine;
             dialogueUI.SetActive(true);
             interactionEnabled = false;
@@ -166,11 +171,11 @@ public class DialogueManager : MonoBehaviour
             currentLine = "Make sure you’re bundled up in your keehpakiikinki naapinaakani before you go outside, kiddo! It’s a cold one!";
             if (talkedToDad == false)
             {
-                tasksInBook += "\ndad needs me to find my keehpakiikinki naapinaakani.\n";
+                tasksInBook += "Dad needs me to find my keehpakiikinki naapinaakani.\n";
                 notificationIcon.SetActive(true);
             }
             characterNotif = "Dad";
-            tasks.text = tasksInBook;
+            //tasks.text = tasksInBook;
             dialogue.text = currentLine;
             dialogueUI.SetActive(true);
             interactionEnabled = false;
@@ -181,6 +186,8 @@ public class DialogueManager : MonoBehaviour
             Dad.SetActive(true);
             Mom.SetActive(false);
             currentLine = "Now you’re ready to brave the cold!";
+            tasksInBook = tasksInBook.Replace("Dad needs me to find my keehpakiikinki naapinaakani.\n", "");
+            tasksInBook = tasksInBook.Replace("You walked by the keehpakiikinki naapinaakani\n", "");
             dialogue.text = currentLine;
             dialogueUI.SetActive(true);
             interactionEnabled = false;

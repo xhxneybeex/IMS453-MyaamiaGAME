@@ -19,6 +19,7 @@ public class ItemPickup : MonoBehaviour
         camera = Camera.main;
 
 
+
     }
 
     void Pickup()

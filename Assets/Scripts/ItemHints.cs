@@ -22,7 +22,9 @@ public class ItemHints : MonoBehaviour
             Debug.Log("you entered the trigger for gloves");
             if (dm.talkedToMom == true)
             {
-                dm.tasksInBook += "\nYou walked by the alencihkana\n";
+                this.gameObject.SetActive(false);
+                //dm.tasksInBook += "\nYou walked by the alencihkana\n";
+                dm.tasksInBook = dm.tasksInBook.Replace("Mom needs me to find my alencihkana\n", "You walked by the alencihkana\n");
                 Debug.Log("it should be updating tasksinbook now");
             }
             glovesHintAdded = true;
@@ -31,11 +33,14 @@ public class ItemHints : MonoBehaviour
             Debug.Log("You entered the trigger for the coat");
             if (dm.talkedToDad == true)
             {
-                dm.tasksInBook += "\nYou walked by the keehpakiikinki naapinaakani\n";
+                this.gameObject.SetActive(false);
+                //dm.tasksInBook += "\nYou walked by the keehpakiikinki naapinaakani\n";
+                dm.tasksInBook = dm.tasksInBook.Replace("Dad needs me to find my keehpakiikinki naapinaakani.\n", "You walked by the keehpakiikinki naapinaakani\n");
                 Debug.Log("it should be updating tasksinbook now");
             }
             coatHintAdded = true;
         }
+        dm.tasks.text = dm.tasksInBook;
     }
 
     public void Update()

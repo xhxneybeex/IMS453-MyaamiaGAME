@@ -61,6 +61,9 @@ public class PlayerController : MonoBehaviour
 
         // Optional debug:
         Debug.Log($"animX={animX}, animY={animY}, isMoving={isMoving}");
+
+        Camera.main.transform.localRotation = Quaternion.Euler(20f, 0f, 0f);
+        Camera.main.transform.localPosition = new Vector3(0f, 3.1f, -7.63f);
     }
 
     void Movement2D()
@@ -90,6 +93,8 @@ public class PlayerController : MonoBehaviour
 
         // Stop animating when idle (so feet stop)
         animator.speed = isMoving ? 1f : 0f;
+        Camera.main.transform.localPosition = new Vector3(0f, 0f, -7.63f);
+        Camera.main.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
     }
 }
 
