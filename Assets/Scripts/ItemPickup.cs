@@ -21,6 +21,7 @@ public class ItemPickup : MonoBehaviour
         camera = Camera.main;
         if (thisHasBeenCollected == true)
         {
+            InventoryManager.Instance.Add(Item);
             Destroy(gameObject);
         }
     }
