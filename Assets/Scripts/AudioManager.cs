@@ -10,19 +10,12 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioClip[] musicTracks;
     [SerializeField] private AudioClip[] sfxTracks;
 
+    [SerializeField] private int trackOnEntry;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        if (SceneManager.GetActiveScene().name == "Level_1_Exterior")
-        {
-            PlayTrack(0);
-        } else if (SceneManager.GetActiveScene().name == "Level_2_Exterior")
-        {
-            PlayTrack(1);
-        } else
-        {
-            PlayTrack(2);
-        }
+        PlayTrack(trackOnEntry);
     }
 
     // Update is called once per frame

@@ -8,9 +8,11 @@ using UnityEngine.Playables;
 
 public class InventoryManager : MonoBehaviour
 {
+    //OFFICIAL EXTERIOR IS TOWN_EXTERIOR
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public GameObject InventoryHUD;
-    public GameObject Notification;
+    public GameObject Notif;
     public UI ui;
 
     public GameObject left;
@@ -73,10 +75,8 @@ public class InventoryManager : MonoBehaviour
         PlayGloves.gameObject.SetActive(false);
     }
 
-    /* public void OpenJournal()
+    /*public void OpenJournal()
      {
-
-
          Debug.Log("AAAA");
          if (!InventoryHUD.activeInHierarchy)
          {
@@ -91,9 +91,9 @@ public class InventoryManager : MonoBehaviour
                  CoatPolaroid();
              }
 
-             if (Notification.activeInHierarchy)
+             if (Notif.activeInHierarchy)
              {
-                 Notification.gameObject.SetActive(false);
+                 Notif.gameObject.SetActive(false);
              }
          }
          else if (InventoryHUD.activeInHierarchy)
@@ -102,6 +102,42 @@ public class InventoryManager : MonoBehaviour
              Debug.Log("inventory should be closed :)");
          }
      } */
+    public void OpenJournal()
+    {
+        Debug.Log("AAAA");
+        if (!InventoryHUD.activeInHierarchy)
+        {
+            InventoryHUD.SetActive(true);
+            Debug.Log("inventory should be open :)");
+            
+            if (Notif.activeInHierarchy)
+            {
+                Notif.gameObject.SetActive(false);
+                Debug.Log("Notification icon dissappears when inventory opens.");
+                TasksTab();
+            }
+            else
+            {
+                ItemsTab();
+                if (currentTwoPages == 1 && UI.journalActive == true)
+                {
+                 Debug.Log("should be showing gloves and/or coat rn");
+                 GlovesPolaroid();
+                 CoatPolaroid();
+                }
+            }
+        }
+        else if (InventoryHUD.activeInHierarchy)
+        {
+            InventoryHUD.SetActive(false);
+            if (Notif.activeInHierarchy)
+            {
+                Notif.gameObject.SetActive(false);
+                Debug.Log("Notification icon should dissappear when inventory closes.");
+            }
+            Debug.Log("inventory should be closed :)");
+        }
+    }
     void Start()
     {
         InventoryHUD.SetActive(false);
@@ -111,18 +147,13 @@ public class InventoryManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        checkForCollected();
+        //checkForCollected();
 
         if (currentTwoPages == 1 && UI.journalActive == true)
         {
             Debug.Log("should be showing gloves and/or coat rn");
             GlovesPolaroid();
             CoatPolaroid();
-        }
-
-        if (Notification.activeInHierarchy)
-        {
-            Notification.gameObject.SetActive(false);
         }
 
 
