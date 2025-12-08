@@ -177,6 +177,7 @@ public class InventoryManager : MonoBehaviour
         itemJournal.transform.GetChild(6).gameObject.SetActive(false); //pepper entry
         itemJournal.transform.GetChild(7).gameObject.SetActive(false); //hairbrush entry
         itemJournal.transform.GetChild(8).gameObject.SetActive(false); //blanket entry
+        itemJournal.transform.GetChild(9).gameObject.SetActive(false); //chair entry
     }
 
     public void ItemsTab()
@@ -283,6 +284,13 @@ public class InventoryManager : MonoBehaviour
         Debug.Log("playing blanket sound");
     }
 
+     public void PlayChairAudio()
+    {
+        itemJournal.transform.GetChild(9).gameObject.GetComponentInChildren<AudioSource>().Play();
+
+        Debug.Log("playing chair sound");
+    }
+
     public void PreviousPage()
     {
         if (currentTwoPages > 1 && currentTwoPages < 11)
@@ -315,6 +323,7 @@ public class InventoryManager : MonoBehaviour
             PepperOff();
             HairOff();
             BlanketOff();
+            ChairOff();
         }
         else if (currentTwoPages == 2)
         {
@@ -327,6 +336,7 @@ public class InventoryManager : MonoBehaviour
             PepperOff();
             HairOff();
             BlanketOff();
+            ChairOff();
         }
         else if (currentTwoPages == 3)
         {
@@ -339,6 +349,7 @@ public class InventoryManager : MonoBehaviour
             PepperOff();
             HairOff();
             BlanketOff();
+            ChairOff();
         }
         else if (currentTwoPages == 4)
         {
@@ -351,10 +362,12 @@ public class InventoryManager : MonoBehaviour
             SaltOff();
             RugOff();
             BlanketOff();
+            ChairOff();
         }
         else if (currentTwoPages == 5)
         {
             BlanketPolaroid();
+            ChairPolaroid();
             GlovesOff();
             CoatOff();
             CoffeeOff();
@@ -375,6 +388,7 @@ public class InventoryManager : MonoBehaviour
             PepperOff();
             HairOff();
             BlanketOff();
+            ChairOff();
         }
 
     }
@@ -527,6 +541,23 @@ public class InventoryManager : MonoBehaviour
     public void BlanketOff()
     {
         itemJournal.transform.GetChild(8).gameObject.SetActive(false); //coffee entry
+
+    }
+
+    public void ChairPolaroid()
+    {
+        //if (MugCollected == true)
+        // {
+        itemJournal.transform.GetChild(9).gameObject.SetActive(true); //coffee entry
+                                                                      //coatAud.SetActive(true);
+                                                                      //coat.Stop();
+
+        // }
+    }
+
+    public void ChairOff()
+    {
+        itemJournal.transform.GetChild(9).gameObject.SetActive(false); //coffee entry
 
     }
 }
