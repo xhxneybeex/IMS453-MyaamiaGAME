@@ -17,6 +17,7 @@ public class ItemPickup : MonoBehaviour
 
     public bool isGloves;
     public bool isCoat;
+    public bool isCoffee;
 
 
     private void Awake()
@@ -52,6 +53,10 @@ public class ItemPickup : MonoBehaviour
         {
             InventoryManager.CoatCollected = true;
             Debug.Log("coat collected was set to true");
+        } else if (isCoffee)
+        {
+            InventoryManager.CoffeeCollected = true;
+            Debug.Log("coffee collected was set to true");
         }
 
 

@@ -119,7 +119,7 @@ public class DialogueManager : MonoBehaviour
     public void StartDialogue(string character)
     {
         Debug.Log("it just checked for e press for " + character);
-        if (character.Equals("Larry") && InventoryManager.MugCollected == false) //&& enterClicked == true
+        if (character.Equals("Larry") && InventoryManager.CoffeeCollected == false) //&& enterClicked == true
         {
             // person = 
             dialogue.text = currentLine;
@@ -127,7 +127,7 @@ public class DialogueManager : MonoBehaviour
             interactionEnabled = false;
             notificationIcon.SetActive(true);
         }
-        else if (character.Equals("Larry") && InventoryManager.MugCollected == true)
+        else if (character.Equals("Larry") && InventoryManager.CoffeeCollected == true)
         {
             currentLine = "Thanks so much! Now I can get moving.";
             dialogue.text = currentLine;

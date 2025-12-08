@@ -48,7 +48,7 @@ public class InventoryManager : MonoBehaviour
 
     public static int currentTwoPages = 1;
 
-    public static bool MugCollected = false;
+    public static bool CoffeeCollected = false;
     public static bool GlovesCollected = false;
 
     public static bool CoatCollected = false;
@@ -69,6 +69,7 @@ public class InventoryManager : MonoBehaviour
         itemJournal.transform.GetChild(0).gameObject.SetActive(false); //gloves entry
         itemJournal.transform.GetChild(1).gameObject.SetActive(false); //coat entry
         itemJournal.transform.GetChild(2).gameObject.SetActive(false); //coffee entry
+        itemJournal.transform.GetChild(3).gameObject.SetActive(false); //key entry
     }
 
     /*public void OpenJournal()
@@ -112,24 +113,8 @@ public class InventoryManager : MonoBehaviour
                 Debug.Log("Notification icon dissappears when inventory opens.");
                 TasksTab();
             }
-            else
-            {
-                ItemsTab();
-                if (currentTwoPages == 1 && UI.journalActive == true)
-                {
-                    Debug.Log("should be showing gloves and/or coat rn");
-                    GlovesPolaroid();
-                    CoatPolaroid();
-                    CoffeeOff();
-                }
-                else if (currentTwoPages == 2 && UI.journalActive == true)
-                {
-                    GlovesOff();
-                    CoatOff();
-                    CoffeePolaroid();
-                }
-            }
         }
+
         else if (InventoryHUD.activeInHierarchy)
         {
             InventoryHUD.SetActive(false);
@@ -140,7 +125,16 @@ public class InventoryManager : MonoBehaviour
             }
             Debug.Log("inventory should be closed :)");
         }
+
+        else
+        {
+            ItemsTab();
+            ActivateCorrectPage();
+        }
     }
+
+
+
     void Start()
     {
         InventoryHUD.SetActive(false);
@@ -152,20 +146,11 @@ public class InventoryManager : MonoBehaviour
     {
         //checkForCollected();
 
-        if (currentTwoPages == 1 && UI.journalActive == true)
+        if (UI.journalActive == true)
         {
-            Debug.Log("should be showing gloves and/or coat rn");
-            GlovesPolaroid();
-            CoatPolaroid();
-            CoffeeOff();
+            ActivateCorrectPage();
         }
-        else if (currentTwoPages == 2 && UI.journalActive == true)
-        {
-            GlovesOff();
-            CoatOff();
-            CoffeePolaroid();
-        }
-       
+
 
         Debug.Log("two current pages are set: " + currentTwoPages);
 
@@ -182,7 +167,8 @@ public class InventoryManager : MonoBehaviour
         right.SetActive(false);
         itemJournal.transform.GetChild(0).gameObject.SetActive(false); //gloves entry
         itemJournal.transform.GetChild(1).gameObject.SetActive(false); //coat entry
-        itemJournal.transform.GetChild(2).gameObject.SetActive(false);
+        itemJournal.transform.GetChild(2).gameObject.SetActive(false); //coffee entry
+        itemJournal.transform.GetChild(3).gameObject.SetActive(false); //keys entry
     }
 
     public void ItemsTab()
@@ -196,7 +182,7 @@ public class InventoryManager : MonoBehaviour
         right.SetActive(true);
         GlovesPolaroid();
         CoatPolaroid();
-       // CoffeePolaroid();
+        // CoffeePolaroid();
     }
 
 
@@ -206,7 +192,7 @@ public class InventoryManager : MonoBehaviour
         {
             if (i.id == 5)
             {
-                MugCollected = true;
+                CoffeeCollected = true;
                 Debug.Log("mug was collected");
             }
 
@@ -248,31 +234,21 @@ public class InventoryManager : MonoBehaviour
         Debug.Log("playing coffee sound");
     }
 
+    public void PlayKeysAudio()
+    {
+        itemJournal.transform.GetChild(3).gameObject.GetComponentInChildren<AudioSource>().Play();
+
+        Debug.Log("playing keys sound");
+    }
+
     public void PreviousPage()
     {
         if (currentTwoPages > 1 && currentTwoPages < 11)
         {
             currentTwoPages--;
-            if (currentTwoPages == 1)
-            {
-                GlovesPolaroid();
-                CoatPolaroid();
-                CoffeeOff();
-            }
-            else if (currentTwoPages == 2)
-            {
-                GlovesOff();
-                CoatOff();
-                CoffeePolaroid();
-            }
-            else
-            {
-                GlovesOff();
-                CoatOff();
-                CoffeeOff();
-
-            }
         }
+
+        ActivateCorrectPage();
     }
 
     public void NextPage()
@@ -280,26 +256,34 @@ public class InventoryManager : MonoBehaviour
         currentTwoPages++;
         if (currentTwoPages > 1 && currentTwoPages < 11)
         {
-            if (currentTwoPages == 1)
-            {
-                GlovesPolaroid();
-                CoatPolaroid();
-                CoffeeOff();
-            }
-            else if (currentTwoPages == 2)
-            {
-                GlovesOff();
-                CoatOff();
-                CoffeePolaroid();
-            }
-            else
-            {
-                GlovesOff();
-                CoatOff();
-                CoffeeOff();
-
-            }
+            ActivateCorrectPage();
         }
+    }
+
+    public void ActivateCorrectPage()
+    {
+        if (currentTwoPages == 1)
+        {
+            GlovesPolaroid();
+            CoatPolaroid();
+            CoffeeOff();
+            KeysOff();
+        }
+        else if (currentTwoPages == 2)
+        {
+            GlovesOff();
+            CoatOff();
+            CoffeePolaroid();
+            KeysPolaroid();
+        }
+        else
+        {
+            GlovesOff();
+            CoatOff();
+            CoffeeOff();
+            KeysOff();
+        }
+
     }
 
     public void GlovesPolaroid()
@@ -307,8 +291,8 @@ public class InventoryManager : MonoBehaviour
         if (GlovesCollected == true)
         {
             itemJournal.transform.GetChild(0).gameObject.SetActive(true); //gloves entry
-            //gloveAud.SetActive(true);
-            //gloves.Stop();
+                                                                          //gloveAud.SetActive(true);
+                                                                          //gloves.Stop();
         }
     }
 
@@ -322,8 +306,8 @@ public class InventoryManager : MonoBehaviour
         if (CoatCollected == true)
         {
             itemJournal.transform.GetChild(1).gameObject.SetActive(true); //coat entry
-            //coatAud.SetActive(true);
-            //coat.Stop();
+                                                                          //coatAud.SetActive(true);
+                                                                          //coat.Stop();
 
         }
     }
@@ -348,6 +332,23 @@ public class InventoryManager : MonoBehaviour
     public void CoffeeOff()
     {
         itemJournal.transform.GetChild(2).gameObject.SetActive(false); //coffee entry
+
+    }
+
+    public void KeysPolaroid()
+    {
+        //if (MugCollected == true)
+        // {
+        itemJournal.transform.GetChild(3).gameObject.SetActive(true); //coffee entry
+                                                                      //coatAud.SetActive(true);
+                                                                      //coat.Stop();
+
+        // }
+    }
+
+    public void KeysOff()
+    {
+        itemJournal.transform.GetChild(3).gameObject.SetActive(false); //coffee entry
 
     }
 }
