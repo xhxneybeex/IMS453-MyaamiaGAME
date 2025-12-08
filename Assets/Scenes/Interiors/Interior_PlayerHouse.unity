@@ -571,11 +571,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1564733062}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &198344690 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8410197862127176129, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
-  m_PrefabInstance: {fileID: 295721674}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &217560434 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6996357129667551141, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
@@ -785,14 +780,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 136207163258083361, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 319928751329707288, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 821119752}
+      objectReference: {fileID: 0}
     - target: {fileID: 503026303024866662, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
       propertyPath: itemGiving
       value: 
@@ -800,23 +791,19 @@ PrefabInstance:
     - target: {fileID: 503026303024866662, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
       propertyPath: inventoryManager
       value: 
-      objectReference: {fileID: 821119752}
-    - target: {fileID: 938503258368012512, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1301515409183358107, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 821119752}
+      objectReference: {fileID: 0}
     - target: {fileID: 2308146758381107725, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 821119752}
+      objectReference: {fileID: 0}
     - target: {fileID: 2605767071279931312, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 821119752}
+      objectReference: {fileID: 0}
     - target: {fileID: 2698501385895745563, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
       propertyPath: inventoryManager
       value: 
@@ -904,18 +891,14 @@ PrefabInstance:
     - target: {fileID: 4126148221599635644, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 821119752}
+      objectReference: {fileID: 0}
     - target: {fileID: 8073162052021953290, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 821119752}
+      objectReference: {fileID: 0}
     - target: {fileID: 8838794914346975184, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
       propertyPath: m_Name
       value: Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 8838794914346975184, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -925,11 +908,6 @@ PrefabInstance:
 --- !u!1 &295721675 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 77254128766095720, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
-  m_PrefabInstance: {fileID: 295721674}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &295721676 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1547736164579869447, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
   m_PrefabInstance: {fileID: 295721674}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &295721677 stripped
@@ -1257,6 +1235,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1722440165}
+    - target: {fileID: 5919365180574316937, guid: 622b7eb6dd688264dbf78193d844eeb9, type: 3}
+      propertyPath: inventoryM
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6196594274587745681, guid: 622b7eb6dd688264dbf78193d844eeb9, type: 3}
       propertyPath: m_Name
       value: Coat
@@ -1794,8 +1776,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemPickup
   Item: {fileID: 11400000, guid: eaa417d811a8fb147a6ec3d7b70df76a, type: 2}
+  inventoryM: {fileID: 0}
   player: {fileID: 0}
   camera: {fileID: 0}
+  isGloves: 0
+  isCoat: 0
 --- !u!114 &493687392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3003,7 +2988,7 @@ PrefabInstance:
     - target: {fileID: 7541442886327853120, guid: 88bdf5943942e29459753f5835c5267c, type: 3}
       propertyPath: gloves
       value: 
-      objectReference: {fileID: 846339788}
+      objectReference: {fileID: 0}
     - target: {fileID: 7541442886327853120, guid: 88bdf5943942e29459753f5835c5267c, type: 3}
       propertyPath: MugText
       value: 
@@ -3023,7 +3008,7 @@ PrefabInstance:
     - target: {fileID: 7541442886327853120, guid: 88bdf5943942e29459753f5835c5267c, type: 3}
       propertyPath: gloveAud
       value: 
-      objectReference: {fileID: 198344690}
+      objectReference: {fileID: 0}
     - target: {fileID: 7541442886327853120, guid: 88bdf5943942e29459753f5835c5267c, type: 3}
       propertyPath: MugSprite
       value: 
@@ -3056,19 +3041,25 @@ PrefabInstance:
       propertyPath: InventoryHUD
       value: 
       objectReference: {fileID: 295721675}
-    - target: {fileID: 7541442886327853120, guid: 88bdf5943942e29459753f5835c5267c, type: 3}
-      propertyPath: Notification
-      value: 
-      objectReference: {fileID: 295721676}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7541442886327853120, guid: 88bdf5943942e29459753f5835c5267c, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6193871268688886045, guid: 88bdf5943942e29459753f5835c5267c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 821119754}
   m_SourcePrefab: {fileID: 100100000, guid: 88bdf5943942e29459753f5835c5267c, type: 3}
---- !u!114 &821119752 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7541442886327853120, guid: 88bdf5943942e29459753f5835c5267c, type: 3}
+--- !u!1 &821119753 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6193871268688886045, guid: 88bdf5943942e29459753f5835c5267c, type: 3}
   m_PrefabInstance: {fileID: 821119751}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &821119754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 821119753}
   m_Enabled: 1
@@ -3076,11 +3067,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 464b621adc005bb439c3e033431abcfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
---- !u!1 &821119753 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6193871268688886045, guid: 88bdf5943942e29459753f5835c5267c, type: 3}
-  m_PrefabInstance: {fileID: 821119751}
-  m_PrefabAsset: {fileID: 0}
+  InventoryHUD: {fileID: 0}
+  Notif: {fileID: 0}
+  ui: {fileID: 0}
+  left: {fileID: 0}
+  right: {fileID: 0}
+  polaroidL: {fileID: 0}
+  polaroidR: {fileID: 0}
+  MugText: {fileID: 0}
+  tasks: {fileID: 0}
+  MugSprite: {fileID: 0}
+  GlovesText: {fileID: 0}
+  GlovesSprite: {fileID: 0}
+  CoatText: {fileID: 0}
+  CoatSprite: {fileID: 0}
+  PlayGloves: {fileID: 0}
+  PlayCoat: {fileID: 0}
+  gloveAud: {fileID: 0}
+  coatAud: {fileID: 0}
+  gloves: {fileID: 0}
+  coat: {fileID: 0}
+  Items: []
 --- !u!1 &845122025
 GameObject:
   m_ObjectHideFlags: 0
@@ -3171,11 +3178,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1564733062}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!82 &846339788 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 4011230301512883841, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
-  m_PrefabInstance: {fileID: 295721674}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &979979632 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7301713695126894939, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
@@ -4635,6 +4637,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1722440165}
+    - target: {fileID: 7096806264783955753, guid: 2e23aaeb54e18a543b5ebf636c3342b1, type: 3}
+      propertyPath: inventoryM
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5131,7 +5137,7 @@ PrefabInstance:
     - target: {fileID: 1236360961502822137, guid: aa3d257ff608a994a90f75ddea0604ba, type: 3}
       propertyPath: InventoryManager
       value: 
-      objectReference: {fileID: 821119752}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5523,7 +5529,7 @@ PrefabInstance:
     - target: {fileID: 8870319421610826583, guid: 28f556e046c2a0048b8a02c8cff716ed, type: 3}
       propertyPath: InventoryManager
       value: 
-      objectReference: {fileID: 821119752}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

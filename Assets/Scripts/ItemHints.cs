@@ -24,7 +24,7 @@ public class ItemHints : MonoBehaviour
             {
                 this.gameObject.SetActive(false);
                 //dm.tasksInBook += "\nYou walked by the alencihkana\n";
-                dm.tasksInBook = dm.tasksInBook.Replace("Mom needs me to find my alencihkana\n", "You walked by the alencihkana\n");
+                dm.tasksInBook = dm.tasksInBook.Replace("Mom needs me to find my alencihkana\n", "I think I walked by the alencihkana\n");
                 Debug.Log("it should be updating tasksinbook now");
             }
             glovesHintAdded = true;
@@ -35,7 +35,7 @@ public class ItemHints : MonoBehaviour
             {
                 this.gameObject.SetActive(false);
                 //dm.tasksInBook += "\nYou walked by the keehpakiikinki naapinaakani\n";
-                dm.tasksInBook = dm.tasksInBook.Replace("Dad needs me to find my keehpakiikinki naapinaakani.\n", "You walked by the keehpakiikinki naapinaakani\n");
+                dm.tasksInBook = dm.tasksInBook.Replace("Dad needs me to find my keehpakiikinki naapinaakani.\n", "I think I walked by the keehpakiikinki naapinaakani\n");
                 Debug.Log("it should be updating tasksinbook now");
             }
             coatHintAdded = true;

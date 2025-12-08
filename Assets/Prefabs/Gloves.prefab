@@ -119,8 +119,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemPickup
   Item: {fileID: 11400000, guid: 8e5163c3da422fa4d8b5086fa1b5264a, type: 2}
+  inventoryM: {fileID: 0}
   player: {fileID: 0}
   camera: {fileID: 0}
+  thisHasBeenCollected: 0
+  isGloves: 1
+  isCoat: 0
 --- !u!65 &5540982871794614893
 BoxCollider:
   m_ObjectHideFlags: 0

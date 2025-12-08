@@ -8,6 +8,8 @@ using UnityEngine.Playables;
 
 public class InventoryManager : MonoBehaviour
 {
+    //OFFICIAL EXTERIOR IS TOWN_EXTERIOR
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public GameObject InventoryHUD;
     public GameObject Notif;
@@ -17,28 +19,28 @@ public class InventoryManager : MonoBehaviour
     public GameObject right;
     public GameObject polaroidL;
     public GameObject polaroidR;
-    public TextMeshProUGUI MugText;
+    //public TextMeshProUGUI MugText;
     public GameObject tasks;
-    public Image MugSprite;
+    //public Image MugSprite;
 
-    public TextMeshProUGUI GlovesText;
-    public Image GlovesSprite;
+    //public TextMeshProUGUI GlovesText;
+    //public Image GlovesSprite;
 
-    public TextMeshProUGUI CoatText;
-    public Image CoatSprite;
+    //public TextMeshProUGUI CoatText;
+    // public Image CoatSprite;
 
-    public GameObject PlayGloves;
+    // public GameObject PlayGloves;
 
-    public GameObject PlayCoat;
+    //public GameObject PlayCoat;
 
-    public GameObject gloveAud;
+    //public GameObject gloveAud;
 
-    public GameObject coatAud;
+    //public GameObject coatAud;
 
-    public AudioSource gloves;
-    public AudioSource coat;
+    //public AudioSource gloves;
+    //public AudioSource coat;
 
-
+    public GameObject itemCanvas;
     public static InventoryManager Instance;
 
     public List<Item> Items = new List<Item>();
@@ -63,14 +65,8 @@ public class InventoryManager : MonoBehaviour
         checkForCollected();
         Instance = this;
         tasks.SetActive(false);
-        MugText.gameObject.SetActive(false);
-        MugSprite.gameObject.SetActive(false);
-        GlovesText.gameObject.SetActive(false);
-        GlovesSprite.gameObject.SetActive(false);
-        CoatText.gameObject.SetActive(false);
-        CoatSprite.gameObject.SetActive(false);
-        PlayCoat.gameObject.SetActive(false);
-        PlayGloves.gameObject.SetActive(false);
+        ui.transform.GetChild(0).gameObject.SetActive(false); //gloves entry
+        ui.transform.GetChild(1).gameObject.SetActive(false); //coat entry
     }
 
     /*public void OpenJournal()
@@ -107,7 +103,7 @@ public class InventoryManager : MonoBehaviour
         {
             InventoryHUD.SetActive(true);
             Debug.Log("inventory should be open :)");
-            
+
             if (Notif.activeInHierarchy)
             {
                 Notif.gameObject.SetActive(false);
@@ -119,9 +115,9 @@ public class InventoryManager : MonoBehaviour
                 ItemsTab();
                 if (currentTwoPages == 1 && UI.journalActive == true)
                 {
-                 Debug.Log("should be showing gloves and/or coat rn");
-                 GlovesPolaroid();
-                 CoatPolaroid();
+                    Debug.Log("should be showing gloves and/or coat rn");
+                    GlovesPolaroid();
+                    CoatPolaroid();
                 }
             }
         }
@@ -165,14 +161,8 @@ public class InventoryManager : MonoBehaviour
         polaroidR.SetActive(false);
         left.SetActive(false);
         right.SetActive(false);
-        MugText.gameObject.SetActive(false);
-        MugSprite.gameObject.SetActive(false);
-        GlovesText.gameObject.SetActive(false);
-        GlovesSprite.gameObject.SetActive(false);
-        CoatText.gameObject.SetActive(false);
-        CoatSprite.gameObject.SetActive(false);
-        PlayCoat.gameObject.SetActive(false);
-        PlayGloves.gameObject.SetActive(false);
+        ui.transform.GetChild(0).gameObject.SetActive(false); //gloves entry
+        ui.transform.GetChild(1).gameObject.SetActive(false); //coat entry
     }
 
     public void ItemsTab()
@@ -216,14 +206,14 @@ public class InventoryManager : MonoBehaviour
 
     public void PlayGloveAudio()
     {
-        PlayGloves.SetActive(true);
-        gloves.Play();
+        // PlayGloves.SetActive(true);
+        // gloves.Play();
         Debug.Log("playing glove sound");
     }
 
     public void PlayCoatAudio()
     {
-        coat.Play();
+        // coat.Play();
         Debug.Log("playing coat sound");
     }
 
@@ -236,7 +226,8 @@ public class InventoryManager : MonoBehaviour
             {
                 GlovesPolaroid();
                 CoatPolaroid();
-            } else
+            }
+            else
             {
                 GlovesOff();
                 CoatOff();
@@ -266,50 +257,41 @@ public class InventoryManager : MonoBehaviour
     {
         if (GlovesCollected == true)
         {
-            GlovesText.gameObject.SetActive(true);
-            GlovesSprite.gameObject.SetActive(true);
-            PlayGloves.gameObject.SetActive(true);
-            gloveAud.SetActive(true);
-            gloves.Stop();
+            ui.transform.GetChild(0).gameObject.SetActive(true); //gloves entry
+            //gloveAud.SetActive(true);
+            //gloves.Stop();
         }
     }
 
     public void GlovesOff()
     {
-        GlovesText.gameObject.SetActive(false);
-        GlovesSprite.gameObject.SetActive(false);
-        PlayGloves.gameObject.SetActive(false);
-        gloveAud.SetActive(false);
+        ui.transform.GetChild(0).gameObject.SetActive(false); //gloves entry
     }
 
     public void CoatPolaroid()
     {
         if (CoatCollected == true)
         {
-            CoatText.gameObject.SetActive(true);
-            CoatSprite.gameObject.SetActive(true);
-            PlayCoat.gameObject.SetActive(true);
-            coatAud.SetActive(true);
-            coat.Stop();
+            ui.transform.GetChild(1).gameObject.SetActive(true); //coat entry
+            //coatAud.SetActive(true);
+            //coat.Stop();
 
         }
     }
 
     public void CoatOff()
     {
-        CoatText.gameObject.SetActive(false);
-        CoatSprite.gameObject.SetActive(false);
-        PlayCoat.gameObject.SetActive(false);
-        coatAud.SetActive(false);
+        ui.transform.GetChild(1).gameObject.SetActive(false); //coat entry
+
     }
 
     public void MugPolaroid()
     {
         if (MugCollected == true)
         {
-            MugText.gameObject.SetActive(true);
-            MugSprite.gameObject.SetActive(true);
-            PlayGloves.gameObject.SetActive(true);
+            //MugText.gameObject.SetActive(true);
+            //MugSprite.gameObject.SetActive(true);
+            // PlayGloves.gameObject.SetActive(true);
         }
     }
 }
