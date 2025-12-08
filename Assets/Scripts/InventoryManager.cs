@@ -176,7 +176,7 @@ public class InventoryManager : MonoBehaviour
         itemJournal.transform.GetChild(5).gameObject.SetActive(false); //salt entry
         itemJournal.transform.GetChild(6).gameObject.SetActive(false); //pepper entry
         itemJournal.transform.GetChild(7).gameObject.SetActive(false); //hairbrush entry
-
+        itemJournal.transform.GetChild(8).gameObject.SetActive(false); //blanket entry
     }
 
     public void ItemsTab()
@@ -276,6 +276,13 @@ public class InventoryManager : MonoBehaviour
         Debug.Log("playing hair sound");
     }
 
+    public void PlayBlanketAudio()
+    {
+        itemJournal.transform.GetChild(8).gameObject.GetComponentInChildren<AudioSource>().Play();
+
+        Debug.Log("playing blanket sound");
+    }
+
     public void PreviousPage()
     {
         if (currentTwoPages > 1 && currentTwoPages < 11)
@@ -307,6 +314,7 @@ public class InventoryManager : MonoBehaviour
             SaltOff();
             PepperOff();
             HairOff();
+            BlanketOff();
         }
         else if (currentTwoPages == 2)
         {
@@ -318,6 +326,7 @@ public class InventoryManager : MonoBehaviour
             KeysPolaroid();
             PepperOff();
             HairOff();
+            BlanketOff();
         }
         else if (currentTwoPages == 3)
         {
@@ -329,6 +338,7 @@ public class InventoryManager : MonoBehaviour
             KeysOff();
             PepperOff();
             HairOff();
+            BlanketOff();
         }
         else if (currentTwoPages == 4)
         {
@@ -340,6 +350,19 @@ public class InventoryManager : MonoBehaviour
             KeysOff();
             SaltOff();
             RugOff();
+            BlanketOff();
+        }
+        else if (currentTwoPages == 5)
+        {
+            BlanketPolaroid();
+            GlovesOff();
+            CoatOff();
+            CoffeeOff();
+            KeysOff();
+            SaltOff();
+            RugOff();
+            PepperOff();
+            HairOff();
         }
         else
         {
@@ -351,6 +374,7 @@ public class InventoryManager : MonoBehaviour
             RugOff();
             PepperOff();
             HairOff();
+            BlanketOff();
         }
 
     }
@@ -486,6 +510,23 @@ public class InventoryManager : MonoBehaviour
     public void HairOff()
     {
         itemJournal.transform.GetChild(7).gameObject.SetActive(false); //coffee entry
+
+    }
+
+    public void BlanketPolaroid()
+    {
+        //if (MugCollected == true)
+        // {
+        itemJournal.transform.GetChild(8).gameObject.SetActive(true); //coffee entry
+                                                                      //coatAud.SetActive(true);
+                                                                      //coat.Stop();
+
+        // }
+    }
+
+    public void BlanketOff()
+    {
+        itemJournal.transform.GetChild(8).gameObject.SetActive(false); //coffee entry
 
     }
 }
