@@ -21,6 +21,8 @@ public class InventoryManager : MonoBehaviour
     public GameObject polaroidR;
     //public TextMeshProUGUI MugText;
     public GameObject tasks;
+
+    public GameObject itemJournal;
     //public Image MugSprite;
 
     //public TextMeshProUGUI GlovesText;
@@ -64,8 +66,8 @@ public class InventoryManager : MonoBehaviour
         checkForCollected();
         Instance = this;
         tasks.SetActive(false);
-        ui.transform.GetChild(0).gameObject.SetActive(false); //gloves entry
-        ui.transform.GetChild(1).gameObject.SetActive(false); //coat entry
+        itemJournal.transform.GetChild(0).gameObject.SetActive(false); //gloves entry
+        itemJournal.transform.GetChild(1).gameObject.SetActive(false); //coat entry
     }
 
     /*public void OpenJournal()
@@ -160,8 +162,8 @@ public class InventoryManager : MonoBehaviour
         polaroidR.SetActive(false);
         left.SetActive(false);
         right.SetActive(false);
-        ui.transform.GetChild(0).gameObject.SetActive(false); //gloves entry
-        ui.transform.GetChild(1).gameObject.SetActive(false); //coat entry
+        itemJournal.transform.GetChild(0).gameObject.SetActive(false); //gloves entry
+        itemJournal.transform.GetChild(1).gameObject.SetActive(false); //coat entry
     }
 
     public void ItemsTab()
@@ -256,7 +258,7 @@ public class InventoryManager : MonoBehaviour
     {
         if (GlovesCollected == true)
         {
-            ui.transform.GetChild(0).gameObject.SetActive(true); //gloves entry
+            itemJournal.transform.GetChild(0).gameObject.SetActive(true); //gloves entry
             //gloveAud.SetActive(true);
             //gloves.Stop();
         }
@@ -264,14 +266,14 @@ public class InventoryManager : MonoBehaviour
 
     public void GlovesOff()
     {
-        ui.transform.GetChild(0).gameObject.SetActive(false); //gloves entry
+        itemJournal.transform.GetChild(0).gameObject.SetActive(false); //gloves entry
     }
 
     public void CoatPolaroid()
     {
         if (CoatCollected == true)
         {
-            ui.transform.GetChild(1).gameObject.SetActive(true); //coat entry
+            itemJournal.transform.GetChild(1).gameObject.SetActive(true); //coat entry
             //coatAud.SetActive(true);
             //coat.Stop();
 
@@ -280,7 +282,7 @@ public class InventoryManager : MonoBehaviour
 
     public void CoatOff()
     {
-        ui.transform.GetChild(1).gameObject.SetActive(false); //coat entry
+        itemJournal.transform.GetChild(1).gameObject.SetActive(false); //coat entry
 
     }
 

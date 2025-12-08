@@ -901,7 +901,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &295721676 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 7037189698948772000, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
+  m_CorrespondingSourceObject: {fileID: 5983639333486294685, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
   m_PrefabInstance: {fileID: 295721674}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &295721678 stripped
@@ -2521,6 +2521,11 @@ Camera:
   m_CorrespondingSourceObject: {fileID: 8669122324123616445, guid: ded15ee3165b8bb48aa6d8b31d94ddb6, type: 3}
   m_PrefabInstance: {fileID: 623043068}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &642126637 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3579775851238768258, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
+  m_PrefabInstance: {fileID: 295721674}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &645786282
 GameObject:
   m_ObjectHideFlags: 0
@@ -2909,7 +2914,7 @@ PrefabInstance:
     - target: {fileID: 624819153388382661, guid: 88bdf5943942e29459753f5835c5267c, type: 3}
       propertyPath: tasks
       value: 
-      objectReference: {fileID: 295721676}
+      objectReference: {fileID: 642126637}
     - target: {fileID: 624819153388382661, guid: 88bdf5943942e29459753f5835c5267c, type: 3}
       propertyPath: polaroidL
       value: 
@@ -2918,6 +2923,10 @@ PrefabInstance:
       propertyPath: polaroidR
       value: 
       objectReference: {fileID: 295721678}
+    - target: {fileID: 624819153388382661, guid: 88bdf5943942e29459753f5835c5267c, type: 3}
+      propertyPath: itemJournal
+      value: 
+      objectReference: {fileID: 295721676}
     - target: {fileID: 624819153388382661, guid: 88bdf5943942e29459753f5835c5267c, type: 3}
       propertyPath: InventoryHUD
       value: 

@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 464b621adc005bb439c3e033431abcfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
-  InventoryHUD: {fileID: 0}
+  InventoryHUD: {fileID: 6193871268688886045}
   Notif: {fileID: 0}
   ui: {fileID: 0}
   left: {fileID: 0}
