@@ -178,6 +178,8 @@ public class InventoryManager : MonoBehaviour
         itemJournal.transform.GetChild(7).gameObject.SetActive(false); //hairbrush entry
         itemJournal.transform.GetChild(8).gameObject.SetActive(false); //blanket entry
         itemJournal.transform.GetChild(9).gameObject.SetActive(false); //chair entry
+        itemJournal.transform.GetChild(10).gameObject.SetActive(false); //hammer entry
+
     }
 
     public void ItemsTab()
@@ -284,11 +286,18 @@ public class InventoryManager : MonoBehaviour
         Debug.Log("playing blanket sound");
     }
 
-     public void PlayChairAudio()
+    public void PlayChairAudio()
     {
         itemJournal.transform.GetChild(9).gameObject.GetComponentInChildren<AudioSource>().Play();
 
         Debug.Log("playing chair sound");
+    }
+
+    public void PlayHammerAudio()
+    {
+        itemJournal.transform.GetChild(10).gameObject.GetComponentInChildren<AudioSource>().Play();
+
+        Debug.Log("playing hammer sound");
     }
 
     public void PreviousPage()
@@ -324,6 +333,7 @@ public class InventoryManager : MonoBehaviour
             HairOff();
             BlanketOff();
             ChairOff();
+            HammerOff();
         }
         else if (currentTwoPages == 2)
         {
@@ -337,6 +347,7 @@ public class InventoryManager : MonoBehaviour
             HairOff();
             BlanketOff();
             ChairOff();
+            HammerOff();
         }
         else if (currentTwoPages == 3)
         {
@@ -350,6 +361,7 @@ public class InventoryManager : MonoBehaviour
             HairOff();
             BlanketOff();
             ChairOff();
+            HammerOff();
         }
         else if (currentTwoPages == 4)
         {
@@ -363,6 +375,7 @@ public class InventoryManager : MonoBehaviour
             RugOff();
             BlanketOff();
             ChairOff();
+            HammerOff();
         }
         else if (currentTwoPages == 5)
         {
@@ -376,6 +389,21 @@ public class InventoryManager : MonoBehaviour
             RugOff();
             PepperOff();
             HairOff();
+            HammerOff();
+        }
+        else if (currentTwoPages == 6)
+        {
+            HammerPolaroid();
+            GlovesOff();
+            CoatOff();
+            CoffeeOff();
+            KeysOff();
+            SaltOff();
+            RugOff();
+            PepperOff();
+            HairOff();
+            BlanketOff();
+            ChairOff();
         }
         else
         {
@@ -389,6 +417,7 @@ public class InventoryManager : MonoBehaviour
             HairOff();
             BlanketOff();
             ChairOff();
+            HammerOff();
         }
 
     }
@@ -558,6 +587,23 @@ public class InventoryManager : MonoBehaviour
     public void ChairOff()
     {
         itemJournal.transform.GetChild(9).gameObject.SetActive(false); //coffee entry
+
+    }
+
+    public void HammerPolaroid()
+    {
+        //if (MugCollected == true)
+        // {
+        itemJournal.transform.GetChild(10).gameObject.SetActive(true); //coffee entry
+                                                                       //coatAud.SetActive(true);
+                                                                       //coat.Stop();
+
+        // }
+    }
+
+    public void HammerOff()
+    {
+        itemJournal.transform.GetChild(10).gameObject.SetActive(false); //coffee entry
 
     }
 }
