@@ -3,7 +3,32 @@ guid: c0d88c5a7b7e0ea47978e1506bcd061e
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: House_Roof_2_001
+    second: {fileID: 2800000, guid: 5ebaf9f317b1d1a40aba958e88f2f8d6, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Ribbon_Door
+    second: {fileID: 2800000, guid: d0ec85f8f91b211459c38aa78e7151a4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Ribbon_Ribbon2
+    second: {fileID: 2800000, guid: 5e2b2688523ed8d448ec1f31dd16e10f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Ribbon_String
+    second: {fileID: 2800000, guid: 6b0fcf98469216a46834f85a21f0183c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Ribbon_Wall
+    second: {fileID: 2800000, guid: f2b657830ed526943a718fafb2e72532, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
