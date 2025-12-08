@@ -181,6 +181,7 @@ public class InventoryManager : MonoBehaviour
         itemJournal.transform.GetChild(10).gameObject.SetActive(false); //hammer entry
         itemJournal.transform.GetChild(11).gameObject.SetActive(false); //shoe entry
         itemJournal.transform.GetChild(12).gameObject.SetActive(false); //ball entry
+        itemJournal.transform.GetChild(13).gameObject.SetActive(false); //stick entry
     }
 
     public void ItemsTab()
@@ -315,6 +316,13 @@ public class InventoryManager : MonoBehaviour
         Debug.Log("playing ball sound");
     }
 
+    public void PlayStickAudio()
+    {
+        itemJournal.transform.GetChild(13).gameObject.GetComponentInChildren<AudioSource>().Play();
+
+        Debug.Log("playing stick sound");
+    }
+
     public void PreviousPage()
     {
         if (currentTwoPages > 1 && currentTwoPages < 11)
@@ -351,6 +359,7 @@ public class InventoryManager : MonoBehaviour
             HammerOff();
             ShoeOff();
             BallOff();
+            StickOff();
         }
         else if (currentTwoPages == 2)
         {
@@ -367,6 +376,7 @@ public class InventoryManager : MonoBehaviour
             HammerOff();
             ShoeOff();
             BallOff();
+            StickOff();
         }
         else if (currentTwoPages == 3)
         {
@@ -383,6 +393,7 @@ public class InventoryManager : MonoBehaviour
             HammerOff();
             ShoeOff();
             BallOff();
+            StickOff();
         }
         else if (currentTwoPages == 4)
         {
@@ -399,6 +410,7 @@ public class InventoryManager : MonoBehaviour
             HammerOff();
             ShoeOff();
             BallOff();
+            StickOff();
         }
         else if (currentTwoPages == 5)
         {
@@ -415,6 +427,7 @@ public class InventoryManager : MonoBehaviour
             HammerOff();
             ShoeOff();
             BallOff();
+            StickOff();
         }
         else if (currentTwoPages == 6)
         {
@@ -431,10 +444,12 @@ public class InventoryManager : MonoBehaviour
             BlanketOff();
             ChairOff();
             BallOff();
+            StickOff();
         }
         else if (currentTwoPages == 7)
         {
             BallPolaroid();
+            StickPolaroid();
             GlovesOff();
             CoatOff();
             CoffeeOff();
@@ -463,6 +478,7 @@ public class InventoryManager : MonoBehaviour
             HammerOff();
             ShoeOff();
             BallOff();
+            StickOff();
         }
 
     }
@@ -683,6 +699,23 @@ public class InventoryManager : MonoBehaviour
     public void BallOff()
     {
         itemJournal.transform.GetChild(12).gameObject.SetActive(false); //coffee entry
+
+    }
+
+    public void StickPolaroid()
+    {
+        //if (MugCollected == true)
+        // {
+        itemJournal.transform.GetChild(13).gameObject.SetActive(true); //coffee entry
+                                                                       //coatAud.SetActive(true);
+                                                                       //coat.Stop();
+
+        // }
+    }
+
+    public void StickOff()
+    {
+        itemJournal.transform.GetChild(13).gameObject.SetActive(false); //coffee entry
 
     }
 }
