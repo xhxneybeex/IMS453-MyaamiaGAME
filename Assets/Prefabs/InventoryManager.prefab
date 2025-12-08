@@ -45,5 +45,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
   InventoryHUD: {fileID: 0}
-  LampText: {fileID: 0}
+  Notif: {fileID: 0}
+  ui: {fileID: 0}
+  left: {fileID: 0}
+  right: {fileID: 0}
+  polaroidL: {fileID: 0}
+  polaroidR: {fileID: 0}
+  MugText: {fileID: 0}
+  tasks: {fileID: 0}
+  MugSprite: {fileID: 0}
+  GlovesText: {fileID: 0}
+  GlovesSprite: {fileID: 0}
+  CoatText: {fileID: 0}
+  CoatSprite: {fileID: 0}
+  PlayGloves: {fileID: 0}
+  PlayCoat: {fileID: 0}
+  gloveAud: {fileID: 0}
+  coatAud: {fileID: 0}
+  gloves: {fileID: 0}
+  coat: {fileID: 0}
   Items: []
