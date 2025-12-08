@@ -120,6 +120,19 @@ public class InventoryManager : MonoBehaviour
                     Debug.Log("should be showing gloves and/or coat rn");
                     GlovesPolaroid();
                     CoatPolaroid();
+                    CoffeeOff();
+                }
+                else if (currentTwoPages == 2 && UI.journalActive == true)
+                {
+                    GlovesOff();
+                    CoatOff();
+                    CoffeePolaroid();
+                }
+                else
+                {
+                    GlovesOff();
+                    CoatOff();
+                    CoffeeOff();
                 }
             }
         }
@@ -151,6 +164,20 @@ public class InventoryManager : MonoBehaviour
             GlovesPolaroid();
             CoatPolaroid();
         }
+        else if (currentTwoPages == 2 && UI.journalActive == true)
+        {
+            GlovesOff();
+            CoatOff();
+            CoffeePolaroid();
+        }
+        else
+        {
+            GlovesOff();
+            CoatOff();
+            CoffeeOff();
+        }
+
+        Debug.Log("two current pages are set: " + currentTwoPages);
 
 
     }
@@ -165,6 +192,7 @@ public class InventoryManager : MonoBehaviour
         right.SetActive(false);
         itemJournal.transform.GetChild(0).gameObject.SetActive(false); //gloves entry
         itemJournal.transform.GetChild(1).gameObject.SetActive(false); //coat entry
+        itemJournal.transform.GetChild(2).gameObject.SetActive(false);
     }
 
     public void ItemsTab()
@@ -223,7 +251,7 @@ public class InventoryManager : MonoBehaviour
         Debug.Log("playing coat sound");
     }
 
-     public void PlayCoffeeAudio()
+    public void PlayCoffeeAudio()
     {
         itemJournal.transform.GetChild(2).gameObject.GetComponentInChildren<AudioSource>().Play();
 
@@ -248,6 +276,13 @@ public class InventoryManager : MonoBehaviour
                 CoatOff();
                 CoffeePolaroid();
             }
+            else
+            {
+                GlovesOff();
+                CoatOff();
+                CoffeeOff();
+
+            }
         }
     }
 
@@ -267,6 +302,13 @@ public class InventoryManager : MonoBehaviour
                 GlovesOff();
                 CoatOff();
                 CoffeePolaroid();
+            }
+            else
+            {
+                GlovesOff();
+                CoatOff();
+                CoffeeOff();
+
             }
         }
     }
@@ -306,17 +348,17 @@ public class InventoryManager : MonoBehaviour
     public void CoffeePolaroid()
     {
         //if (MugCollected == true)
-       // {
-            itemJournal.transform.GetChild(2).gameObject.SetActive(true); //coat entry
-            //coatAud.SetActive(true);
-            //coat.Stop();
+        // {
+        itemJournal.transform.GetChild(2).gameObject.SetActive(true); //coffee entry
+                                                                      //coatAud.SetActive(true);
+                                                                      //coat.Stop();
 
-       // }
+        // }
     }
 
     public void CoffeeOff()
     {
-        itemJournal.transform.GetChild(2).gameObject.SetActive(false); //coat entry
+        itemJournal.transform.GetChild(2).gameObject.SetActive(false); //coffee entry
 
     }
 }
