@@ -207,6 +207,7 @@ public class InventoryManager : MonoBehaviour
 
     public void PlayGloveAudio()
     {
+        itemJournal.transform.GetChild(0).gameObject.GetComponent<AudioSource>().Play();
         // PlayGloves.SetActive(true);
         // gloves.Play();
         Debug.Log("playing glove sound");
@@ -214,6 +215,8 @@ public class InventoryManager : MonoBehaviour
 
     public void PlayCoatAudio()
     {
+        itemJournal.transform.GetChild(1).gameObject.GetComponent<AudioSource>().Play();
+
         // coat.Play();
         Debug.Log("playing coat sound");
     }

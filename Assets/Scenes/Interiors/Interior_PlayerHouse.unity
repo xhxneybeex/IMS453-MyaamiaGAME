@@ -772,27 +772,23 @@ PrefabInstance:
     - target: {fileID: 319928751329707288, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 821119754}
     - target: {fileID: 503026303024866662, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
       propertyPath: itemGiving
       value: 
       objectReference: {fileID: 1468609863}
-    - target: {fileID: 503026303024866662, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
-      propertyPath: inventoryManager
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 1301515409183358107, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 821119754}
     - target: {fileID: 2308146758381107725, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 821119754}
     - target: {fileID: 2605767071279931312, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 821119754}
     - target: {fileID: 2698501385895745563, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
       propertyPath: inventoryManager
       value: 
@@ -876,14 +872,6 @@ PrefabInstance:
     - target: {fileID: 2797264601173513885, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4126148221599635644, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8073162052021953290, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8838794914346975184, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
       propertyPath: m_Name
@@ -1221,7 +1209,7 @@ PrefabInstance:
     - target: {fileID: 5919365180574316937, guid: 622b7eb6dd688264dbf78193d844eeb9, type: 3}
       propertyPath: inventoryM
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 821119754}
     - target: {fileID: 6196594274587745681, guid: 622b7eb6dd688264dbf78193d844eeb9, type: 3}
       propertyPath: m_Name
       value: Coat
@@ -2985,6 +2973,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6193871268688886045, guid: 88bdf5943942e29459753f5835c5267c, type: 3}
   m_PrefabInstance: {fileID: 821119751}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &821119754 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 624819153388382661, guid: 88bdf5943942e29459753f5835c5267c, type: 3}
+  m_PrefabInstance: {fileID: 821119751}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 821119753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 464b621adc005bb439c3e033431abcfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
 --- !u!1 &845122025
 GameObject:
   m_ObjectHideFlags: 0
@@ -4505,7 +4504,7 @@ PrefabInstance:
     - target: {fileID: 7096806264783955753, guid: 2e23aaeb54e18a543b5ebf636c3342b1, type: 3}
       propertyPath: inventoryM
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 821119754}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5002,7 +5001,7 @@ PrefabInstance:
     - target: {fileID: 1236360961502822137, guid: aa3d257ff608a994a90f75ddea0604ba, type: 3}
       propertyPath: InventoryManager
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 821119754}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5389,7 +5388,7 @@ PrefabInstance:
     - target: {fileID: 8870319421610826583, guid: 28f556e046c2a0048b8a02c8cff716ed, type: 3}
       propertyPath: InventoryManager
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 821119754}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

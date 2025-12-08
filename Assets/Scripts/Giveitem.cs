@@ -38,9 +38,9 @@ public class Giveitem : MonoBehaviour
             Debug.Log(this.gameObject.name.ToString());
             timesWalkedUpToMom += 1;
             Debug.Log("times walked up to equals " + timesWalkedUpToMom);
-            if (InventoryManager.ui.transform.GetChild(0).gameObject.activeInHierarchy)
+            if (InventoryManager.itemJournal.transform.GetChild(0).gameObject.activeInHierarchy)
             {
-                InventoryManager.ui.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = "alencihkana";
+                InventoryManager.itemJournal.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = "alencihkana";
             }
             else
             {
@@ -53,9 +53,9 @@ public class Giveitem : MonoBehaviour
             Debug.Log(this.gameObject.name.ToString());
             timesWalkedUpToDad += 1;
             Debug.Log("times walked up to equals " + timesWalkedUpToDad);
-            if (InventoryManager.ui.transform.GetChild(0).gameObject.activeInHierarchy)
+            if (InventoryManager.itemJournal.transform.GetChild(0).gameObject.activeInHierarchy)
             {
-                InventoryManager.ui.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = "keehpakiikinki naapinaakani";
+                InventoryManager.itemJournal.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = "keehpakiikinki naapinaakani";
             }
             else
             {
