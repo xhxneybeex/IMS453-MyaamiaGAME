@@ -20,22 +20,22 @@ public class ItemHints : MonoBehaviour
         if (item.id == 6)
         {
             Debug.Log("you entered the trigger for gloves");
-            if (dm.talkedToMom == true)
+            if (dm.talkedToMom == true && InventoryManager.GlovesCollected == false)
             {
                 this.gameObject.SetActive(false);
                 //dm.tasksInBook += "\nYou walked by the alencihkana\n";
-                dm.tasksInBook = dm.tasksInBook.Replace("Mom needs me to find my alencihkana\n", "I think I walked by the alencihkana\n");
+                dm.tasksInBook = dm.tasksInBook.Replace("Mom needs me to find my alencihkana\n", "I think I saw the alencihkana on the counter\n");
                 Debug.Log("it should be updating tasksinbook now");
             }
             glovesHintAdded = true;
         } else if (item.id == 7)
         {
             Debug.Log("You entered the trigger for the coat");
-            if (dm.talkedToDad == true)
+            if (dm.talkedToDad == true && InventoryManager.CoatCollected == false)
             {
                 this.gameObject.SetActive(false);
                 //dm.tasksInBook += "\nYou walked by the keehpakiikinki naapinaakani\n";
-                dm.tasksInBook = dm.tasksInBook.Replace("Dad needs me to find my keehpakiikinki naapinaakani.\n", "I think I walked by the keehpakiikinki naapinaakani\n");
+                dm.tasksInBook = dm.tasksInBook.Replace("Dad needs me to find my keehpakiikinki naapinaakani.\n", "I think the plant is right by the keehpakiikinki naapinaakani\n");
                 Debug.Log("it should be updating tasksinbook now");
             }
             coatHintAdded = true;

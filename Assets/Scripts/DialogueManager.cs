@@ -158,7 +158,7 @@ public class DialogueManager : MonoBehaviour
             Mom.SetActive(true);
             currentLine = "That should help keep you warm!";
             tasksInBook = tasksInBook.Replace("Mom needs me to find my alencihkana\n", "");
-            tasksInBook = tasksInBook.Replace("I think I walked by the alencihkana\n", "");
+            tasksInBook = tasksInBook.Replace("I think I saw the alencihkana on the counter\n", "");
             dialogue.text = currentLine;
             dialogueUI.SetActive(true);
             interactionEnabled = false;
@@ -187,7 +187,7 @@ public class DialogueManager : MonoBehaviour
             Mom.SetActive(false);
             currentLine = "Now you’re ready to brave the cold!";
             tasksInBook = tasksInBook.Replace("Dad needs me to find my keehpakiikinki naapinaakani.\n", "");
-            tasksInBook = tasksInBook.Replace("I think I walked by the keehpakiikinki naapinaakani\n", "");
+            tasksInBook = tasksInBook.Replace("I think the plant is right by the keehpakiikinki naapinaakani\n", "");
             dialogue.text = currentLine;
             dialogueUI.SetActive(true);
             interactionEnabled = false;
