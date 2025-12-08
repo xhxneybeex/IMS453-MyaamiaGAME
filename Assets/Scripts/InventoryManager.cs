@@ -173,6 +173,7 @@ public class InventoryManager : MonoBehaviour
         itemJournal.transform.GetChild(2).gameObject.SetActive(false); //coffee entry
         itemJournal.transform.GetChild(3).gameObject.SetActive(false); //keys entry
         itemJournal.transform.GetChild(4).gameObject.SetActive(false); //rug entry
+        itemJournal.transform.GetChild(5).gameObject.SetActive(false); //rug entry
 
     }
 
@@ -252,6 +253,13 @@ public class InventoryManager : MonoBehaviour
         Debug.Log("playing rug sound");
     }
 
+    public void PlaySaltAudio()
+    {
+        itemJournal.transform.GetChild(5).gameObject.GetComponentInChildren<AudioSource>().Play();
+
+        Debug.Log("playing salt sound");
+    }
+
     public void PreviousPage()
     {
         if (currentTwoPages > 1 && currentTwoPages < 11)
@@ -280,18 +288,21 @@ public class InventoryManager : MonoBehaviour
             CoffeeOff();
             KeysOff();
             RugOff();
+            SaltOff();
         }
         else if (currentTwoPages == 2)
         {
             GlovesOff();
             CoatOff();
             RugOff();
+            SaltOff();
             CoffeePolaroid();
             KeysPolaroid();
         }
         else if (currentTwoPages == 3)
         {
             RugPolaroid();
+            SaltPolaroid();
             GlovesOff();
             CoatOff();
             CoffeeOff();
@@ -303,6 +314,8 @@ public class InventoryManager : MonoBehaviour
             CoatOff();
             CoffeeOff();
             KeysOff();
+            SaltOff();
+            RugOff();
         }
 
     }
@@ -387,6 +400,23 @@ public class InventoryManager : MonoBehaviour
     public void RugOff()
     {
         itemJournal.transform.GetChild(4).gameObject.SetActive(false); //coffee entry
+
+    }
+
+    public void SaltPolaroid()
+    {
+        //if (MugCollected == true)
+        // {
+        itemJournal.transform.GetChild(5).gameObject.SetActive(true); //coffee entry
+                                                                      //coatAud.SetActive(true);
+                                                                      //coat.Stop();
+
+        // }
+    }
+
+    public void SaltOff()
+    {
+        itemJournal.transform.GetChild(5).gameObject.SetActive(false); //coffee entry
 
     }
 }
