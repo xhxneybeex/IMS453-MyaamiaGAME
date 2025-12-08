@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7437103166107735079}
-  - component: {fileID: 7541442886327853120}
+  - component: {fileID: 624819153388382661}
   m_Layer: 0
   m_Name: InventoryManager
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7541442886327853120
+--- !u!114 &624819153388382661
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -51,17 +51,5 @@ MonoBehaviour:
   right: {fileID: 0}
   polaroidL: {fileID: 0}
   polaroidR: {fileID: 0}
-  MugText: {fileID: 0}
   tasks: {fileID: 0}
-  MugSprite: {fileID: 0}
-  GlovesText: {fileID: 0}
-  GlovesSprite: {fileID: 0}
-  CoatText: {fileID: 0}
-  CoatSprite: {fileID: 0}
-  PlayGloves: {fileID: 0}
-  PlayCoat: {fileID: 0}
-  gloveAud: {fileID: 0}
-  coatAud: {fileID: 0}
-  gloves: {fileID: 0}
-  coat: {fileID: 0}
   Items: []

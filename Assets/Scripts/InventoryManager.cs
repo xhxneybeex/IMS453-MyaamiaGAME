@@ -40,7 +40,6 @@ public class InventoryManager : MonoBehaviour
     //public AudioSource gloves;
     //public AudioSource coat;
 
-    public GameObject itemCanvas;
     public static InventoryManager Instance;
 
     public List<Item> Items = new List<Item>();

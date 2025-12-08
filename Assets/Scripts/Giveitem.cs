@@ -1,4 +1,7 @@
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+using Unity.VisualScripting;
 
 public class Giveitem : MonoBehaviour
 {
@@ -35,9 +38,9 @@ public class Giveitem : MonoBehaviour
             Debug.Log(this.gameObject.name.ToString());
             timesWalkedUpToMom += 1;
             Debug.Log("times walked up to equals " + timesWalkedUpToMom);
-            if (InventoryManager.GlovesSprite.gameObject.activeInHierarchy)
+            if (InventoryManager.ui.transform.GetChild(0).gameObject.activeInHierarchy)
             {
-                InventoryManager.GlovesText.text = "alencihkana";
+                InventoryManager.ui.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = "alencihkana";
             }
             else
             {
@@ -50,9 +53,9 @@ public class Giveitem : MonoBehaviour
             Debug.Log(this.gameObject.name.ToString());
             timesWalkedUpToDad += 1;
             Debug.Log("times walked up to equals " + timesWalkedUpToDad);
-            if (InventoryManager.CoatSprite.gameObject.activeInHierarchy)
+            if (InventoryManager.ui.transform.GetChild(0).gameObject.activeInHierarchy)
             {
-                InventoryManager.CoatText.text = "keehpakiikinki naapinaakani";
+                InventoryManager.ui.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = "keehpakiikinki naapinaakani";
             }
             else
             {
