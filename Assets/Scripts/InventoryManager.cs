@@ -68,6 +68,7 @@ public class InventoryManager : MonoBehaviour
         tasks.SetActive(false);
         itemJournal.transform.GetChild(0).gameObject.SetActive(false); //gloves entry
         itemJournal.transform.GetChild(1).gameObject.SetActive(false); //coat entry
+        itemJournal.transform.GetChild(2).gameObject.SetActive(false); //coffee entry entry
     }
 
     /*public void OpenJournal()
@@ -177,7 +178,7 @@ public class InventoryManager : MonoBehaviour
         right.SetActive(true);
         GlovesPolaroid();
         CoatPolaroid();
-        MugPolaroid();
+        CoffeePolaroid();
     }
 
 
@@ -207,7 +208,8 @@ public class InventoryManager : MonoBehaviour
 
     public void PlayGloveAudio()
     {
-        itemJournal.transform.GetChild(0).gameObject.GetComponent<AudioSource>().Play();
+        itemJournal.transform.GetChild(0).gameObject.GetComponentInChildren<AudioSource>().Play();
+
         // PlayGloves.SetActive(true);
         // gloves.Play();
         Debug.Log("playing glove sound");
@@ -215,7 +217,15 @@ public class InventoryManager : MonoBehaviour
 
     public void PlayCoatAudio()
     {
-        itemJournal.transform.GetChild(1).gameObject.GetComponent<AudioSource>().Play();
+        itemJournal.transform.GetChild(1).gameObject.GetComponentInChildren<AudioSource>().Play();
+
+        // coat.Play();
+        Debug.Log("playing coat sound");
+    }
+
+     public void PlayCoffeeAudio()
+    {
+        itemJournal.transform.GetChild(2).gameObject.GetComponentInChildren<AudioSource>().Play();
 
         // coat.Play();
         Debug.Log("playing coat sound");
@@ -230,11 +240,13 @@ public class InventoryManager : MonoBehaviour
             {
                 GlovesPolaroid();
                 CoatPolaroid();
+                CoffeeOff();
             }
-            else
+            else if (currentTwoPages == 2)
             {
                 GlovesOff();
                 CoatOff();
+                CoffeePolaroid();
             }
         }
     }
@@ -248,11 +260,13 @@ public class InventoryManager : MonoBehaviour
             {
                 GlovesPolaroid();
                 CoatPolaroid();
+                CoffeeOff();
             }
-            else
+            else if (currentTwoPages == 2)
             {
                 GlovesOff();
                 CoatOff();
+                CoffeePolaroid();
             }
         }
     }
@@ -289,14 +303,21 @@ public class InventoryManager : MonoBehaviour
 
     }
 
-    public void MugPolaroid()
+    public void CoffeePolaroid()
     {
-        if (MugCollected == true)
-        {
-            //MugText.gameObject.SetActive(true);
-            //MugSprite.gameObject.SetActive(true);
-            // PlayGloves.gameObject.SetActive(true);
-        }
+        //if (MugCollected == true)
+       // {
+            itemJournal.transform.GetChild(2).gameObject.SetActive(true); //coat entry
+            //coatAud.SetActive(true);
+            //coat.Stop();
+
+       // }
+    }
+
+    public void CoffeeOff()
+    {
+        itemJournal.transform.GetChild(2).gameObject.SetActive(false); //coat entry
+
     }
 }
 
