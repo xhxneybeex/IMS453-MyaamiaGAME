@@ -174,6 +174,7 @@ public class InventoryManager : MonoBehaviour
         itemJournal.transform.GetChild(3).gameObject.SetActive(false); //keys entry
         itemJournal.transform.GetChild(4).gameObject.SetActive(false); //rug entry
         itemJournal.transform.GetChild(5).gameObject.SetActive(false); //rug entry
+        itemJournal.transform.GetChild(6).gameObject.SetActive(false); //rug entry
 
     }
 
@@ -260,6 +261,13 @@ public class InventoryManager : MonoBehaviour
         Debug.Log("playing salt sound");
     }
 
+    public void PlayPepperAudio()
+    {
+        itemJournal.transform.GetChild(6).gameObject.GetComponentInChildren<AudioSource>().Play();
+
+        Debug.Log("playing pepper sound");
+    }
+
     public void PreviousPage()
     {
         if (currentTwoPages > 1 && currentTwoPages < 11)
@@ -289,6 +297,7 @@ public class InventoryManager : MonoBehaviour
             KeysOff();
             RugOff();
             SaltOff();
+            PepperOff();
         }
         else if (currentTwoPages == 2)
         {
@@ -298,6 +307,7 @@ public class InventoryManager : MonoBehaviour
             SaltOff();
             CoffeePolaroid();
             KeysPolaroid();
+            PepperOff();
         }
         else if (currentTwoPages == 3)
         {
@@ -307,6 +317,17 @@ public class InventoryManager : MonoBehaviour
             CoatOff();
             CoffeeOff();
             KeysOff();
+            PepperOff();
+        }
+        else if (currentTwoPages == 4)
+        {
+            PepperPolaroid();
+            GlovesOff();
+            CoatOff();
+            CoffeeOff();
+            KeysOff();
+            SaltOff();
+            RugOff();
         }
         else
         {
@@ -316,6 +337,7 @@ public class InventoryManager : MonoBehaviour
             KeysOff();
             SaltOff();
             RugOff();
+            PepperOff();
         }
 
     }
@@ -417,6 +439,23 @@ public class InventoryManager : MonoBehaviour
     public void SaltOff()
     {
         itemJournal.transform.GetChild(5).gameObject.SetActive(false); //coffee entry
+
+    }
+
+    public void PepperPolaroid()
+    {
+        //if (MugCollected == true)
+        // {
+        itemJournal.transform.GetChild(6).gameObject.SetActive(true); //coffee entry
+                                                                      //coatAud.SetActive(true);
+                                                                      //coat.Stop();
+
+        // }
+    }
+
+    public void PepperOff()
+    {
+        itemJournal.transform.GetChild(6).gameObject.SetActive(false); //coffee entry
 
     }
 }
