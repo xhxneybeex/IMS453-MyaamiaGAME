@@ -68,7 +68,7 @@ public class InventoryManager : MonoBehaviour
         tasks.SetActive(false);
         itemJournal.transform.GetChild(0).gameObject.SetActive(false); //gloves entry
         itemJournal.transform.GetChild(1).gameObject.SetActive(false); //coat entry
-        itemJournal.transform.GetChild(2).gameObject.SetActive(false); //coffee entry entry
+        itemJournal.transform.GetChild(2).gameObject.SetActive(false); //coffee entry
     }
 
     /*public void OpenJournal()
@@ -128,12 +128,6 @@ public class InventoryManager : MonoBehaviour
                     CoatOff();
                     CoffeePolaroid();
                 }
-                else
-                {
-                    GlovesOff();
-                    CoatOff();
-                    CoffeeOff();
-                }
             }
         }
         else if (InventoryHUD.activeInHierarchy)
@@ -163,6 +157,7 @@ public class InventoryManager : MonoBehaviour
             Debug.Log("should be showing gloves and/or coat rn");
             GlovesPolaroid();
             CoatPolaroid();
+            CoffeeOff();
         }
         else if (currentTwoPages == 2 && UI.journalActive == true)
         {
@@ -170,12 +165,7 @@ public class InventoryManager : MonoBehaviour
             CoatOff();
             CoffeePolaroid();
         }
-        else
-        {
-            GlovesOff();
-            CoatOff();
-            CoffeeOff();
-        }
+       
 
         Debug.Log("two current pages are set: " + currentTwoPages);
 
@@ -206,7 +196,7 @@ public class InventoryManager : MonoBehaviour
         right.SetActive(true);
         GlovesPolaroid();
         CoatPolaroid();
-        CoffeePolaroid();
+       // CoffeePolaroid();
     }
 
 
@@ -255,8 +245,7 @@ public class InventoryManager : MonoBehaviour
     {
         itemJournal.transform.GetChild(2).gameObject.GetComponentInChildren<AudioSource>().Play();
 
-        // coat.Play();
-        Debug.Log("playing coat sound");
+        Debug.Log("playing coffee sound");
     }
 
     public void PreviousPage()
