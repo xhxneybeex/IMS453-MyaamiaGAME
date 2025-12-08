@@ -250,7 +250,7 @@ public class InventoryManager : MonoBehaviour
 
     public void PreviousPage()
     {
-        if (currentTwoPages > 1 && currentTwoPages < 12)
+        if (currentTwoPages > 1 && currentTwoPages < 11)
         {
             currentTwoPages--;
             if (currentTwoPages == 1)
@@ -278,7 +278,7 @@ public class InventoryManager : MonoBehaviour
     public void NextPage()
     {
         currentTwoPages++;
-        if (currentTwoPages > 1 && currentTwoPages < 12)
+        if (currentTwoPages > 1 && currentTwoPages < 11)
         {
             if (currentTwoPages == 1)
             {
