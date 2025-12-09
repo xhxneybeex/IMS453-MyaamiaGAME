@@ -524,7 +524,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 624819153388382661, guid: 88bdf5943942e29459753f5835c5267c, type: 3}
         m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
         m_MethodName: TasksTab
         m_Mode: 1
@@ -656,9 +656,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2698501385895745563}
-        m_TargetAssemblyTypeName: UI, Assembly-CSharp
-        m_MethodName: ToggleJournal
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
+        m_MethodName: OpenJournal
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -924,7 +924,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 624819153388382661, guid: 88bdf5943942e29459753f5835c5267c, type: 3}
         m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
         m_MethodName: ItemsTab
         m_Mode: 1

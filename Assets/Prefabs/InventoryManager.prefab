@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 464b621adc005bb439c3e033431abcfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
-  InventoryHUD: {fileID: 6193871268688886045}
+  InventoryHUD: {fileID: 0}
   Notif: {fileID: 0}
   ui: {fileID: 0}
   left: {fileID: 0}
@@ -52,4 +52,5 @@ MonoBehaviour:
   polaroidL: {fileID: 0}
   polaroidR: {fileID: 0}
   tasks: {fileID: 0}
+  itemJournal: {fileID: 0}
   Items: []
