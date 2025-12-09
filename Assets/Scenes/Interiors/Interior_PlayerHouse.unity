@@ -789,18 +789,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 821119754}
-    - target: {fileID: 1616063333943934778, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1787991142}
-    - target: {fileID: 1616063333943934778, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ToggleJournal
-      objectReference: {fileID: 0}
-    - target: {fileID: 1616063333943934778, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UI, Assembly-CSharp
-      objectReference: {fileID: 0}
     - target: {fileID: 2270814162215865889, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1844,9 +1832,24 @@ MonoBehaviour:
   camera: {fileID: 0}
   isGloves: 0
   isCoat: 0
-  isCoffee: 0
   isChair: 0
   isHammer: 0
+  isCoffee: 0
+  isKeys: 0
+  isRug: 0
+  isBlanket: 0
+  isSalt: 0
+  isPepper: 0
+  isShoe: 0
+  isBall: 0
+  isCorn: 0
+  isPlates: 0
+  isForks: 0
+  isSpoons: 0
+  isBrush: 0
+  isStick: 0
+  isSoap: 0
+  isTowel: 0
 --- !u!114 &493687392
 MonoBehaviour:
   m_ObjectHideFlags: 0
