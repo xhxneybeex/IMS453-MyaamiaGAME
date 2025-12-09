@@ -32,7 +32,7 @@ public class SceneController : MonoBehaviour
 
     public void StartGame()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("SampleScene");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Interior_PlayerHouse");
     }
 
     public void YesExit() {
