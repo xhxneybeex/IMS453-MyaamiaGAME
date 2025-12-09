@@ -691,13 +691,11 @@ public class InventoryManager : MonoBehaviour
 
     public void CoffeePolaroid()
     {
-        //if (MugCollected == true)
-        // {
-        itemJournal.transform.GetChild(2).gameObject.SetActive(true); //coffee entry
-                                                                      //coatAud.SetActive(true);
-                                                                      //coat.Stop();
+        if (CoffeeCollected == true)
+        {
+            itemJournal.transform.GetChild(2).gameObject.SetActive(true);
 
-        // }
+        }
     }
 
     public void CoffeeOff()

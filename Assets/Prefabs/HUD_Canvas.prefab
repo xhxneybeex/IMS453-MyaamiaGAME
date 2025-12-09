@@ -3634,7 +3634,7 @@ PrefabInstance:
     - target: {fileID: 8332308045662730045, guid: 512d86fc0b7ed4a4baf5d1fe5eb69da8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 624819153388382661, guid: 88bdf5943942e29459753f5835c5267c, type: 3}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4389,7 +4389,7 @@ PrefabInstance:
     - target: {fileID: 5106878995084953591, guid: 1e86f95b327d5ec4489f079a2f0e7ab7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 624819153388382661, guid: 88bdf5943942e29459753f5835c5267c, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 7698692234109609440, guid: 1e86f95b327d5ec4489f079a2f0e7ab7, type: 3}
       propertyPath: m_Name
       value: CoatEntry
@@ -4889,7 +4889,7 @@ PrefabInstance:
     - target: {fileID: 427498079778582390, guid: 05ba9e378410bb14c849cab064d90eaa, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 624819153388382661, guid: 88bdf5943942e29459753f5835c5267c, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 3019311235167751521, guid: 05ba9e378410bb14c849cab064d90eaa, type: 3}
       propertyPath: m_Name
       value: CoffeeEntry
