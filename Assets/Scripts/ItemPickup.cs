@@ -88,6 +88,9 @@ public class ItemPickup : MonoBehaviour
         } else if (InventoryManager.CornCollected == true && isCorn == true)
         {
             gameObject.SetActive(false);
+        } else if (InventoryManager.PlatesCollected == true && isPlates == true)
+        {
+            gameObject.SetActive(false);
         }
         else
         {
@@ -157,11 +160,15 @@ public class ItemPickup : MonoBehaviour
         }  else if (isBall)
         {
             InventoryManager.BallCollected = true;
-            Debug.Log("shoe collected was set to true");
+            Debug.Log("ball collected was set to true");
         }  else if (isCorn)
         {
             InventoryManager.CornCollected = true;
-            Debug.Log("shoe collected was set to true");
+            Debug.Log("corn collected was set to true");
+        }  else if (isPlates)
+        {
+            InventoryManager.PlatesCollected = true;
+            Debug.Log("plates collected was set to true");
         }
 
 

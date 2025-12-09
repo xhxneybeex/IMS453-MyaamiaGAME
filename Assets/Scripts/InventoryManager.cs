@@ -936,18 +936,16 @@ public class InventoryManager : MonoBehaviour
 
     public void PlatesPolaroid()
     {
-        //if (MugCollected == true)
-        // {
-        itemJournal.transform.GetChild(17).gameObject.SetActive(true); //coffee entry
-                                                                       //coatAud.SetActive(true);
-                                                                       //coat.Stop();
+        if (PlatesCollected == true)
+        {
+            itemJournal.transform.GetChild(17).gameObject.SetActive(true);
 
-        // }
+        }
     }
 
     public void PlatesOff()
     {
-        itemJournal.transform.GetChild(17).gameObject.SetActive(false); //coffee entry
+        itemJournal.transform.GetChild(17).gameObject.SetActive(false);
 
     }
 
