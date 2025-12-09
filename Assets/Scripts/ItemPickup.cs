@@ -18,6 +18,9 @@ public class ItemPickup : MonoBehaviour
     public bool isGloves;
     public bool isCoat;
     public bool isCoffee;
+    public bool isChair;
+
+    public bool isHammer;
 
 
     private void Awake()
@@ -29,6 +32,12 @@ public class ItemPickup : MonoBehaviour
             gameObject.SetActive(false);
         }
         else if (InventoryManager.GlovesCollected == true && isGloves == true)
+        {
+            gameObject.SetActive(false);
+        } else if (InventoryManager.ChairCollected == true && isChair == true)
+        {
+            gameObject.SetActive(false);
+        } else if (InventoryManager.HammerCollected == true && isHammer == true)
         {
             gameObject.SetActive(false);
         }
@@ -57,6 +66,14 @@ public class ItemPickup : MonoBehaviour
         {
             InventoryManager.CoffeeCollected = true;
             Debug.Log("coffee collected was set to true");
+        } else if (isChair)
+        {
+            InventoryManager.ChairCollected = true;
+            Debug.Log("chair collected was set to true");
+        } else if (isHammer)
+        {
+            InventoryManager.HammerCollected = true;
+            Debug.Log("hammer collected was set to true");
         }
 
 

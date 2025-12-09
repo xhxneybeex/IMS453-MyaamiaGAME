@@ -52,6 +52,8 @@ public class InventoryManager : MonoBehaviour
     public static bool GlovesCollected = false;
 
     public static bool CoatCollected = false;
+    public static bool ChairCollected = false;
+    public static bool HammerCollected = false;
 
 
     //public InventoryItemController iic;
@@ -628,26 +630,26 @@ public class InventoryManager : MonoBehaviour
         {
             currentTwoPages = 10;
             PreviousPage();
-           /* GlovesOff();
-            CoatOff();
-            CoffeeOff();
-            KeysOff();
-            SaltOff();
-            RugOff();
-            PepperOff();
-            HairOff();
-            BlanketOff();
-            ChairOff();
-            HammerOff();
-            ShoeOff();
-            BallOff();
-            StickOff();
-            SoapOff();
-            TowelOff();
-            CornOff();
-            PlatesOff();
-            ForksOff();
-            SpoonsOff(); */
+            /* GlovesOff();
+             CoatOff();
+             CoffeeOff();
+             KeysOff();
+             SaltOff();
+             RugOff();
+             PepperOff();
+             HairOff();
+             BlanketOff();
+             ChairOff();
+             HammerOff();
+             ShoeOff();
+             BallOff();
+             StickOff();
+             SoapOff();
+             TowelOff();
+             CornOff();
+             PlatesOff();
+             ForksOff();
+             SpoonsOff(); */
         }
 
     }
@@ -805,13 +807,11 @@ public class InventoryManager : MonoBehaviour
 
     public void ChairPolaroid()
     {
-        //if (MugCollected == true)
-        // {
-        itemJournal.transform.GetChild(9).gameObject.SetActive(true); //coffee entry
-                                                                      //coatAud.SetActive(true);
-                                                                      //coat.Stop();
+        if (ChairCollected == true)
+        {
+            itemJournal.transform.GetChild(9).gameObject.SetActive(true);
 
-        // }
+        }
     }
 
     public void ChairOff()
@@ -822,13 +822,11 @@ public class InventoryManager : MonoBehaviour
 
     public void HammerPolaroid()
     {
-        //if (MugCollected == true)
-        // {
-        itemJournal.transform.GetChild(10).gameObject.SetActive(true); //coffee entry
-                                                                       //coatAud.SetActive(true);
-                                                                       //coat.Stop();
+        if (HammerCollected == true)
+        {
+            itemJournal.transform.GetChild(10).gameObject.SetActive(true); 
 
-        // }
+        }
     }
 
     public void HammerOff()
@@ -973,7 +971,7 @@ public class InventoryManager : MonoBehaviour
 
     }
 
-     public void SpoonsPolaroid()
+    public void SpoonsPolaroid()
     {
         //if (MugCollected == true)
         // {
