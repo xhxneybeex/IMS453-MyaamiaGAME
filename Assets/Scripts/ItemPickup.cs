@@ -79,6 +79,9 @@ public class ItemPickup : MonoBehaviour
         else if (InventoryManager.PepperCollected == true && isPepper == true)
         {
             gameObject.SetActive(false);
+        }  else if (InventoryManager.ShoeCollected == true && isShoe == true)
+        {
+            gameObject.SetActive(false);
         }
         else
         {
@@ -141,6 +144,10 @@ public class ItemPickup : MonoBehaviour
         {
             InventoryManager.PepperCollected = true;
             Debug.Log("pepper collected was set to true");
+        } else if (isShoe)
+        {
+            InventoryManager.ShoeCollected = true;
+            Debug.Log("shoe collected was set to true");
         }
 
 
