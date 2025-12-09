@@ -778,13 +778,11 @@ public class InventoryManager : MonoBehaviour
 
     public void HairPolaroid()
     {
-        //if (MugCollected == true)
-        // {
-        itemJournal.transform.GetChild(7).gameObject.SetActive(true); //coffee entry
-                                                                      //coatAud.SetActive(true);
-                                                                      //coat.Stop();
+        if (BrushCollected == true)
+        {
+            itemJournal.transform.GetChild(7).gameObject.SetActive(true);
 
-        // }
+        }
     }
 
     public void HairOff()
