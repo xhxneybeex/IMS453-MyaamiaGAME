@@ -57,6 +57,18 @@ public class InventoryManager : MonoBehaviour
     public static bool KeysCollected = false;
     public static bool RugCollected = false;
     public static bool BlanketCollected = false;
+    public static bool SaltCollected = false;
+    public static bool PepperCollected = false;
+    public static bool ShoeCollected = false;
+    public static bool BallCollected = false;
+    public static bool CornCollected = false;
+    public static bool PlatesCollected = false;
+    public static bool ForksCollected = false;
+    public static bool SpoonsCollected = false;
+    public static bool BrushCollected = false;
+    public static bool StickCollected = false;
+    public static bool SoapCollected = false;
+    public static bool TowelCollected = false;
 
     public static bool TableCollected = false;
     public static bool StoveCollected = false;
@@ -696,13 +708,11 @@ public class InventoryManager : MonoBehaviour
 
     public void CoffeePolaroid()
     {
-        //if (MugCollected == true)
-        // {
-        itemJournal.transform.GetChild(2).gameObject.SetActive(true); //coffee entry
-                                                                      //coatAud.SetActive(true);
-                                                                      //coat.Stop();
+        if (CoffeeCollected == true)
+        {
+            itemJournal.transform.GetChild(2).gameObject.SetActive(true);
 
-        // }
+        }
     }
 
     public void CoffeeOff()
@@ -743,13 +753,11 @@ public class InventoryManager : MonoBehaviour
 
     public void SaltPolaroid()
     {
-        //if (MugCollected == true)
-        // {
-        itemJournal.transform.GetChild(5).gameObject.SetActive(true); //coffee entry
-                                                                      //coatAud.SetActive(true);
-                                                                      //coat.Stop();
+        if (SaltCollected == true)
+        {
+            itemJournal.transform.GetChild(5).gameObject.SetActive(true);
 
-        // }
+        }
     }
 
     public void SaltOff()
@@ -760,13 +768,11 @@ public class InventoryManager : MonoBehaviour
 
     public void PepperPolaroid()
     {
-        //if (MugCollected == true)
-        // {
-        itemJournal.transform.GetChild(6).gameObject.SetActive(true); //coffee entry
-                                                                      //coatAud.SetActive(true);
-                                                                      //coat.Stop();
+        if (PepperCollected == true)
+        {
+            itemJournal.transform.GetChild(6).gameObject.SetActive(true);
 
-        // }
+        }
     }
 
     public void PepperOff()
@@ -839,13 +845,11 @@ public class InventoryManager : MonoBehaviour
 
     public void ShoePolaroid()
     {
-        //if (MugCollected == true)
-        // {
-        itemJournal.transform.GetChild(11).gameObject.SetActive(true); //coffee entry
-                                                                       //coatAud.SetActive(true);
-                                                                       //coat.Stop();
+        if (ShoeCollected == true)
+        {
+            itemJournal.transform.GetChild(11).gameObject.SetActive(true);
 
-        // }
+        }
     }
 
     public void ShoeOff()
@@ -856,13 +860,11 @@ public class InventoryManager : MonoBehaviour
 
     public void BallPolaroid()
     {
-        //if (MugCollected == true)
-        // {
-        itemJournal.transform.GetChild(12).gameObject.SetActive(true); //coffee entry
-                                                                       //coatAud.SetActive(true);
-                                                                       //coat.Stop();
+        if (BallCollected == true)
+        {
+            itemJournal.transform.GetChild(12).gameObject.SetActive(true);
 
-        // }
+        }
     }
 
     public void BallOff()
@@ -924,13 +926,11 @@ public class InventoryManager : MonoBehaviour
 
     public void CornPolaroid()
     {
-        //if (MugCollected == true)
-        // {
-        itemJournal.transform.GetChild(16).gameObject.SetActive(true); //coffee entry
-                                                                       //coatAud.SetActive(true);
-                                                                       //coat.Stop();
+        if (CornCollected == true)
+        {
+            itemJournal.transform.GetChild(16).gameObject.SetActive(true);
 
-        // }
+        }
     }
 
     public void CornOff()
@@ -941,30 +941,26 @@ public class InventoryManager : MonoBehaviour
 
     public void PlatesPolaroid()
     {
-        //if (MugCollected == true)
-        // {
-        itemJournal.transform.GetChild(17).gameObject.SetActive(true); //coffee entry
-                                                                       //coatAud.SetActive(true);
-                                                                       //coat.Stop();
+        if (PlatesCollected == true)
+        {
+            itemJournal.transform.GetChild(17).gameObject.SetActive(true);
 
-        // }
+        }
     }
 
     public void PlatesOff()
     {
-        itemJournal.transform.GetChild(17).gameObject.SetActive(false); //coffee entry
+        itemJournal.transform.GetChild(17).gameObject.SetActive(false);
 
     }
 
     public void ForksPolaroid()
     {
-        //if (MugCollected == true)
-        // {
-        itemJournal.transform.GetChild(18).gameObject.SetActive(true); //coffee entry
-                                                                       //coatAud.SetActive(true);
-                                                                       //coat.Stop();
+        if (ForksCollected == true)
+        {
+            itemJournal.transform.GetChild(18).gameObject.SetActive(true);
 
-        // }
+        }
     }
 
     public void ForksOff()
@@ -975,13 +971,11 @@ public class InventoryManager : MonoBehaviour
 
     public void SpoonsPolaroid()
     {
-        //if (MugCollected == true)
-        // {
-        itemJournal.transform.GetChild(19).gameObject.SetActive(true); //coffee entry
-                                                                       //coatAud.SetActive(true);
-                                                                       //coat.Stop();
+        if (SpoonsCollected == true)
+        {
+            itemJournal.transform.GetChild(19).gameObject.SetActive(true);
 
-        // }
+        }
     }
 
     public void SpoonsOff()

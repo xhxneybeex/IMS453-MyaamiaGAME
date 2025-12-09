@@ -15,15 +15,29 @@ public class ItemPickup : MonoBehaviour
 
     [SerializeField] public static bool thisHasBeenCollected = false;
 
+    //player house
     public bool isGloves;
     public bool isCoat;
-    public bool isCoffee;
     public bool isChair;
-
     public bool isHammer;
+
+    //larry's house
+    public bool isCoffee;
+
+    //drew's house
     public bool isKeys;
     public bool isRug;
     public bool isBlanket;
+
+    //tony's house
+    public bool isSalt;
+    public bool isPepper;
+    public bool isShoe;
+    public bool isBall;
+    public bool isCorn;
+    public bool isPlates;
+    public bool isForks;
+    public bool isSpoons;
 
 
     private void Awake()
@@ -55,6 +69,32 @@ public class ItemPickup : MonoBehaviour
             gameObject.SetActive(false);
         }
         else if (InventoryManager.BlanketCollected == true && isBlanket == true)
+        {
+            gameObject.SetActive(false);
+        }
+        else if (InventoryManager.SaltCollected == true && isSalt == true)
+        {
+            gameObject.SetActive(false);
+        }
+        else if (InventoryManager.PepperCollected == true && isPepper == true)
+        {
+            gameObject.SetActive(false);
+        }  else if (InventoryManager.ShoeCollected == true && isShoe == true)
+        {
+            gameObject.SetActive(false);
+        }  else if (InventoryManager.BallCollected == true && isBall == true)
+        {
+            gameObject.SetActive(false);
+        } else if (InventoryManager.CornCollected == true && isCorn == true)
+        {
+            gameObject.SetActive(false);
+        } else if (InventoryManager.PlatesCollected == true && isPlates == true)
+        {
+            gameObject.SetActive(false);
+        } else if (InventoryManager.ForksCollected == true && isForks == true)
+        {
+            gameObject.SetActive(false);
+        } else if (InventoryManager.SpoonsCollected == true && isSpoons == true)
         {
             gameObject.SetActive(false);
         }
@@ -109,6 +149,40 @@ public class ItemPickup : MonoBehaviour
         {
             InventoryManager.BlanketCollected = true;
             Debug.Log("hammer collected was set to true");
+        }
+        else if (isSalt)
+        {
+            InventoryManager.SaltCollected = true;
+            Debug.Log("salt collected was set to true");
+        }
+        else if (isPepper)
+        {
+            InventoryManager.PepperCollected = true;
+            Debug.Log("pepper collected was set to true");
+        } else if (isShoe)
+        {
+            InventoryManager.ShoeCollected = true;
+            Debug.Log("shoe collected was set to true");
+        }  else if (isBall)
+        {
+            InventoryManager.BallCollected = true;
+            Debug.Log("ball collected was set to true");
+        }  else if (isCorn)
+        {
+            InventoryManager.CornCollected = true;
+            Debug.Log("corn collected was set to true");
+        }  else if (isPlates)
+        {
+            InventoryManager.PlatesCollected = true;
+            Debug.Log("plates collected was set to true");
+        } else if (isForks)
+        {
+            InventoryManager.ForksCollected = true;
+            Debug.Log("plates collected was set to true");
+        } else if (isSpoons)
+        {
+            InventoryManager.SpoonsCollected = true;
+            Debug.Log("plates collected was set to true");
         }
 
 
