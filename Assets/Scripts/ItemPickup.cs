@@ -15,15 +15,29 @@ public class ItemPickup : MonoBehaviour
 
     [SerializeField] public static bool thisHasBeenCollected = false;
 
+    //player house
     public bool isGloves;
     public bool isCoat;
-    public bool isCoffee;
     public bool isChair;
-
     public bool isHammer;
+
+    //larry's house
+    public bool isCoffee;
+
+    //drew's house
     public bool isKeys;
     public bool isRug;
     public bool isBlanket;
+
+    //tony's house
+    public bool isSalt;
+    public bool isPepper;
+    public bool isShoe;
+    public bool isBall;
+    public bool isCorn;
+    public bool isPlates;
+    public bool isForks;
+    public bool isSpoons;
 
 
     private void Awake()
@@ -55,6 +69,10 @@ public class ItemPickup : MonoBehaviour
             gameObject.SetActive(false);
         }
         else if (InventoryManager.BlanketCollected == true && isBlanket == true)
+        {
+            gameObject.SetActive(false);
+        }
+        else if (InventoryManager.SaltCollected == true && isSalt == true)
         {
             gameObject.SetActive(false);
         }
@@ -109,6 +127,11 @@ public class ItemPickup : MonoBehaviour
         {
             InventoryManager.BlanketCollected = true;
             Debug.Log("hammer collected was set to true");
+        }
+        else if (isSalt)
+        {
+            InventoryManager.SaltCollected = true;
+            Debug.Log("salt collected was set to true");
         }
 
 

@@ -57,6 +57,7 @@ public class InventoryManager : MonoBehaviour
     public static bool KeysCollected = false;
     public static bool RugCollected = false;
     public static bool BlanketCollected = false;
+    public static bool SaltCollected = false;
 
 
     //public InventoryItemController iic;
@@ -736,13 +737,11 @@ public class InventoryManager : MonoBehaviour
 
     public void SaltPolaroid()
     {
-        //if (MugCollected == true)
-        // {
-        itemJournal.transform.GetChild(5).gameObject.SetActive(true); //coffee entry
-                                                                      //coatAud.SetActive(true);
-                                                                      //coat.Stop();
+        if (SaltCollected == true)
+        {
+            itemJournal.transform.GetChild(5).gameObject.SetActive(true);
 
-        // }
+        }
     }
 
     public void SaltOff()
