@@ -987,8 +987,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemPickup
   Item: {fileID: 11400000, guid: eaa417d811a8fb147a6ec3d7b70df76a, type: 2}
+  inventoryM: {fileID: 0}
   player: {fileID: 981541255}
   camera: {fileID: 1032195066}
+  isGloves: 0
+  isCoat: 0
+  isCoffee: 0
 --- !u!114 &493687392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1034,11 +1038,11 @@ PrefabInstance:
     - target: {fileID: 503026303024866662, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
       propertyPath: inventoryManager
       value: 
-      objectReference: {fileID: 821119752}
+      objectReference: {fileID: 0}
     - target: {fileID: 1616063333943934778, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 821119752}
+      objectReference: {fileID: 0}
     - target: {fileID: 2797264601173513885, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1151,11 +1155,6 @@ PrefabInstance:
       addedObject: {fileID: 64862174}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
---- !u!1 &553166398 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6718016846109878348, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
-  m_PrefabInstance: {fileID: 553166397}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &553166399 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 136207163258083361, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
@@ -2000,17 +1999,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88bdf5943942e29459753f5835c5267c, type: 3}
---- !u!114 &821119752 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7541442886327853120, guid: 88bdf5943942e29459753f5835c5267c, type: 3}
-  m_PrefabInstance: {fileID: 821119751}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 464b621adc005bb439c3e033431abcfb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
 --- !u!1 &890008387
 GameObject:
   m_ObjectHideFlags: 0
@@ -2319,9 +2307,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b640f0f16ccf5f144b46599da0e70830, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  InventoryManager: {fileID: 821119752}
+  InventoryManager: {fileID: 0}
   DialogueManager: {fileID: 4312366}
-  timesWalkedUpTo: 0
+  timesWalkedUpToMom: 0
+  timesWalkedUpToDad: 0
 --- !u!65 &935721749
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4219,8 +4208,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34423b226754fb040aaadbf6719d383d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneController
+  sceneToLoad: Town_Exterior
+  to2DScene: 0
   exitScreen: {fileID: 553166399}
-  settingsScreen: {fileID: 553166398}
+  settingsScreen: {fileID: 0}
 --- !u!65 &1996621069
 BoxCollider:
   m_ObjectHideFlags: 0
