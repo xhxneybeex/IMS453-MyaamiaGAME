@@ -868,13 +868,11 @@ public class InventoryManager : MonoBehaviour
 
     public void StickPolaroid()
     {
-        //if (MugCollected == true)
-        // {
-        itemJournal.transform.GetChild(13).gameObject.SetActive(true); //coffee entry
-                                                                       //coatAud.SetActive(true);
-                                                                       //coat.Stop();
+        if (StickCollected == true)
+        {
+            itemJournal.transform.GetChild(13).gameObject.SetActive(true);
 
-        // }
+        }
     }
 
     public void StickOff()

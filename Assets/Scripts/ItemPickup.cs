@@ -106,6 +106,9 @@ public class ItemPickup : MonoBehaviour
         } else if (InventoryManager.BrushCollected == true && isBrush == true)
         {
             gameObject.SetActive(false);
+        } else if (InventoryManager.StickCollected == true && isStick == true)
+        {
+            gameObject.SetActive(false);
         }
         else
         {
@@ -195,6 +198,10 @@ public class ItemPickup : MonoBehaviour
         } else if (isBrush)
         {
             InventoryManager.BrushCollected = true;
+            Debug.Log("plates collected was set to true");
+        } else if (isStick)
+        {
+            InventoryManager.StickCollected = true;
             Debug.Log("plates collected was set to true");
         }
 
