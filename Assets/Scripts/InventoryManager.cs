@@ -185,7 +185,9 @@ public class InventoryManager : MonoBehaviour
         itemJournal.transform.GetChild(14).gameObject.SetActive(false); //soap entry
         itemJournal.transform.GetChild(15).gameObject.SetActive(false); //towel entry
         itemJournal.transform.GetChild(16).gameObject.SetActive(false); //corn entry
-        itemJournal.transform.GetChild(17).gameObject.SetActive(false); //corn entry
+        itemJournal.transform.GetChild(17).gameObject.SetActive(false); //plates entry
+        itemJournal.transform.GetChild(18).gameObject.SetActive(false); //forks entry
+        itemJournal.transform.GetChild(19).gameObject.SetActive(false); //spoons entry
     }
 
     public void ItemsTab()
@@ -352,7 +354,21 @@ public class InventoryManager : MonoBehaviour
     {
         itemJournal.transform.GetChild(17).gameObject.GetComponentInChildren<AudioSource>().Play();
 
-        Debug.Log("playing plate sound");
+        Debug.Log("playing plates sound");
+    }
+
+    public void PlayForksAudio()
+    {
+        itemJournal.transform.GetChild(18).gameObject.GetComponentInChildren<AudioSource>().Play();
+
+        Debug.Log("playing forks sound");
+    }
+
+    public void PlaySpoonsAudio()
+    {
+        itemJournal.transform.GetChild(19).gameObject.GetComponentInChildren<AudioSource>().Play();
+
+        Debug.Log("playing spoons sound");
     }
 
     public void PreviousPage()
@@ -396,6 +412,8 @@ public class InventoryManager : MonoBehaviour
             TowelOff();
             CornOff();
             PlatesOff();
+            ForksOff();
+            SpoonsOff();
         }
         else if (currentTwoPages == 2)
         {
@@ -417,6 +435,8 @@ public class InventoryManager : MonoBehaviour
             TowelOff();
             CornOff();
             PlatesOff();
+            ForksOff();
+            SpoonsOff();
         }
         else if (currentTwoPages == 3)
         {
@@ -438,6 +458,8 @@ public class InventoryManager : MonoBehaviour
             TowelOff();
             CornOff();
             PlatesOff();
+            ForksOff();
+            SpoonsOff();
         }
         else if (currentTwoPages == 4)
         {
@@ -459,6 +481,8 @@ public class InventoryManager : MonoBehaviour
             TowelOff();
             CornOff();
             PlatesOff();
+            ForksOff();
+            SpoonsOff();
         }
         else if (currentTwoPages == 5)
         {
@@ -480,6 +504,8 @@ public class InventoryManager : MonoBehaviour
             TowelOff();
             CornOff();
             PlatesOff();
+            ForksOff();
+            SpoonsOff();
         }
         else if (currentTwoPages == 6)
         {
@@ -501,6 +527,8 @@ public class InventoryManager : MonoBehaviour
             TowelOff();
             CornOff();
             PlatesOff();
+            ForksOff();
+            SpoonsOff();
         }
         else if (currentTwoPages == 7)
         {
@@ -522,6 +550,8 @@ public class InventoryManager : MonoBehaviour
             TowelOff();
             CornOff();
             PlatesOff();
+            ForksOff();
+            SpoonsOff();
         }
         else if (currentTwoPages == 8)
         {
@@ -543,6 +573,8 @@ public class InventoryManager : MonoBehaviour
             StickOff();
             CornOff();
             PlatesOff();
+            ForksOff();
+            SpoonsOff();
         }
         else if (currentTwoPages == 9)
         {
@@ -564,6 +596,31 @@ public class InventoryManager : MonoBehaviour
             StickOff();
             SoapOff();
             TowelOff();
+            ForksOff();
+            SpoonsOff();
+        }
+        else if (currentTwoPages == 10)
+        {
+            ForksPolaroid();
+            SpoonsPolaroid();
+            GlovesOff();
+            CoatOff();
+            CoffeeOff();
+            KeysOff();
+            SaltOff();
+            RugOff();
+            PepperOff();
+            HairOff();
+            BlanketOff();
+            ChairOff();
+            HammerOff();
+            ShoeOff();
+            BallOff();
+            StickOff();
+            SoapOff();
+            TowelOff();
+            CornOff();
+            PlatesOff();
         }
         else
         {
@@ -585,6 +642,8 @@ public class InventoryManager : MonoBehaviour
             TowelOff();
             CornOff();
             PlatesOff();
+            ForksOff();
+            SpoonsOff();
         }
 
     }
@@ -876,7 +935,7 @@ public class InventoryManager : MonoBehaviour
 
     }
 
-     public void PlatesPolaroid()
+    public void PlatesPolaroid()
     {
         //if (MugCollected == true)
         // {
@@ -890,6 +949,40 @@ public class InventoryManager : MonoBehaviour
     public void PlatesOff()
     {
         itemJournal.transform.GetChild(17).gameObject.SetActive(false); //coffee entry
+
+    }
+
+    public void ForksPolaroid()
+    {
+        //if (MugCollected == true)
+        // {
+        itemJournal.transform.GetChild(18).gameObject.SetActive(true); //coffee entry
+                                                                       //coatAud.SetActive(true);
+                                                                       //coat.Stop();
+
+        // }
+    }
+
+    public void ForksOff()
+    {
+        itemJournal.transform.GetChild(18).gameObject.SetActive(false); //coffee entry
+
+    }
+
+     public void SpoonsPolaroid()
+    {
+        //if (MugCollected == true)
+        // {
+        itemJournal.transform.GetChild(19).gameObject.SetActive(true); //coffee entry
+                                                                       //coatAud.SetActive(true);
+                                                                       //coat.Stop();
+
+        // }
+    }
+
+    public void SpoonsOff()
+    {
+        itemJournal.transform.GetChild(19).gameObject.SetActive(false); //coffee entry
 
     }
 }
