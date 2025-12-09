@@ -98,6 +98,8 @@ public class InventoryManager : MonoBehaviour
      } */
     public void OpenJournal()
     {
+        checkForCollected();
+        ActivateCorrectPage();
         Debug.Log("AAAA");
         if (!InventoryHUD.activeInHierarchy)
         {
@@ -141,7 +143,7 @@ public class InventoryManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //checkForCollected();
+        checkForCollected();
 
         if (UI.journalActive == true)
         {
