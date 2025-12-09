@@ -185,6 +185,7 @@ public class InventoryManager : MonoBehaviour
         itemJournal.transform.GetChild(14).gameObject.SetActive(false); //soap entry
         itemJournal.transform.GetChild(15).gameObject.SetActive(false); //towel entry
         itemJournal.transform.GetChild(16).gameObject.SetActive(false); //corn entry
+        itemJournal.transform.GetChild(17).gameObject.SetActive(false); //corn entry
     }
 
     public void ItemsTab()
@@ -347,6 +348,13 @@ public class InventoryManager : MonoBehaviour
         Debug.Log("playing corn sound");
     }
 
+    public void PlayPlatesAudio()
+    {
+        itemJournal.transform.GetChild(17).gameObject.GetComponentInChildren<AudioSource>().Play();
+
+        Debug.Log("playing plate sound");
+    }
+
     public void PreviousPage()
     {
         if (currentTwoPages > 1 && currentTwoPages < 11)
@@ -387,6 +395,7 @@ public class InventoryManager : MonoBehaviour
             SoapOff();
             TowelOff();
             CornOff();
+            PlatesOff();
         }
         else if (currentTwoPages == 2)
         {
@@ -407,6 +416,7 @@ public class InventoryManager : MonoBehaviour
             SoapOff();
             TowelOff();
             CornOff();
+            PlatesOff();
         }
         else if (currentTwoPages == 3)
         {
@@ -427,6 +437,7 @@ public class InventoryManager : MonoBehaviour
             SoapOff();
             TowelOff();
             CornOff();
+            PlatesOff();
         }
         else if (currentTwoPages == 4)
         {
@@ -447,6 +458,7 @@ public class InventoryManager : MonoBehaviour
             SoapOff();
             TowelOff();
             CornOff();
+            PlatesOff();
         }
         else if (currentTwoPages == 5)
         {
@@ -467,6 +479,7 @@ public class InventoryManager : MonoBehaviour
             SoapOff();
             TowelOff();
             CornOff();
+            PlatesOff();
         }
         else if (currentTwoPages == 6)
         {
@@ -487,6 +500,7 @@ public class InventoryManager : MonoBehaviour
             SoapOff();
             TowelOff();
             CornOff();
+            PlatesOff();
         }
         else if (currentTwoPages == 7)
         {
@@ -507,6 +521,7 @@ public class InventoryManager : MonoBehaviour
             SoapOff();
             TowelOff();
             CornOff();
+            PlatesOff();
         }
         else if (currentTwoPages == 8)
         {
@@ -527,10 +542,12 @@ public class InventoryManager : MonoBehaviour
             BallOff();
             StickOff();
             CornOff();
+            PlatesOff();
         }
         else if (currentTwoPages == 9)
         {
             CornPolaroid();
+            PlatesPolaroid();
             GlovesOff();
             CoatOff();
             CoffeeOff();
@@ -567,6 +584,7 @@ public class InventoryManager : MonoBehaviour
             SoapOff();
             TowelOff();
             CornOff();
+            PlatesOff();
         }
 
     }
@@ -855,6 +873,23 @@ public class InventoryManager : MonoBehaviour
     public void CornOff()
     {
         itemJournal.transform.GetChild(16).gameObject.SetActive(false); //coffee entry
+
+    }
+
+     public void PlatesPolaroid()
+    {
+        //if (MugCollected == true)
+        // {
+        itemJournal.transform.GetChild(17).gameObject.SetActive(true); //coffee entry
+                                                                       //coatAud.SetActive(true);
+                                                                       //coat.Stop();
+
+        // }
+    }
+
+    public void PlatesOff()
+    {
+        itemJournal.transform.GetChild(17).gameObject.SetActive(false); //coffee entry
 
     }
 }
