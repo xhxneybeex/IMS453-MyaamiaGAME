@@ -39,6 +39,17 @@ public class ItemHints : MonoBehaviour
                 Debug.Log("it should be updating tasksinbook now");
             }
             coatHintAdded = true;
+        } else if (item.id == 10) // Hammer
+        {
+            Debug.Log("You entered the trigger for the hammer");
+            if (dm.talkedToDrew == true && InventoryManager.CoatCollected == false)
+            {
+                this.gameObject.SetActive(false);
+                //dm.tasksInBook += "\nYou walked by the keehpakiikinki naapinaakani\n";
+                dm.tasksInBook = dm.tasksInBook.Replace("Drew needs me to find a pakantaakani\n", "I think the pakantaakani was somewhere in my house.\n");
+                Debug.Log("it should be updating tasksinbook now");
+            }
+            coatHintAdded = true;
         }
         dm.tasks.text = dm.tasksInBook;
     }

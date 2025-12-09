@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4809366303653937120}
   - component: {fileID: 4919281671475512641}
   m_Layer: 5
-  m_Name: Mom
+  m_Name: Portrait
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

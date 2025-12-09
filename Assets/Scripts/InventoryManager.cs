@@ -58,6 +58,11 @@ public class InventoryManager : MonoBehaviour
     public static bool RugCollected = false;
     public static bool BlanketCollected = false;
 
+    public static bool TableCollected = false;
+    public static bool StoveCollected = false;
+    public static bool RefridgeratorCollected = false;
+    public static bool LampCollected = false;
+
 
     //public InventoryItemController iic;
 

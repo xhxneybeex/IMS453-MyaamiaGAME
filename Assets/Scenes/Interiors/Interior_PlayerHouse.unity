@@ -239,6 +239,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1678017394843746008, guid: ae8381ce8ffa92649967371e0c3ec46d, type: 3}
+      propertyPath: trackOnEntry
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7281265258193102866, guid: ae8381ce8ffa92649967371e0c3ec46d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.73751
@@ -777,6 +781,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 821119754}
+    - target: {fileID: 503026303024866662, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
+      propertyPath: Portrait
+      value: 
+      objectReference: {fileID: 870047975}
     - target: {fileID: 503026303024866662, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
       propertyPath: itemGiving
       value: 
@@ -1847,6 +1855,9 @@ MonoBehaviour:
   isCoffee: 0
   isChair: 0
   isHammer: 0
+  isKeys: 0
+  isRug: 0
+  isBlanket: 0
 --- !u!114 &493687392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3169,6 +3180,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1564733062}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!1 &870047975 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1969701079475749151, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
+  m_PrefabInstance: {fileID: 295721674}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1005557110
 GameObject:
   m_ObjectHideFlags: 0
