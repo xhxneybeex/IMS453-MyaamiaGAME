@@ -373,7 +373,7 @@ public class InventoryManager : MonoBehaviour
 
     public void PreviousPage()
     {
-        if (currentTwoPages > 1 && currentTwoPages < 11)
+        if (currentTwoPages > 1)
         {
             currentTwoPages--;
         }
@@ -624,7 +624,9 @@ public class InventoryManager : MonoBehaviour
         }
         else
         {
-            GlovesOff();
+            currentTwoPages = 10;
+            PreviousPage();
+           /* GlovesOff();
             CoatOff();
             CoffeeOff();
             KeysOff();
@@ -643,7 +645,7 @@ public class InventoryManager : MonoBehaviour
             CornOff();
             PlatesOff();
             ForksOff();
-            SpoonsOff();
+            SpoonsOff(); */
         }
 
     }
