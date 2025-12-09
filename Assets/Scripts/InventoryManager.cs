@@ -883,13 +883,11 @@ public class InventoryManager : MonoBehaviour
 
     public void SoapPolaroid()
     {
-        //if (MugCollected == true)
-        // {
-        itemJournal.transform.GetChild(14).gameObject.SetActive(true); //coffee entry
-                                                                       //coatAud.SetActive(true);
-                                                                       //coat.Stop();
+        if (SoapCollected == true)
+        {
+            itemJournal.transform.GetChild(14).gameObject.SetActive(true);
 
-        // }
+        }
     }
 
     public void SoapOff()

@@ -109,6 +109,9 @@ public class ItemPickup : MonoBehaviour
         } else if (InventoryManager.StickCollected == true && isStick == true)
         {
             gameObject.SetActive(false);
+        } else if (InventoryManager.SoapCollected == true && isSoap == true)
+        {
+            gameObject.SetActive(false);
         }
         else
         {
@@ -202,6 +205,10 @@ public class ItemPickup : MonoBehaviour
         } else if (isStick)
         {
             InventoryManager.StickCollected = true;
+            Debug.Log("plates collected was set to true");
+        } else if (isSoap)
+        {
+            InventoryManager.SoapCollected = true;
             Debug.Log("plates collected was set to true");
         }
 
