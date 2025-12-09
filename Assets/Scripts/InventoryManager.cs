@@ -58,6 +58,7 @@ public class InventoryManager : MonoBehaviour
     public static bool RugCollected = false;
     public static bool BlanketCollected = false;
     public static bool SaltCollected = false;
+    public static bool PepperCollected = false;
 
 
     //public InventoryItemController iic;
@@ -752,13 +753,11 @@ public class InventoryManager : MonoBehaviour
 
     public void PepperPolaroid()
     {
-        //if (MugCollected == true)
-        // {
-        itemJournal.transform.GetChild(6).gameObject.SetActive(true); //coffee entry
-                                                                      //coatAud.SetActive(true);
-                                                                      //coat.Stop();
+        if (PepperCollected == true)
+        {
+            itemJournal.transform.GetChild(6).gameObject.SetActive(true);
 
-        // }
+        }
     }
 
     public void PepperOff()
