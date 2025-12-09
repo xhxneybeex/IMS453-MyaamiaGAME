@@ -21,6 +21,9 @@ public class ItemPickup : MonoBehaviour
     public bool isChair;
 
     public bool isHammer;
+    public bool isKeys;
+    public bool isRug;
+    public bool isBlanket;
 
 
     private void Awake()
@@ -34,10 +37,24 @@ public class ItemPickup : MonoBehaviour
         else if (InventoryManager.GlovesCollected == true && isGloves == true)
         {
             gameObject.SetActive(false);
-        } else if (InventoryManager.ChairCollected == true && isChair == true)
+        }
+        else if (InventoryManager.ChairCollected == true && isChair == true)
         {
             gameObject.SetActive(false);
-        } else if (InventoryManager.HammerCollected == true && isHammer == true)
+        }
+        else if (InventoryManager.HammerCollected == true && isHammer == true)
+        {
+            gameObject.SetActive(false);
+        }
+        else if (InventoryManager.KeysCollected == true && isKeys == true)
+        {
+            gameObject.SetActive(false);
+        }
+        else if (InventoryManager.RugCollected == true && isRug == true)
+        {
+            gameObject.SetActive(false);
+        }
+        else if (InventoryManager.BlanketCollected == true && isBlanket == true)
         {
             gameObject.SetActive(false);
         }
@@ -62,17 +79,35 @@ public class ItemPickup : MonoBehaviour
         {
             InventoryManager.CoatCollected = true;
             Debug.Log("coat collected was set to true");
-        } else if (isCoffee)
+        }
+        else if (isCoffee)
         {
             InventoryManager.CoffeeCollected = true;
             Debug.Log("coffee collected was set to true");
-        } else if (isChair)
+        }
+        else if (isChair)
         {
             InventoryManager.ChairCollected = true;
             Debug.Log("chair collected was set to true");
-        } else if (isHammer)
+        }
+        else if (isHammer)
         {
             InventoryManager.HammerCollected = true;
+            Debug.Log("hammer collected was set to true");
+        }
+        else if (isKeys)
+        {
+            InventoryManager.KeysCollected = true;
+            Debug.Log("hammer collected was set to true");
+        }
+        else if (isRug)
+        {
+            InventoryManager.RugCollected = true;
+            Debug.Log("hammer collected was set to true");
+        }
+        else if (isBlanket)
+        {
+            InventoryManager.BlanketCollected = true;
             Debug.Log("hammer collected was set to true");
         }
 

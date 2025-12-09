@@ -54,6 +54,9 @@ public class InventoryManager : MonoBehaviour
     public static bool CoatCollected = false;
     public static bool ChairCollected = false;
     public static bool HammerCollected = false;
+    public static bool KeysCollected = false;
+    public static bool RugCollected = false;
+    public static bool BlanketCollected = false;
 
 
     //public InventoryItemController iic;
@@ -705,13 +708,11 @@ public class InventoryManager : MonoBehaviour
 
     public void KeysPolaroid()
     {
-        //if (MugCollected == true)
-        // {
-        itemJournal.transform.GetChild(3).gameObject.SetActive(true); //coffee entry
-                                                                      //coatAud.SetActive(true);
-                                                                      //coat.Stop();
+        if (KeysCollected == true)
+        {
+            itemJournal.transform.GetChild(3).gameObject.SetActive(true);
 
-        // }
+        }
     }
 
     public void KeysOff()
@@ -722,13 +723,11 @@ public class InventoryManager : MonoBehaviour
 
     public void RugPolaroid()
     {
-        //if (MugCollected == true)
-        // {
-        itemJournal.transform.GetChild(4).gameObject.SetActive(true); //coffee entry
-                                                                      //coatAud.SetActive(true);
-                                                                      //coat.Stop();
+        if (RugCollected == true)
+        {
+            itemJournal.transform.GetChild(4).gameObject.SetActive(true);
 
-        // }
+        }
     }
 
     public void RugOff()
@@ -790,13 +789,11 @@ public class InventoryManager : MonoBehaviour
 
     public void BlanketPolaroid()
     {
-        //if (MugCollected == true)
-        // {
-        itemJournal.transform.GetChild(8).gameObject.SetActive(true); //coffee entry
-                                                                      //coatAud.SetActive(true);
-                                                                      //coat.Stop();
+        if (BlanketCollected == true)
+        {
+            itemJournal.transform.GetChild(8).gameObject.SetActive(true);
 
-        // }
+        }
     }
 
     public void BlanketOff()
@@ -824,7 +821,7 @@ public class InventoryManager : MonoBehaviour
     {
         if (HammerCollected == true)
         {
-            itemJournal.transform.GetChild(10).gameObject.SetActive(true); 
+            itemJournal.transform.GetChild(10).gameObject.SetActive(true);
 
         }
     }
