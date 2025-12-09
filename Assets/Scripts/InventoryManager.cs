@@ -951,13 +951,11 @@ public class InventoryManager : MonoBehaviour
 
     public void ForksPolaroid()
     {
-        //if (MugCollected == true)
-        // {
-        itemJournal.transform.GetChild(18).gameObject.SetActive(true); //coffee entry
-                                                                       //coatAud.SetActive(true);
-                                                                       //coat.Stop();
+        if (ForksCollected == true)
+        {
+            itemJournal.transform.GetChild(18).gameObject.SetActive(true);
 
-        // }
+        }
     }
 
     public void ForksOff()
