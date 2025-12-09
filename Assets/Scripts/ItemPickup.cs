@@ -112,6 +112,9 @@ public class ItemPickup : MonoBehaviour
         } else if (InventoryManager.SoapCollected == true && isSoap == true)
         {
             gameObject.SetActive(false);
+        } else if (InventoryManager.TowelCollected == true && isTowel == true)
+        {
+            gameObject.SetActive(false);
         }
         else
         {
@@ -193,23 +196,27 @@ public class ItemPickup : MonoBehaviour
         } else if (isForks)
         {
             InventoryManager.ForksCollected = true;
-            Debug.Log("plates collected was set to true");
+            Debug.Log("forks collected was set to true");
         } else if (isSpoons)
         {
             InventoryManager.SpoonsCollected = true;
-            Debug.Log("plates collected was set to true");
+            Debug.Log("spoons collected was set to true");
         } else if (isBrush)
         {
             InventoryManager.BrushCollected = true;
-            Debug.Log("plates collected was set to true");
+            Debug.Log("brush collected was set to true");
         } else if (isStick)
         {
             InventoryManager.StickCollected = true;
-            Debug.Log("plates collected was set to true");
+            Debug.Log("stick collected was set to true");
         } else if (isSoap)
         {
             InventoryManager.SoapCollected = true;
-            Debug.Log("plates collected was set to true");
+            Debug.Log("soap collected was set to true");
+        } else if (isTowel)
+        {
+            InventoryManager.TowelCollected = true;
+            Debug.Log("towel collected was set to true");
         }
 
 
