@@ -966,13 +966,11 @@ public class InventoryManager : MonoBehaviour
 
     public void SpoonsPolaroid()
     {
-        //if (MugCollected == true)
-        // {
-        itemJournal.transform.GetChild(19).gameObject.SetActive(true); //coffee entry
-                                                                       //coatAud.SetActive(true);
-                                                                       //coat.Stop();
+        if (SpoonsCollected == true)
+        {
+            itemJournal.transform.GetChild(19).gameObject.SetActive(true);
 
-        // }
+        }
     }
 
     public void SpoonsOff()

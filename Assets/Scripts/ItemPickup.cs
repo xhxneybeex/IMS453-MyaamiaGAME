@@ -94,6 +94,9 @@ public class ItemPickup : MonoBehaviour
         } else if (InventoryManager.ForksCollected == true && isForks == true)
         {
             gameObject.SetActive(false);
+        } else if (InventoryManager.SpoonsCollected == true && isSpoons == true)
+        {
+            gameObject.SetActive(false);
         }
         else
         {
@@ -175,6 +178,10 @@ public class ItemPickup : MonoBehaviour
         } else if (isForks)
         {
             InventoryManager.ForksCollected = true;
+            Debug.Log("plates collected was set to true");
+        } else if (isSpoons)
+        {
+            InventoryManager.SpoonsCollected = true;
             Debug.Log("plates collected was set to true");
         }
 
