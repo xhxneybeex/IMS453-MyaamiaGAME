@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: BlueMug
   m_EditorClassIdentifier: Assembly-CSharp::Item
   id: 5
-  itemName: Blue Mug
-  icon: {fileID: 21300000, guid: e68811ecdf5a52f40bb06fd1f1e40d9a, type: 3}
+  itemName: Coffee
+  icon: {fileID: 21300000, guid: e289470d6e97cd64e9689cfdddb30259, type: 3}

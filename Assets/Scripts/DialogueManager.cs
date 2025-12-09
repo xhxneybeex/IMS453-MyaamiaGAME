@@ -119,7 +119,7 @@ public class DialogueManager : MonoBehaviour
     public void StartDialogue(string character)
     {
         Debug.Log("it just checked for e press for " + character);
-        if (character.Equals("Larry") && InventoryManager.MugCollected == false) //&& enterClicked == true
+        if (character.Equals("Larry") && InventoryManager.CoffeeCollected == false) //&& enterClicked == true
         {
             // person = 
             dialogue.text = currentLine;
@@ -127,7 +127,7 @@ public class DialogueManager : MonoBehaviour
             interactionEnabled = false;
             notificationIcon.SetActive(true);
         }
-        else if (character.Equals("Larry") && InventoryManager.MugCollected == true)
+        else if (character.Equals("Larry") && InventoryManager.CoffeeCollected == true)
         {
             currentLine = "Thanks so much! Now I can get moving.";
             dialogue.text = currentLine;
@@ -156,9 +156,9 @@ public class DialogueManager : MonoBehaviour
         {
             Dad.SetActive(false);
             Mom.SetActive(true);
-            currentLine = "That should help keep you warm!";
+            currentLine = "That should help keep you warm! I also noticed that Angeline’s old naahkiipioni was falling apart, so I thought we could surprise her with a nice new one. I have some work to take care of here, so could you drop off this new naahkiipioni for me?";
             tasksInBook = tasksInBook.Replace("Mom needs me to find my alencihkana\n", "");
-            tasksInBook = tasksInBook.Replace("You walked by the alencihkana\n", "");
+            tasksInBook = tasksInBook.Replace("I think I saw the alencihkana on the counter\n", "");
             dialogue.text = currentLine;
             dialogueUI.SetActive(true);
             interactionEnabled = false;
@@ -187,7 +187,7 @@ public class DialogueManager : MonoBehaviour
             Mom.SetActive(false);
             currentLine = "Now you’re ready to brave the cold!";
             tasksInBook = tasksInBook.Replace("Dad needs me to find my keehpakiikinki naapinaakani.\n", "");
-            tasksInBook = tasksInBook.Replace("You walked by the keehpakiikinki naapinaakani\n", "");
+            tasksInBook = tasksInBook.Replace("I think the plant is right by the keehpakiikinki naapinaakani\n", "");
             dialogue.text = currentLine;
             dialogueUI.SetActive(true);
             interactionEnabled = false;

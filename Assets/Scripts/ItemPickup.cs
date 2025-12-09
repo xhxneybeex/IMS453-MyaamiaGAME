@@ -3,6 +3,7 @@ using UnityEngine;
 public class ItemPickup : MonoBehaviour
 {
     public Item Item;
+    public InventoryManager inventoryM;
 
     public GameObject player;
 
@@ -14,32 +15,114 @@ public class ItemPickup : MonoBehaviour
 
     [SerializeField] public static bool thisHasBeenCollected = false;
 
+    public bool isGloves;
+    public bool isCoat;
+    public bool isCoffee;
+    public bool isChair;
+
+    public bool isHammer;
+    public bool isKeys;
+    public bool isRug;
+    public bool isBlanket;
+
 
     private void Awake()
     {
         playerController = GetComponent<PlayerController>();
         camera = Camera.main;
-        if (thisHasBeenCollected == true)
+        if (InventoryManager.CoatCollected == true && isCoat == true)
         {
-            InventoryManager.Instance.Add(Item);
-            Destroy(gameObject);
+            gameObject.SetActive(false);
+        }
+        else if (InventoryManager.GlovesCollected == true && isGloves == true)
+        {
+            gameObject.SetActive(false);
+        }
+        else if (InventoryManager.ChairCollected == true && isChair == true)
+        {
+            gameObject.SetActive(false);
+        }
+        else if (InventoryManager.HammerCollected == true && isHammer == true)
+        {
+            gameObject.SetActive(false);
+        }
+        else if (InventoryManager.KeysCollected == true && isKeys == true)
+        {
+            gameObject.SetActive(false);
+        }
+        else if (InventoryManager.RugCollected == true && isRug == true)
+        {
+            gameObject.SetActive(false);
+        }
+        else if (InventoryManager.BlanketCollected == true && isBlanket == true)
+        {
+            gameObject.SetActive(false);
+        }
+        else
+        {
+            gameObject.SetActive(true);
         }
     }
+
 
     void Pickup()
     {
         InventoryManager.Instance.Add(Item);
         thisHasBeenCollected = true;
-        Destroy(gameObject);
+
+        if (isGloves)
+        {
+            InventoryManager.GlovesCollected = true;
+            Debug.Log("gloves collected was set to true");
+        }
+        else if (isCoat)
+        {
+            InventoryManager.CoatCollected = true;
+            Debug.Log("coat collected was set to true");
+        }
+        else if (isCoffee)
+        {
+            InventoryManager.CoffeeCollected = true;
+            Debug.Log("coffee collected was set to true");
+        }
+        else if (isChair)
+        {
+            InventoryManager.ChairCollected = true;
+            Debug.Log("chair collected was set to true");
+        }
+        else if (isHammer)
+        {
+            InventoryManager.HammerCollected = true;
+            Debug.Log("hammer collected was set to true");
+        }
+        else if (isKeys)
+        {
+            InventoryManager.KeysCollected = true;
+            Debug.Log("hammer collected was set to true");
+        }
+        else if (isRug)
+        {
+            InventoryManager.RugCollected = true;
+            Debug.Log("hammer collected was set to true");
+        }
+        else if (isBlanket)
+        {
+            InventoryManager.BlanketCollected = true;
+            Debug.Log("hammer collected was set to true");
+        }
+
+
+        gameObject.SetActive(false);
     }
 
     private void OnMouseDown()
     {
-        
+
+        if (inventoryM.InventoryHUD.activeInHierarchy == false)
+        {
             Pickup();
             Debug.Log("iT WORKED");
-        
-        
+        }
         /*if (Physics.Raycast(camera.transform.position, camera.transform.TransformDirection(Vector3.up), out hit, Mathf.Max(5)))
         {
             Pickup();

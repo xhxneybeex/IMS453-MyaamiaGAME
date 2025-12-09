@@ -27,9 +27,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8665795548006199607}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 6, z: 10}
+  m_LocalScale: {x: 1.7268001, y: 1.03608, z: 1.7268001}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -81,8 +81,8 @@ SpriteRenderer:
   m_SortingLayerID: 290018937
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 020cff8bbba3c964aa6383fae1383ef6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: f1a8bfc7958018c46b7a839e496adee0, type: 3}
+  m_Color: {r: 0.9333334, g: 0.509804, b: 0.9333334, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -111,8 +111,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.2997573, y: 0.23283081, z: 0.10128307}
-  m_Center: {x: 0.0008419037, y: -0.025307914, z: 0.04665804}
+  m_Size: {x: 1.7538463, y: 1.1903336, z: 0.2}
+  m_Center: {x: -0.01587469, y: -0.11153227, z: 0}
 --- !u!114 &5979036263689474359
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,7 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34423b226754fb040aaadbf6719d383d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneController
-  sceneToLoad: Level_2_Exterior
+  sceneToLoad: Town_Exterior
   to2DScene: 0
   exitScreen: {fileID: 0}
   settingsScreen: {fileID: 0}
