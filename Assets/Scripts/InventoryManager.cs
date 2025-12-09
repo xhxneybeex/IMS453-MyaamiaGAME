@@ -61,6 +61,14 @@ public class InventoryManager : MonoBehaviour
     public static bool PepperCollected = false;
     public static bool ShoeCollected = false;
     public static bool BallCollected = false;
+    public static bool CornCollected = false;
+    public static bool PlatesCollected = false;
+    public static bool ForksCollected = false;
+    public static bool SpoonsCollected = false;
+    public static bool BrushCollected = false;
+    public static bool StickCollected = false;
+    public static bool SoapCollected = false;
+    public static bool TowelCollected = false;
 
 
     //public InventoryItemController iic;
@@ -913,13 +921,11 @@ public class InventoryManager : MonoBehaviour
 
     public void CornPolaroid()
     {
-        //if (MugCollected == true)
-        // {
-        itemJournal.transform.GetChild(16).gameObject.SetActive(true); //coffee entry
-                                                                       //coatAud.SetActive(true);
-                                                                       //coat.Stop();
+        if (CornCollected == true)
+        {
+            itemJournal.transform.GetChild(16).gameObject.SetActive(true);
 
-        // }
+        }
     }
 
     public void CornOff()

@@ -85,6 +85,9 @@ public class ItemPickup : MonoBehaviour
         }  else if (InventoryManager.BallCollected == true && isBall == true)
         {
             gameObject.SetActive(false);
+        } else if (InventoryManager.CornCollected == true && isCorn == true)
+        {
+            gameObject.SetActive(false);
         }
         else
         {
@@ -154,6 +157,10 @@ public class ItemPickup : MonoBehaviour
         }  else if (isBall)
         {
             InventoryManager.BallCollected = true;
+            Debug.Log("shoe collected was set to true");
+        }  else if (isCorn)
+        {
+            InventoryManager.CornCollected = true;
             Debug.Log("shoe collected was set to true");
         }
 
