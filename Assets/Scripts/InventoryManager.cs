@@ -184,6 +184,7 @@ public class InventoryManager : MonoBehaviour
         itemJournal.transform.GetChild(13).gameObject.SetActive(false); //stick entry
         itemJournal.transform.GetChild(14).gameObject.SetActive(false); //soap entry
         itemJournal.transform.GetChild(15).gameObject.SetActive(false); //towel entry
+        itemJournal.transform.GetChild(16).gameObject.SetActive(false); //corn entry
     }
 
     public void ItemsTab()
@@ -332,11 +333,18 @@ public class InventoryManager : MonoBehaviour
         Debug.Log("playing soap sound");
     }
 
-      public void PlayTowelAudio()
+    public void PlayTowelAudio()
     {
         itemJournal.transform.GetChild(15).gameObject.GetComponentInChildren<AudioSource>().Play();
 
-        Debug.Log("playing soap sound");
+        Debug.Log("playing towel sound");
+    }
+
+    public void PlayCornAudio()
+    {
+        itemJournal.transform.GetChild(16).gameObject.GetComponentInChildren<AudioSource>().Play();
+
+        Debug.Log("playing corn sound");
     }
 
     public void PreviousPage()
@@ -378,6 +386,7 @@ public class InventoryManager : MonoBehaviour
             StickOff();
             SoapOff();
             TowelOff();
+            CornOff();
         }
         else if (currentTwoPages == 2)
         {
@@ -397,6 +406,7 @@ public class InventoryManager : MonoBehaviour
             StickOff();
             SoapOff();
             TowelOff();
+            CornOff();
         }
         else if (currentTwoPages == 3)
         {
@@ -416,6 +426,7 @@ public class InventoryManager : MonoBehaviour
             StickOff();
             SoapOff();
             TowelOff();
+            CornOff();
         }
         else if (currentTwoPages == 4)
         {
@@ -435,6 +446,7 @@ public class InventoryManager : MonoBehaviour
             StickOff();
             SoapOff();
             TowelOff();
+            CornOff();
         }
         else if (currentTwoPages == 5)
         {
@@ -454,6 +466,7 @@ public class InventoryManager : MonoBehaviour
             StickOff();
             SoapOff();
             TowelOff();
+            CornOff();
         }
         else if (currentTwoPages == 6)
         {
@@ -473,6 +486,7 @@ public class InventoryManager : MonoBehaviour
             StickOff();
             SoapOff();
             TowelOff();
+            CornOff();
         }
         else if (currentTwoPages == 7)
         {
@@ -492,6 +506,7 @@ public class InventoryManager : MonoBehaviour
             ShoeOff();
             SoapOff();
             TowelOff();
+            CornOff();
         }
         else if (currentTwoPages == 8)
         {
@@ -511,6 +526,27 @@ public class InventoryManager : MonoBehaviour
             ShoeOff();
             BallOff();
             StickOff();
+            CornOff();
+        }
+        else if (currentTwoPages == 9)
+        {
+            CornPolaroid();
+            GlovesOff();
+            CoatOff();
+            CoffeeOff();
+            KeysOff();
+            SaltOff();
+            RugOff();
+            PepperOff();
+            HairOff();
+            BlanketOff();
+            ChairOff();
+            HammerOff();
+            ShoeOff();
+            BallOff();
+            StickOff();
+            SoapOff();
+            TowelOff();
         }
         else
         {
@@ -530,6 +566,7 @@ public class InventoryManager : MonoBehaviour
             StickOff();
             SoapOff();
             TowelOff();
+            CornOff();
         }
 
     }
@@ -801,6 +838,23 @@ public class InventoryManager : MonoBehaviour
     public void TowelOff()
     {
         itemJournal.transform.GetChild(15).gameObject.SetActive(false); //coffee entry
+
+    }
+
+    public void CornPolaroid()
+    {
+        //if (MugCollected == true)
+        // {
+        itemJournal.transform.GetChild(16).gameObject.SetActive(true); //coffee entry
+                                                                       //coatAud.SetActive(true);
+                                                                       //coat.Stop();
+
+        // }
+    }
+
+    public void CornOff()
+    {
+        itemJournal.transform.GetChild(16).gameObject.SetActive(false); //coffee entry
 
     }
 }
