@@ -12,7 +12,7 @@ public class BridgeLogic : MonoBehaviour
     {
         if (InventoryManager.GlovesCollected && InventoryManager.CoatCollected && InventoryManager.RugCollected && InventoryManager.HammerCollected
             && InventoryManager.SaltCollected && InventoryManager.PepperCollected && InventoryManager.CoffeeCollected && InventoryManager.KeysCollected
-            && InventoryManager.BrushCollected && InventoryManager.BlanketCollected && InventoryManager.ChairCollected && InventoryManager.ShoeCollected)
+            && InventoryManager.BlanketCollected && InventoryManager.ChairCollected && InventoryManager.ShoeCollected)
         {
             gameObject.SetActive(true);
         } else
