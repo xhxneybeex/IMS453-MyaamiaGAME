@@ -121,8 +121,7 @@ public class InventoryManager : MonoBehaviour
     public void OpenJournal()
     {
         checkForCollected();
-        ActivateCorrectPage();
-        Debug.Log("AAAA");
+        //Debug.Log("AAAA");
         if (!InventoryHUD.activeInHierarchy)
         {
             InventoryHUD.SetActive(true);
@@ -133,6 +132,11 @@ public class InventoryManager : MonoBehaviour
                 Notif.gameObject.SetActive(false);
                 Debug.Log("Notification icon dissappears when inventory opens.");
                 TasksTab();
+            }
+            else
+            {
+                ItemsTab();
+                //ActivateCorrectPage();
             }
         }
 
@@ -147,11 +151,7 @@ public class InventoryManager : MonoBehaviour
             Debug.Log("inventory should be closed :)");
         }
 
-        else
-        {
-            ItemsTab();
-            ActivateCorrectPage();
-        }
+        
     }
 
 
@@ -173,7 +173,7 @@ public class InventoryManager : MonoBehaviour
         }
 
 
-        Debug.Log("two current pages are set: " + currentTwoPages);
+        //Debug.Log("two current pages are set: " + currentTwoPages);
 
 
     }

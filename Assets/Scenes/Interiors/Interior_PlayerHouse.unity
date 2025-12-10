@@ -455,8 +455,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemHints
   dm: {fileID: 357491882}
-  glovesHintAdded: 0
-  coatHintAdded: 0
   item: {fileID: 11400000, guid: 8e5163c3da422fa4d8b5086fa1b5264a, type: 2}
 --- !u!54 &128499448
 Rigidbody:
@@ -786,9 +784,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 870047975}
     - target: {fileID: 503026303024866662, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
+      propertyPath: Portrait2
+      value: 
+      objectReference: {fileID: 295721677}
+    - target: {fileID: 503026303024866662, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
       propertyPath: itemGiving
       value: 
       objectReference: {fileID: 1468609863}
+    - target: {fileID: 503026303024866662, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
+      propertyPath: inventoryManager
+      value: 
+      objectReference: {fileID: 821119754}
+    - target: {fileID: 766889676990247113, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 38078ca122be56b42a676c486c6b83cf, type: 3}
     - target: {fileID: 1301515409183358107, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -957,6 +967,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 821119754}
+    - target: {fileID: 7915818510155862810, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
+      propertyPath: m_text
+      value: No current or past tasks
+      objectReference: {fileID: 0}
     - target: {fileID: 8047571467664815690, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -990,6 +1004,11 @@ GameObject:
 --- !u!1 &295721676 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5983639333486294685, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
+  m_PrefabInstance: {fileID: 295721674}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &295721677 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6201892301246873673, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
   m_PrefabInstance: {fileID: 295721674}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &295721678 stripped
@@ -1852,12 +1871,24 @@ MonoBehaviour:
   camera: {fileID: 0}
   isGloves: 0
   isCoat: 0
-  isCoffee: 0
   isChair: 0
   isHammer: 0
+  isCoffee: 0
   isKeys: 0
   isRug: 0
   isBlanket: 0
+  isSalt: 0
+  isPepper: 0
+  isShoe: 0
+  isBall: 0
+  isCorn: 0
+  isPlates: 0
+  isForks: 0
+  isSpoons: 0
+  isBrush: 0
+  isStick: 0
+  isSoap: 0
+  isTowel: 0
 --- !u!114 &493687392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3826,8 +3857,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemHints
   dm: {fileID: 357491882}
-  glovesHintAdded: 0
-  coatHintAdded: 0
   item: {fileID: 11400000, guid: b1e1b688460def346804ea2bf4afbaca, type: 2}
 --- !u!65 &1128747640
 BoxCollider:

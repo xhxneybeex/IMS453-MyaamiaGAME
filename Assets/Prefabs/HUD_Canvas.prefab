@@ -2045,9 +2045,22 @@ MonoBehaviour:
   notificationIcon: {fileID: 6996357129667551141}
   dialogue: {fileID: 5784668444511319707}
   ToDoText: {fileID: 3877123227234045737}
+  portraits:
+  - {fileID: 21300000, guid: 1961ea764a4146a4d9ea42312071673d, type: 3}
+  - {fileID: 21300000, guid: c026d9e5ef24ed042bc7aabbf1dd52ea, type: 3}
+  - {fileID: 21300000, guid: 364077fa33c0f9f458d56a7c6673c7fb, type: 3}
+  - {fileID: 21300000, guid: 5f905f7a2fa925a49a69c621c8da5e3e, type: 3}
+  - {fileID: 21300000, guid: e962a6f8a41ce5345966f5faaff863ef, type: 3}
+  - {fileID: 21300000, guid: 4682e13275320d446b7a16386abba241, type: 3}
+  - {fileID: 21300000, guid: 86890ed8a2c7da248adf4f075da50820, type: 3}
+  - {fileID: 21300000, guid: 1d963ef68bc24f54393ee2580ac1f486, type: 3}
+  - {fileID: 21300000, guid: 38078ca122be56b42a676c486c6b83cf, type: 3}
+  - {fileID: 21300000, guid: 363ef887cd749394c9ec2514fc80ffec, type: 3}
+  - {fileID: 21300000, guid: 05565cc0a6bb01d4882a99cea745e551, type: 3}
+  - {fileID: 21300000, guid: 64402bf4719b06e4eb7b759759e49ed8, type: 3}
+  - {fileID: 21300000, guid: 1cde4fc37b427134490a73ce4a0e1779, type: 3}
   tasks: {fileID: 7915818510155862810}
   Portrait: {fileID: 1969701079475749151}
-  Dad: {fileID: 6201892301246873673}
   interactionEnabled: 0
   enterClicked: 0
   characterNotif: Larry
@@ -2055,13 +2068,7 @@ MonoBehaviour:
     need something to wake me up. I really need my kociihsaapowi minehkwaakani, but
     it takes so much energy to get up. Could you bring it to me? I think I left it
     on the atoohpooni?"
-  tasksInBook: 
   currentChar: 
-  talkedToMom: 0
-  talkedToDad: 0
-  talkedToLarry: 0
-  talkedToDrew: 0
-  talkedToTony: 0
 --- !u!1 &8838794914346975184
 GameObject:
   m_ObjectHideFlags: 0
@@ -3260,7 +3267,7 @@ PrefabInstance:
     - target: {fileID: 434653983900467719, guid: 35df36f1a9b5b754cb797db923df569c, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 5f905f7a2fa925a49a69c621c8da5e3e, type: 3}
+      objectReference: {fileID: 21300000, guid: c026d9e5ef24ed042bc7aabbf1dd52ea, type: 3}
     - target: {fileID: 642353757397891776, guid: 35df36f1a9b5b754cb797db923df569c, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3355,7 +3362,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1268877352868310885, guid: 35df36f1a9b5b754cb797db923df569c, type: 3}
       propertyPath: m_Name
-      value: Dad
+      value: Portrait2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1268877352868310885, guid: 35df36f1a9b5b754cb797db923df569c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1715093312308648375, guid: 35df36f1a9b5b754cb797db923df569c, type: 3}
       propertyPath: m_text
@@ -3427,11 +3438,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
---- !u!1 &6201892301246873673 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1268877352868310885, guid: 35df36f1a9b5b754cb797db923df569c, type: 3}
-  m_PrefabInstance: {fileID: 5155065809857163052}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5254320940867533240
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3751,7 +3757,7 @@ PrefabInstance:
     - target: {fileID: 4919281671475512641, guid: aabbb6398c9ce9b47974a74a0d52a224, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 1cde4fc37b427134490a73ce4a0e1779, type: 3}
+      objectReference: {fileID: 21300000, guid: e962a6f8a41ce5345966f5faaff863ef, type: 3}
     - target: {fileID: 6175998830267511959, guid: aabbb6398c9ce9b47974a74a0d52a224, type: 3}
       propertyPath: m_Name
       value: Portrait
