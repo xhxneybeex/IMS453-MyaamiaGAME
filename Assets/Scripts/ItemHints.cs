@@ -25,8 +25,16 @@ public class ItemHints : MonoBehaviour
                 DialogueManager.tasksInBook = DialogueManager.tasksInBook.Replace("Russel wants me to return Betsy's wilenaahkhtaakani\n", "I think I saw the wilenaahkhtaakani in Drew's house\n");
                 Debug.Log("it should be updating tasksinbook now");
             }
-        }
-        else if (item.id == 6) // gloves
+        } else if (item.id == 5) // BlueMug
+        {
+            if (DialogueManager.talkedToLarry == true && InventoryManager.CoffeeCollected == false)
+            {
+                this.gameObject.SetActive(false);
+                DialogueManager.tasksInBook = DialogueManager.tasksInBook.Replace("Larry needs me to find his kociihsaapowi\n", "I think I saw Larry's kociihsaapowi somewhere in his house\n");
+                //Debug.Log("it should be updating tasksinbook now");
+            }
+            //coatHintAdded = true;
+        } else if (item.id == 6) // gloves
         {
             Debug.Log("you entered the trigger for gloves"); 
             if (DialogueManager.talkedToMom == true && InventoryManager.GlovesCollected == false)
@@ -44,6 +52,15 @@ public class ItemHints : MonoBehaviour
                 this.gameObject.SetActive(false);
                 DialogueManager.tasksInBook = DialogueManager.tasksInBook.Replace("Dad needs me to find my keehpakiikinki naapinaakani.\n", "I think the plant is right by the keehpakiikinki naapinaakani\n");
                 Debug.Log("it should be updating tasksinbook now");
+            }
+            //coatHintAdded = true;
+        } else if (item.id == 9) // Chair
+        {
+            if (DialogueManager.talkedToMom2 == true && InventoryManager.ChairCollected == false)
+            {
+                this.gameObject.SetActive(false);
+                DialogueManager.tasksInBook = DialogueManager.tasksInBook.Replace("Mom wants me to find a naahkiipioni\n", "There's a naahkiipioni in my house.\n");
+                //Debug.Log("it should be updating tasksinbook now");
             }
             //coatHintAdded = true;
         } else if (item.id == 10) // Hammer
@@ -84,12 +101,57 @@ public class ItemHints : MonoBehaviour
                 Debug.Log("it should be updating tasksinbook now");
             }
             //coatHintAdded = true;
+        } else if (item.id == 15) // Shoe
+        {
+            if (DialogueManager.talkedToSpot == true && InventoryManager.ShoeCollected == false)
+            {
+                this.gameObject.SetActive(false);
+                DialogueManager.tasksInBook = DialogueManager.tasksInBook.Replace("Spot wants me to find a mahkisini\n", "I think I saw a mahkisini in Tony's house\n");
+                //Debug.Log("it should be updating tasksinbook now");
+            }
+            //coatHintAdded = true;
+        } else if (item.id == 17) // Corn
+        {
+            if (DialogueManager.talkedToCaroline == true && InventoryManager.CornCollected == false)
+            {
+                this.gameObject.SetActive(false);
+                DialogueManager.tasksInBook = DialogueManager.tasksInBook.Replace("Caroline wants me to find some miincipi\n", "I think I saw some miincipi in Tony's house\n");
+                //Debug.Log("it should be updating tasksinbook now");
+            }
+            //coatHintAdded = true;
+        } else if (item.id == 18 || item.id == 19 || item.id == 20) // Plates, Forks, Spoons
+        {
+            if (DialogueManager.talkedToTony2 == true && InventoryManager.PlatesCollected == false || DialogueManager.talkedToTony2 == true && InventoryManager.ForksCollected == false || DialogueManager.talkedToTony2 == true && InventoryManager.SpoonsCollected == false)
+            {
+                this.gameObject.SetActive(false);
+                DialogueManager.tasksInBook = DialogueManager.tasksInBook.Replace("Tony wants me to find some šinkilaakana, neewikoleekia, and kookaana\n", "kookaana, šinkilaakana, and Neewikoleekia were in Tony's house\n");
+                //Debug.Log("it should be updating tasksinbook now");
+            }
+            //coatHintAdded = true;
         } else if (item.id == 21) // Brush
         {
             if (DialogueManager.talkedToAngeline == true && InventoryManager.BrushCollected == false)
             {
                 this.gameObject.SetActive(false);
                 DialogueManager.tasksInBook = DialogueManager.tasksInBook.Replace("Angeline wants me to find her a piiwahaakani\n", "I think I saw a piiwahaakani in Judy's house\n");
+                //Debug.Log("it should be updating tasksinbook now");
+            }
+            //coatHintAdded = true;
+        } else if (item.id == 22) // Stick
+        {
+            if (DialogueManager.talkedToMarco == true && InventoryManager.StickCollected == false)
+            {
+                this.gameObject.SetActive(false);
+                DialogueManager.tasksInBook = DialogueManager.tasksInBook.Replace("Marco wants me to find a pakitahaakani\n", "I think I saw a pakitahaakani in Judy's house\n");
+                //Debug.Log("it should be updating tasksinbook now");
+            }
+            //coatHintAdded = true;
+        } else if (item.id == 23 || item.id == 24) // Soap and Towel
+        {
+            if (DialogueManager.talkedToJudy == true && InventoryManager.SoapCollected == false || DialogueManager.talkedToJudy == true && InventoryManager.TowelCollected == false)
+            {
+                this.gameObject.SetActive(false);
+                DialogueManager.tasksInBook = DialogueManager.tasksInBook.Replace("Judy wants me to find a waapahaakani and a kišiinkweehaakani\n", "I think I saw a waapahaakani and a kišiinkweehaakani in Judy's house\n");
                 //Debug.Log("it should be updating tasksinbook now");
             }
             //coatHintAdded = true;
