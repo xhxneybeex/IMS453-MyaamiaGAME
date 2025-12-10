@@ -728,10 +728,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 2797264601173513885, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
-      insertIndex: 13
-      addedObject: {fileID: 1800630813}
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
 --- !u!1 &295721675 stripped
@@ -2713,11 +2710,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -5.807, y: -6.758, z: -64.402}
---- !u!224 &1253905096 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 2797264601173513885, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
-  m_PrefabInstance: {fileID: 295721674}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1285762725 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9162372914802094910, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
@@ -3735,72 +3727,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1564733062}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1800630812
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1253905096}
-    m_Modifications:
-    - target: {fileID: 2196268020562083546, guid: abdaae9ee879cf24ea339800bb4fff5d, type: 3}
-      propertyPath: m_Name
-      value: ItemHintsTrigger (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6330252386275438604, guid: abdaae9ee879cf24ea339800bb4fff5d, type: 3}
-      propertyPath: dm
-      value: 
-      objectReference: {fileID: 526772096}
-    - target: {fileID: 7102162844805363015, guid: abdaae9ee879cf24ea339800bb4fff5d, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -462.87408
-      objectReference: {fileID: 0}
-    - target: {fileID: 7102162844805363015, guid: abdaae9ee879cf24ea339800bb4fff5d, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -299.99997
-      objectReference: {fileID: 0}
-    - target: {fileID: 7102162844805363015, guid: abdaae9ee879cf24ea339800bb4fff5d, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -16.421434
-      objectReference: {fileID: 0}
-    - target: {fileID: 7102162844805363015, guid: abdaae9ee879cf24ea339800bb4fff5d, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7102162844805363015, guid: abdaae9ee879cf24ea339800bb4fff5d, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7102162844805363015, guid: abdaae9ee879cf24ea339800bb4fff5d, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7102162844805363015, guid: abdaae9ee879cf24ea339800bb4fff5d, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7102162844805363015, guid: abdaae9ee879cf24ea339800bb4fff5d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7102162844805363015, guid: abdaae9ee879cf24ea339800bb4fff5d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7102162844805363015, guid: abdaae9ee879cf24ea339800bb4fff5d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: abdaae9ee879cf24ea339800bb4fff5d, type: 3}
---- !u!4 &1800630813 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7102162844805363015, guid: abdaae9ee879cf24ea339800bb4fff5d, type: 3}
-  m_PrefabInstance: {fileID: 1800630812}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1866864381 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5797301403094227229, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
