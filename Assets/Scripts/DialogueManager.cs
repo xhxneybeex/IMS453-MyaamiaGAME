@@ -202,7 +202,6 @@ public class DialogueManager : MonoBehaviour
                 dialogue.text = currentLine;
                 interactionEnabled = false;
             }
-            
         }
 
         else if (character.Equals("Drew"))
@@ -290,6 +289,7 @@ public class DialogueManager : MonoBehaviour
                 //Portrait.SetActive(false);
                 currentLine = "Finally, a kid who knows how to show their elders some respect! But you didn’t catch the thief, eh? And while you were gone, they struck again! My wilenaahkhtaakani is nowhere to be seen, and the floor looks positively barren without it. I’ll catch that thief yet, I tell you…";
                 tasksInBook = tasksInBook.Replace("Betsy needs me to find her paahpahaakana\n", "");
+                tasksInBook = tasksInBook.Replace("I think the paahpahaakana is in Drew's house\n", "");
                 ResetToDoText();
                 dialogue.text = currentLine;
                 interactionEnabled = false;
@@ -320,6 +320,7 @@ public class DialogueManager : MonoBehaviour
                 //Portrait.SetActive(false);
                 currentLine = "Thanks for helping me return that wilenaahkhtaakani. I like to pull pranks on Old Lady Betsy, but I don’t want her to feel bad!";
                 tasksInBook = tasksInBook.Replace("Russel wants me to return Betsy's wilenaahkhtaakani\n", "");
+                tasksInBook = tasksInBook.Replace("I think I saw the wilenaahkhtaakani in Drew's house\n", "");
                 ResetToDoText();
                 dialogue.text = currentLine;
                 interactionEnabled = false;
@@ -348,6 +349,7 @@ public class DialogueManager : MonoBehaviour
             {
                 currentLine = "Ah, I’m saved! Now that I look presentable, I can make sure everything is on track for the Summer gathering. Your continued help is much appreciated!";
                 tasksInBook = tasksInBook.Replace("Angeline wants me to find her a piiwahaakani\n", "");
+                tasksInBook = tasksInBook.Replace("I think I saw a piiwahaakani in Judy's house\n", "");
                 ResetToDoText();
                 dialogue.text = currentLine;
                 interactionEnabled = false;
@@ -374,6 +376,7 @@ public class DialogueManager : MonoBehaviour
             {
                 currentLine = "That’s Ryan’s waapimotayi alright! And he’s finally quieted down! Now we can both get some rest. Thank you!";
                 tasksInBook = tasksInBook.Replace("Sam wants me to find her a waapimotayi\n", "");
+                tasksInBook = tasksInBook.Replace("I think I saw a waapimotayi in Drew's house\n", "");
                 ResetToDoText();
                 dialogue.text = currentLine;
                 interactionEnabled = false;

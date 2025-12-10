@@ -56,6 +56,24 @@ public class ItemHints : MonoBehaviour
                 Debug.Log("it should be updating tasksinbook now");
             }
             //coatHintAdded = true;
+        } else if (item.id == 11) // Keys
+        {
+            if (DialogueManager.talkedToBetsy == true && InventoryManager.KeysCollected == false)
+            {
+                this.gameObject.SetActive(false);
+                DialogueManager.tasksInBook = DialogueManager.tasksInBook.Replace("Betsy needs me to find her paahpahaakana\n", "I think the paahpahaakana is in Drew's house\n");
+                //Debug.Log("it should be updating tasksinbook now");
+            }
+            //coatHintAdded = true;
+        } else if (item.id == 12) // Blanket
+        {
+            if (DialogueManager.talkedToSam == true && InventoryManager.BlanketCollected == false)
+            {
+                this.gameObject.SetActive(false);
+                DialogueManager.tasksInBook = DialogueManager.tasksInBook.Replace("Sam wants me to find her a waapimotayi\n", "I think I saw a waapimotayi in Drew's house\n");
+                //Debug.Log("it should be updating tasksinbook now");
+            }
+            //coatHintAdded = true;
         } else if (item.id == 13 || item.id == 14) // Salt or Pepper
         {
             //Debug.Log("You entered the trigger for the salt");
@@ -64,6 +82,15 @@ public class ItemHints : MonoBehaviour
                 this.gameObject.SetActive(false);
                 DialogueManager.tasksInBook = DialogueManager.tasksInBook.Replace("Tony needs me to find his wiihkapaakani and wiihsakaakani\n", "I think the wiihkapaakani and wiihsakaakani were in Tony's kitchen.\n");
                 Debug.Log("it should be updating tasksinbook now");
+            }
+            //coatHintAdded = true;
+        } else if (item.id == 21) // Brush
+        {
+            if (DialogueManager.talkedToAngeline == true && InventoryManager.BrushCollected == false)
+            {
+                this.gameObject.SetActive(false);
+                DialogueManager.tasksInBook = DialogueManager.tasksInBook.Replace("Angeline wants me to find her a piiwahaakani\n", "I think I saw a piiwahaakani in Judy's house\n");
+                //Debug.Log("it should be updating tasksinbook now");
             }
             //coatHintAdded = true;
         }
