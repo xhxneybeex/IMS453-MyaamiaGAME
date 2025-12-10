@@ -39,6 +39,12 @@ public class ItemPickup : MonoBehaviour
     public bool isForks;
     public bool isSpoons;
 
+    //judy's house
+    public bool isBrush;
+    public bool isStick;
+    public bool isSoap;
+    public bool isTowel;
+
 
     private void Awake()
     {
@@ -95,6 +101,18 @@ public class ItemPickup : MonoBehaviour
         {
             gameObject.SetActive(false);
         } else if (InventoryManager.SpoonsCollected == true && isSpoons == true)
+        {
+            gameObject.SetActive(false);
+        } else if (InventoryManager.BrushCollected == true && isBrush == true)
+        {
+            gameObject.SetActive(false);
+        } else if (InventoryManager.StickCollected == true && isStick == true)
+        {
+            gameObject.SetActive(false);
+        } else if (InventoryManager.SoapCollected == true && isSoap == true)
+        {
+            gameObject.SetActive(false);
+        } else if (InventoryManager.TowelCollected == true && isTowel == true)
         {
             gameObject.SetActive(false);
         }
@@ -178,11 +196,27 @@ public class ItemPickup : MonoBehaviour
         } else if (isForks)
         {
             InventoryManager.ForksCollected = true;
-            Debug.Log("plates collected was set to true");
+            Debug.Log("forks collected was set to true");
         } else if (isSpoons)
         {
             InventoryManager.SpoonsCollected = true;
-            Debug.Log("plates collected was set to true");
+            Debug.Log("spoons collected was set to true");
+        } else if (isBrush)
+        {
+            InventoryManager.BrushCollected = true;
+            Debug.Log("brush collected was set to true");
+        } else if (isStick)
+        {
+            InventoryManager.StickCollected = true;
+            Debug.Log("stick collected was set to true");
+        } else if (isSoap)
+        {
+            InventoryManager.SoapCollected = true;
+            Debug.Log("soap collected was set to true");
+        } else if (isTowel)
+        {
+            InventoryManager.TowelCollected = true;
+            Debug.Log("towel collected was set to true");
         }
 
 

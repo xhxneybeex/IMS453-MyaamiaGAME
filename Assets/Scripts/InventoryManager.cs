@@ -702,7 +702,7 @@ public class InventoryManager : MonoBehaviour
 
     public void CoatOff()
     {
-        itemJournal.transform.GetChild(1).gameObject.SetActive(false); //coat entry
+        itemJournal.transform.GetChild(1).gameObject.SetActive(false); 
 
     }
 
@@ -717,7 +717,7 @@ public class InventoryManager : MonoBehaviour
 
     public void CoffeeOff()
     {
-        itemJournal.transform.GetChild(2).gameObject.SetActive(false); //coffee entry
+        itemJournal.transform.GetChild(2).gameObject.SetActive(false); 
 
     }
 
@@ -732,7 +732,7 @@ public class InventoryManager : MonoBehaviour
 
     public void KeysOff()
     {
-        itemJournal.transform.GetChild(3).gameObject.SetActive(false); //coffee entry
+        itemJournal.transform.GetChild(3).gameObject.SetActive(false); 
 
     }
 
@@ -747,7 +747,7 @@ public class InventoryManager : MonoBehaviour
 
     public void RugOff()
     {
-        itemJournal.transform.GetChild(4).gameObject.SetActive(false); //coffee entry
+        itemJournal.transform.GetChild(4).gameObject.SetActive(false); 
 
     }
 
@@ -762,7 +762,7 @@ public class InventoryManager : MonoBehaviour
 
     public void SaltOff()
     {
-        itemJournal.transform.GetChild(5).gameObject.SetActive(false); //coffee entry
+        itemJournal.transform.GetChild(5).gameObject.SetActive(false); 
 
     }
 
@@ -777,24 +777,22 @@ public class InventoryManager : MonoBehaviour
 
     public void PepperOff()
     {
-        itemJournal.transform.GetChild(6).gameObject.SetActive(false); //coffee entry
+        itemJournal.transform.GetChild(6).gameObject.SetActive(false); 
 
     }
 
     public void HairPolaroid()
     {
-        //if (MugCollected == true)
-        // {
-        itemJournal.transform.GetChild(7).gameObject.SetActive(true); //coffee entry
-                                                                      //coatAud.SetActive(true);
-                                                                      //coat.Stop();
+        if (BrushCollected == true)
+        {
+            itemJournal.transform.GetChild(7).gameObject.SetActive(true);
 
-        // }
+        }
     }
 
     public void HairOff()
     {
-        itemJournal.transform.GetChild(7).gameObject.SetActive(false); //coffee entry
+        itemJournal.transform.GetChild(7).gameObject.SetActive(false); 
 
     }
 
@@ -809,7 +807,7 @@ public class InventoryManager : MonoBehaviour
 
     public void BlanketOff()
     {
-        itemJournal.transform.GetChild(8).gameObject.SetActive(false); //coffee entry
+        itemJournal.transform.GetChild(8).gameObject.SetActive(false); 
 
     }
 
@@ -824,7 +822,7 @@ public class InventoryManager : MonoBehaviour
 
     public void ChairOff()
     {
-        itemJournal.transform.GetChild(9).gameObject.SetActive(false); //coffee entry
+        itemJournal.transform.GetChild(9).gameObject.SetActive(false); 
 
     }
 
@@ -839,7 +837,7 @@ public class InventoryManager : MonoBehaviour
 
     public void HammerOff()
     {
-        itemJournal.transform.GetChild(10).gameObject.SetActive(false); //coffee entry
+        itemJournal.transform.GetChild(10).gameObject.SetActive(false); 
 
     }
 
@@ -854,7 +852,7 @@ public class InventoryManager : MonoBehaviour
 
     public void ShoeOff()
     {
-        itemJournal.transform.GetChild(11).gameObject.SetActive(false); //coffee entry
+        itemJournal.transform.GetChild(11).gameObject.SetActive(false); 
 
     }
 
@@ -869,58 +867,52 @@ public class InventoryManager : MonoBehaviour
 
     public void BallOff()
     {
-        itemJournal.transform.GetChild(12).gameObject.SetActive(false); //coffee entry
+        itemJournal.transform.GetChild(12).gameObject.SetActive(false); 
 
     }
 
     public void StickPolaroid()
     {
-        //if (MugCollected == true)
-        // {
-        itemJournal.transform.GetChild(13).gameObject.SetActive(true); //coffee entry
-                                                                       //coatAud.SetActive(true);
-                                                                       //coat.Stop();
+        if (StickCollected == true)
+        {
+            itemJournal.transform.GetChild(13).gameObject.SetActive(true);
 
-        // }
+        }
     }
 
     public void StickOff()
     {
-        itemJournal.transform.GetChild(13).gameObject.SetActive(false); //coffee entry
+        itemJournal.transform.GetChild(13).gameObject.SetActive(false);
 
     }
 
     public void SoapPolaroid()
     {
-        //if (MugCollected == true)
-        // {
-        itemJournal.transform.GetChild(14).gameObject.SetActive(true); //coffee entry
-                                                                       //coatAud.SetActive(true);
-                                                                       //coat.Stop();
+        if (SoapCollected == true)
+        {
+            itemJournal.transform.GetChild(14).gameObject.SetActive(true);
 
-        // }
+        }
     }
 
     public void SoapOff()
     {
-        itemJournal.transform.GetChild(14).gameObject.SetActive(false); //coffee entry
+        itemJournal.transform.GetChild(14).gameObject.SetActive(false); 
 
     }
 
     public void TowelPolaroid()
     {
-        //if (MugCollected == true)
-        // {
-        itemJournal.transform.GetChild(15).gameObject.SetActive(true); //coffee entry
-                                                                       //coatAud.SetActive(true);
-                                                                       //coat.Stop();
+        if (TowelCollected == true)
+        {
+            itemJournal.transform.GetChild(15).gameObject.SetActive(true);
 
-        // }
+        }
     }
 
     public void TowelOff()
     {
-        itemJournal.transform.GetChild(15).gameObject.SetActive(false); //coffee entry
+        itemJournal.transform.GetChild(15).gameObject.SetActive(false); 
 
     }
 
@@ -935,7 +927,7 @@ public class InventoryManager : MonoBehaviour
 
     public void CornOff()
     {
-        itemJournal.transform.GetChild(16).gameObject.SetActive(false); //coffee entry
+        itemJournal.transform.GetChild(16).gameObject.SetActive(false); 
 
     }
 
@@ -965,7 +957,7 @@ public class InventoryManager : MonoBehaviour
 
     public void ForksOff()
     {
-        itemJournal.transform.GetChild(18).gameObject.SetActive(false); //coffee entry
+        itemJournal.transform.GetChild(18).gameObject.SetActive(false);
 
     }
 
@@ -980,7 +972,7 @@ public class InventoryManager : MonoBehaviour
 
     public void SpoonsOff()
     {
-        itemJournal.transform.GetChild(19).gameObject.SetActive(false); //coffee entry
+        itemJournal.transform.GetChild(19).gameObject.SetActive(false); 
 
     }
 }

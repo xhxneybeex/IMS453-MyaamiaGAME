@@ -2684,7 +2684,7 @@ PrefabInstance:
     - target: {fileID: 4857393821179522233, guid: 45cc3c81b60c20b4da40c995e867fdb8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 624819153388382661, guid: 88bdf5943942e29459753f5835c5267c, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 8890784905456958362, guid: 45cc3c81b60c20b4da40c995e867fdb8, type: 3}
       propertyPath: m_Name
       value: CornEntry
@@ -2790,7 +2790,7 @@ PrefabInstance:
     - target: {fileID: 854115408378392575, guid: e311322b3cdcdf74386adfa10d1019d9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 624819153388382661, guid: 88bdf5943942e29459753f5835c5267c, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 2112433789724025815, guid: e311322b3cdcdf74386adfa10d1019d9, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 180.3
@@ -2916,7 +2916,11 @@ PrefabInstance:
     - target: {fileID: 6015873153973609761, guid: 8c8a22c63209c584d81266ef28075fdb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 624819153388382661, guid: 88bdf5943942e29459753f5835c5267c, type: 3}
+      objectReference: {fileID: 0}
+    - target: {fileID: 6015873153973609761, guid: 8c8a22c63209c584d81266ef28075fdb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayHammerAudio
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3022,7 +3026,7 @@ PrefabInstance:
     - target: {fileID: 7985747866242392662, guid: 2fd444fb311d3a54894bb70506fae8cf, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 624819153388382661, guid: 88bdf5943942e29459753f5835c5267c, type: 3}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3124,7 +3128,7 @@ PrefabInstance:
     - target: {fileID: 5489131294136478632, guid: 137b086dbbba65b418168954f0103a9a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 624819153388382661, guid: 88bdf5943942e29459753f5835c5267c, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 8082527952409562726, guid: 137b086dbbba65b418168954f0103a9a, type: 3}
       propertyPath: m_Name
       value: SpoonsEntry
@@ -3234,7 +3238,7 @@ PrefabInstance:
     - target: {fileID: 6003532680798403595, guid: bfdde14698d7dc241ab29b03ebbfc9ab, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 624819153388382661, guid: 88bdf5943942e29459753f5835c5267c, type: 3}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3535,7 +3539,7 @@ PrefabInstance:
     - target: {fileID: 7613516687491037968, guid: 1d6f35806e690b649bf4f035c991aa3c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 624819153388382661, guid: 88bdf5943942e29459753f5835c5267c, type: 3}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3862,7 +3866,7 @@ PrefabInstance:
     - target: {fileID: 5733087225855842200, guid: b8557fa3681e02f4cb7527ada33591d3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 624819153388382661, guid: 88bdf5943942e29459753f5835c5267c, type: 3}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3884,7 +3888,7 @@ PrefabInstance:
     - target: {fileID: 381067307947890782, guid: 77299915b0c046147b0b04dbc0e45b47, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 624819153388382661, guid: 88bdf5943942e29459753f5835c5267c, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6203069023057885370, guid: 77299915b0c046147b0b04dbc0e45b47, type: 3}
       propertyPath: m_Name
       value: PlatesEntry
@@ -3990,7 +3994,7 @@ PrefabInstance:
     - target: {fileID: 767690376916252329, guid: 5a5c10abf78756343a8f28302ad821fa, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 624819153388382661, guid: 88bdf5943942e29459753f5835c5267c, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 767690376916252329, guid: 5a5c10abf78756343a8f28302ad821fa, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: PlayPepperAudio
@@ -4100,7 +4104,7 @@ PrefabInstance:
     - target: {fileID: 1018713824903965216, guid: e419e9107b89bf9448942b4fb41be6b9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 624819153388382661, guid: 88bdf5943942e29459753f5835c5267c, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 4540541157693241902, guid: e419e9107b89bf9448942b4fb41be6b9, type: 3}
       propertyPath: m_Name
       value: KeysEntry
@@ -4210,7 +4214,7 @@ PrefabInstance:
     - target: {fileID: 3623425085108767692, guid: dd2f49b921e23a24996e8ed71901e61d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 624819153388382661, guid: 88bdf5943942e29459753f5835c5267c, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 3623425085108767692, guid: dd2f49b921e23a24996e8ed71901e61d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: PlaySaltAudio
@@ -4510,7 +4514,7 @@ PrefabInstance:
     - target: {fileID: 7581279972847588812, guid: 9c03a98944ab0aa46a32f3355ad00d00, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 624819153388382661, guid: 88bdf5943942e29459753f5835c5267c, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 8480769918633223264, guid: 9c03a98944ab0aa46a32f3355ad00d00, type: 3}
       propertyPath: m_Name
       value: BallEntry
@@ -4616,7 +4620,7 @@ PrefabInstance:
     - target: {fileID: 8319898008209046318, guid: c62a26fe76ffc7340863579baaa2f865, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 624819153388382661, guid: 88bdf5943942e29459753f5835c5267c, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 9098775988613103129, guid: c62a26fe76ffc7340863579baaa2f865, type: 3}
       propertyPath: m_Name
       value: SoapEntry
@@ -4794,7 +4798,7 @@ PrefabInstance:
     - target: {fileID: 233623955074829115, guid: 8243e253bed60d84a89e1ce28496211c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 624819153388382661, guid: 88bdf5943942e29459753f5835c5267c, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 4252332537708331259, guid: 8243e253bed60d84a89e1ce28496211c, type: 3}
       propertyPath: m_Name
       value: HairEntry
@@ -5034,7 +5038,7 @@ PrefabInstance:
     - target: {fileID: 2586340579795885005, guid: cd8d9dbb1d5bcc1498cf72951f4eb85f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 624819153388382661, guid: 88bdf5943942e29459753f5835c5267c, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 2586340579795885005, guid: cd8d9dbb1d5bcc1498cf72951f4eb85f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: PlayRugAudio
@@ -5144,7 +5148,7 @@ PrefabInstance:
     - target: {fileID: 1681295301206989920, guid: f97f55ce3a8603d4ba684671557eeb22, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 624819153388382661, guid: 88bdf5943942e29459753f5835c5267c, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 2235181884077239522, guid: f97f55ce3a8603d4ba684671557eeb22, type: 3}
       propertyPath: m_Name
       value: ForksEntry
