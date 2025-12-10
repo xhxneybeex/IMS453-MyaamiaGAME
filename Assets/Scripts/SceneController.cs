@@ -9,7 +9,7 @@ public class SceneController : MonoBehaviour
     [SerializeField] private bool to2DScene = false;
     public static bool is2DScene = false;
     public GameObject exitScreen;
-    public GameObject settingsScreen;
+    public GameObject settingsScreen; 
 
     void Start()
     {
