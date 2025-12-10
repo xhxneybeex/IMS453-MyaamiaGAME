@@ -2046,7 +2046,7 @@ MonoBehaviour:
   dialogue: {fileID: 5784668444511319707}
   ToDoText: {fileID: 3877123227234045737}
   tasks: {fileID: 7915818510155862810}
-  Mom: {fileID: 1969701079475749151}
+  Portrait: {fileID: 1969701079475749151}
   Dad: {fileID: 6201892301246873673}
   interactionEnabled: 0
   enterClicked: 0
@@ -2059,6 +2059,9 @@ MonoBehaviour:
   currentChar: 
   talkedToMom: 0
   talkedToDad: 0
+  talkedToLarry: 0
+  talkedToDrew: 0
+  talkedToTony: 0
 --- !u!1 &8838794914346975184
 GameObject:
   m_ObjectHideFlags: 0
@@ -3359,6 +3362,10 @@ PrefabInstance:
       value: 26
       objectReference: {fileID: 0}
     - target: {fileID: 1715093312308648375, guid: 35df36f1a9b5b754cb797db923df569c, type: 3}
+      propertyPath: m_margin.x
+      value: -86.03351
+      objectReference: {fileID: 0}
+    - target: {fileID: 1715093312308648375, guid: 35df36f1a9b5b754cb797db923df569c, type: 3}
       propertyPath: m_margin.y
       value: 4.2268295
       objectReference: {fileID: 0}
@@ -3369,6 +3376,10 @@ PrefabInstance:
     - target: {fileID: 1715093312308648375, guid: 35df36f1a9b5b754cb797db923df569c, type: 3}
       propertyPath: m_fontStyle
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1715093312308648375, guid: 35df36f1a9b5b754cb797db923df569c, type: 3}
+      propertyPath: m_lineSpacing
+      value: -24
       objectReference: {fileID: 0}
     - target: {fileID: 1715093312308648375, guid: 35df36f1a9b5b754cb797db923df569c, type: 3}
       propertyPath: m_fontSizeBase
@@ -3736,10 +3747,10 @@ PrefabInstance:
     - target: {fileID: 4919281671475512641, guid: aabbb6398c9ce9b47974a74a0d52a224, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 38078ca122be56b42a676c486c6b83cf, type: 3}
+      objectReference: {fileID: 21300000, guid: 1cde4fc37b427134490a73ce4a0e1779, type: 3}
     - target: {fileID: 6175998830267511959, guid: aabbb6398c9ce9b47974a74a0d52a224, type: 3}
       propertyPath: m_Name
-      value: Mom
+      value: Portrait
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

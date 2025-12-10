@@ -55,9 +55,9 @@ public class Giveitem : MonoBehaviour
             Debug.Log(this.gameObject.name.ToString());
             timesWalkedUpToDad += 1;
             Debug.Log("times walked up to equals " + timesWalkedUpToDad);
-            if (InventoryManager.itemJournal.transform.GetChild(0).gameObject.activeInHierarchy)
+            if (InventoryManager.itemJournal.transform.GetChild(1).gameObject.activeInHierarchy)
             {
-                InventoryManager.itemJournal.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = "keehpakiikinki naapinaakani";
+                InventoryManager.itemJournal.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().text = "keehpakiikinki naapinaakani";
             }
             else
             {
@@ -71,9 +71,9 @@ public class Giveitem : MonoBehaviour
             Debug.Log(this.gameObject.name.ToString());
             timesWalkedUpToDrew += 1;
             Debug.Log("times walked up to equals " + timesWalkedUpToDrew);
-            if (InventoryManager.itemJournal.transform.GetChild(0).gameObject.activeInHierarchy)
+            if (InventoryManager.itemJournal.transform.GetChild(10).gameObject.activeInHierarchy)
             {
-                InventoryManager.itemJournal.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = "keehpakiikinki naapinaakani";
+                InventoryManager.itemJournal.transform.GetChild(10).gameObject.GetComponent<TextMeshProUGUI>().text = "keehpakiikinki naapinaakani";
             }
             else
             {
@@ -86,15 +86,33 @@ public class Giveitem : MonoBehaviour
             Debug.Log(this.gameObject.name.ToString());
             timesWalkedUpToDrew += 1;
             Debug.Log("times walked up to equals " + timesWalkedUpToLarry);
-            if (InventoryManager.itemJournal.transform.GetChild(0).gameObject.activeInHierarchy)
+            if (InventoryManager.itemJournal.transform.GetChild(2).gameObject.activeInHierarchy)
             {
-                InventoryManager.itemJournal.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = "kociihsaapowi";
+                InventoryManager.itemJournal.transform.GetChild(2).gameObject.GetComponent<TextMeshProUGUI>().text = "kociihsaapowi";
             }
             else
             {
                 Debug.Log("you can interact with Larry now");
                 currentChar = "Larry";
             }
+        }
+        else if (this.gameObject.name.ToString() == "Tony")
+        {
+            Debug.Log(this.gameObject.name.ToString());
+            //timesWalkedUpToDrew += 1;
+            //Debug.Log("times walked up to equals " + timesWalkedUpToLarry);
+            if (InventoryManager.itemJournal.transform.GetChild(5).gameObject.activeInHierarchy)
+            {
+                InventoryManager.itemJournal.transform.GetChild(5).gameObject.GetComponent<TextMeshProUGUI>().text = "wiihkapaakani";
+            }
+            if (InventoryManager.itemJournal.transform.GetChild(6).gameObject.activeInHierarchy)
+            {
+                InventoryManager.itemJournal.transform.GetChild(5).gameObject.GetComponent<TextMeshProUGUI>().text = "wiihsakaakani";
+            }
+            
+            Debug.Log("you can interact with Tony now");
+            currentChar = "Tony";
+            
         }
     }
     private void OnTriggerExit()
