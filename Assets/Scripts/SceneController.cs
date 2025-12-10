@@ -23,11 +23,15 @@ public class SceneController : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter()
+    private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("AAAAA");
-        SceneManager.LoadScene(sceneToLoad);
-        is2DScene = to2DScene;
+        if (other.CompareTag("Player"))
+        {
+            Debug.Log("AAAAA");
+            SceneManager.LoadScene(sceneToLoad);
+            is2DScene = to2DScene;
+        }
+        
     }
 
     public void StartGame()
