@@ -52,6 +52,23 @@ public class InventoryManager : MonoBehaviour
     public static bool GlovesCollected = false;
 
     public static bool CoatCollected = false;
+    public static bool ChairCollected = false;
+    public static bool HammerCollected = false;
+    public static bool KeysCollected = false;
+    public static bool RugCollected = false;
+    public static bool BlanketCollected = false;
+    public static bool SaltCollected = false;
+    public static bool PepperCollected = false;
+    public static bool ShoeCollected = false;
+    public static bool BallCollected = false;
+    public static bool CornCollected = false;
+    public static bool PlatesCollected = false;
+    public static bool ForksCollected = false;
+    public static bool SpoonsCollected = false;
+    public static bool BrushCollected = false;
+    public static bool StickCollected = false;
+    public static bool SoapCollected = false;
+    public static bool TowelCollected = false;
 
 
     //public InventoryItemController iic;
@@ -98,6 +115,8 @@ public class InventoryManager : MonoBehaviour
      } */
     public void OpenJournal()
     {
+        checkForCollected();
+        ActivateCorrectPage();
         Debug.Log("AAAA");
         if (!InventoryHUD.activeInHierarchy)
         {
@@ -141,7 +160,7 @@ public class InventoryManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //checkForCollected();
+        checkForCollected();
 
         if (UI.journalActive == true)
         {
@@ -182,6 +201,12 @@ public class InventoryManager : MonoBehaviour
         itemJournal.transform.GetChild(11).gameObject.SetActive(false); //shoe entry
         itemJournal.transform.GetChild(12).gameObject.SetActive(false); //ball entry
         itemJournal.transform.GetChild(13).gameObject.SetActive(false); //stick entry
+        itemJournal.transform.GetChild(14).gameObject.SetActive(false); //soap entry
+        itemJournal.transform.GetChild(15).gameObject.SetActive(false); //towel entry
+        itemJournal.transform.GetChild(16).gameObject.SetActive(false); //corn entry
+        itemJournal.transform.GetChild(17).gameObject.SetActive(false); //plates entry
+        itemJournal.transform.GetChild(18).gameObject.SetActive(false); //forks entry
+        itemJournal.transform.GetChild(19).gameObject.SetActive(false); //spoons entry
     }
 
     public void ItemsTab()
@@ -323,9 +348,51 @@ public class InventoryManager : MonoBehaviour
         Debug.Log("playing stick sound");
     }
 
+    public void PlaySoapAudio()
+    {
+        itemJournal.transform.GetChild(14).gameObject.GetComponentInChildren<AudioSource>().Play();
+
+        Debug.Log("playing soap sound");
+    }
+
+    public void PlayTowelAudio()
+    {
+        itemJournal.transform.GetChild(15).gameObject.GetComponentInChildren<AudioSource>().Play();
+
+        Debug.Log("playing towel sound");
+    }
+
+    public void PlayCornAudio()
+    {
+        itemJournal.transform.GetChild(16).gameObject.GetComponentInChildren<AudioSource>().Play();
+
+        Debug.Log("playing corn sound");
+    }
+
+    public void PlayPlatesAudio()
+    {
+        itemJournal.transform.GetChild(17).gameObject.GetComponentInChildren<AudioSource>().Play();
+
+        Debug.Log("playing plates sound");
+    }
+
+    public void PlayForksAudio()
+    {
+        itemJournal.transform.GetChild(18).gameObject.GetComponentInChildren<AudioSource>().Play();
+
+        Debug.Log("playing forks sound");
+    }
+
+    public void PlaySpoonsAudio()
+    {
+        itemJournal.transform.GetChild(19).gameObject.GetComponentInChildren<AudioSource>().Play();
+
+        Debug.Log("playing spoons sound");
+    }
+
     public void PreviousPage()
     {
-        if (currentTwoPages > 1 && currentTwoPages < 11)
+        if (currentTwoPages > 1)
         {
             currentTwoPages--;
         }
@@ -360,6 +427,12 @@ public class InventoryManager : MonoBehaviour
             ShoeOff();
             BallOff();
             StickOff();
+            SoapOff();
+            TowelOff();
+            CornOff();
+            PlatesOff();
+            ForksOff();
+            SpoonsOff();
         }
         else if (currentTwoPages == 2)
         {
@@ -377,6 +450,12 @@ public class InventoryManager : MonoBehaviour
             ShoeOff();
             BallOff();
             StickOff();
+            SoapOff();
+            TowelOff();
+            CornOff();
+            PlatesOff();
+            ForksOff();
+            SpoonsOff();
         }
         else if (currentTwoPages == 3)
         {
@@ -394,6 +473,12 @@ public class InventoryManager : MonoBehaviour
             ShoeOff();
             BallOff();
             StickOff();
+            SoapOff();
+            TowelOff();
+            CornOff();
+            PlatesOff();
+            ForksOff();
+            SpoonsOff();
         }
         else if (currentTwoPages == 4)
         {
@@ -411,6 +496,12 @@ public class InventoryManager : MonoBehaviour
             ShoeOff();
             BallOff();
             StickOff();
+            SoapOff();
+            TowelOff();
+            CornOff();
+            PlatesOff();
+            ForksOff();
+            SpoonsOff();
         }
         else if (currentTwoPages == 5)
         {
@@ -428,6 +519,12 @@ public class InventoryManager : MonoBehaviour
             ShoeOff();
             BallOff();
             StickOff();
+            SoapOff();
+            TowelOff();
+            CornOff();
+            PlatesOff();
+            ForksOff();
+            SpoonsOff();
         }
         else if (currentTwoPages == 6)
         {
@@ -445,6 +542,12 @@ public class InventoryManager : MonoBehaviour
             ChairOff();
             BallOff();
             StickOff();
+            SoapOff();
+            TowelOff();
+            CornOff();
+            PlatesOff();
+            ForksOff();
+            SpoonsOff();
         }
         else if (currentTwoPages == 7)
         {
@@ -462,9 +565,17 @@ public class InventoryManager : MonoBehaviour
             ChairOff();
             HammerOff();
             ShoeOff();
+            SoapOff();
+            TowelOff();
+            CornOff();
+            PlatesOff();
+            ForksOff();
+            SpoonsOff();
         }
-        else
+        else if (currentTwoPages == 8)
         {
+            SoapPolaroid();
+            TowelPolaroid();
             GlovesOff();
             CoatOff();
             CoffeeOff();
@@ -479,6 +590,81 @@ public class InventoryManager : MonoBehaviour
             ShoeOff();
             BallOff();
             StickOff();
+            CornOff();
+            PlatesOff();
+            ForksOff();
+            SpoonsOff();
+        }
+        else if (currentTwoPages == 9)
+        {
+            CornPolaroid();
+            PlatesPolaroid();
+            GlovesOff();
+            CoatOff();
+            CoffeeOff();
+            KeysOff();
+            SaltOff();
+            RugOff();
+            PepperOff();
+            HairOff();
+            BlanketOff();
+            ChairOff();
+            HammerOff();
+            ShoeOff();
+            BallOff();
+            StickOff();
+            SoapOff();
+            TowelOff();
+            ForksOff();
+            SpoonsOff();
+        }
+        else if (currentTwoPages == 10)
+        {
+            ForksPolaroid();
+            SpoonsPolaroid();
+            GlovesOff();
+            CoatOff();
+            CoffeeOff();
+            KeysOff();
+            SaltOff();
+            RugOff();
+            PepperOff();
+            HairOff();
+            BlanketOff();
+            ChairOff();
+            HammerOff();
+            ShoeOff();
+            BallOff();
+            StickOff();
+            SoapOff();
+            TowelOff();
+            CornOff();
+            PlatesOff();
+        }
+        else
+        {
+            currentTwoPages = 10;
+            PreviousPage();
+            /* GlovesOff();
+             CoatOff();
+             CoffeeOff();
+             KeysOff();
+             SaltOff();
+             RugOff();
+             PepperOff();
+             HairOff();
+             BlanketOff();
+             ChairOff();
+             HammerOff();
+             ShoeOff();
+             BallOff();
+             StickOff();
+             SoapOff();
+             TowelOff();
+             CornOff();
+             PlatesOff();
+             ForksOff();
+             SpoonsOff(); */
         }
 
     }
@@ -511,211 +697,277 @@ public class InventoryManager : MonoBehaviour
 
     public void CoatOff()
     {
-        itemJournal.transform.GetChild(1).gameObject.SetActive(false); //coat entry
+        itemJournal.transform.GetChild(1).gameObject.SetActive(false); 
 
     }
 
     public void CoffeePolaroid()
     {
-        //if (MugCollected == true)
-        // {
-        itemJournal.transform.GetChild(2).gameObject.SetActive(true); //coffee entry
-                                                                      //coatAud.SetActive(true);
-                                                                      //coat.Stop();
+        if (CoffeeCollected == true)
+        {
+            itemJournal.transform.GetChild(2).gameObject.SetActive(true);
 
-        // }
+        }
     }
 
     public void CoffeeOff()
     {
-        itemJournal.transform.GetChild(2).gameObject.SetActive(false); //coffee entry
+        itemJournal.transform.GetChild(2).gameObject.SetActive(false); 
 
     }
 
     public void KeysPolaroid()
     {
-        //if (MugCollected == true)
-        // {
-        itemJournal.transform.GetChild(3).gameObject.SetActive(true); //coffee entry
-                                                                      //coatAud.SetActive(true);
-                                                                      //coat.Stop();
+        if (KeysCollected == true)
+        {
+            itemJournal.transform.GetChild(3).gameObject.SetActive(true);
 
-        // }
+        }
     }
 
     public void KeysOff()
     {
-        itemJournal.transform.GetChild(3).gameObject.SetActive(false); //coffee entry
+        itemJournal.transform.GetChild(3).gameObject.SetActive(false); 
 
     }
 
     public void RugPolaroid()
     {
-        //if (MugCollected == true)
-        // {
-        itemJournal.transform.GetChild(4).gameObject.SetActive(true); //coffee entry
-                                                                      //coatAud.SetActive(true);
-                                                                      //coat.Stop();
+        if (RugCollected == true)
+        {
+            itemJournal.transform.GetChild(4).gameObject.SetActive(true);
 
-        // }
+        }
     }
 
     public void RugOff()
     {
-        itemJournal.transform.GetChild(4).gameObject.SetActive(false); //coffee entry
+        itemJournal.transform.GetChild(4).gameObject.SetActive(false); 
 
     }
 
     public void SaltPolaroid()
     {
-        //if (MugCollected == true)
-        // {
-        itemJournal.transform.GetChild(5).gameObject.SetActive(true); //coffee entry
-                                                                      //coatAud.SetActive(true);
-                                                                      //coat.Stop();
+        if (SaltCollected == true)
+        {
+            itemJournal.transform.GetChild(5).gameObject.SetActive(true);
 
-        // }
+        }
     }
 
     public void SaltOff()
     {
-        itemJournal.transform.GetChild(5).gameObject.SetActive(false); //coffee entry
+        itemJournal.transform.GetChild(5).gameObject.SetActive(false); 
 
     }
 
     public void PepperPolaroid()
     {
-        //if (MugCollected == true)
-        // {
-        itemJournal.transform.GetChild(6).gameObject.SetActive(true); //coffee entry
-                                                                      //coatAud.SetActive(true);
-                                                                      //coat.Stop();
+        if (PepperCollected == true)
+        {
+            itemJournal.transform.GetChild(6).gameObject.SetActive(true);
 
-        // }
+        }
     }
 
     public void PepperOff()
     {
-        itemJournal.transform.GetChild(6).gameObject.SetActive(false); //coffee entry
+        itemJournal.transform.GetChild(6).gameObject.SetActive(false); 
 
     }
 
     public void HairPolaroid()
     {
-        //if (MugCollected == true)
-        // {
-        itemJournal.transform.GetChild(7).gameObject.SetActive(true); //coffee entry
-                                                                      //coatAud.SetActive(true);
-                                                                      //coat.Stop();
+        if (BrushCollected == true)
+        {
+            itemJournal.transform.GetChild(7).gameObject.SetActive(true);
 
-        // }
+        }
     }
 
     public void HairOff()
     {
-        itemJournal.transform.GetChild(7).gameObject.SetActive(false); //coffee entry
+        itemJournal.transform.GetChild(7).gameObject.SetActive(false); 
 
     }
 
     public void BlanketPolaroid()
     {
-        //if (MugCollected == true)
-        // {
-        itemJournal.transform.GetChild(8).gameObject.SetActive(true); //coffee entry
-                                                                      //coatAud.SetActive(true);
-                                                                      //coat.Stop();
+        if (BlanketCollected == true)
+        {
+            itemJournal.transform.GetChild(8).gameObject.SetActive(true);
 
-        // }
+        }
     }
 
     public void BlanketOff()
     {
-        itemJournal.transform.GetChild(8).gameObject.SetActive(false); //coffee entry
+        itemJournal.transform.GetChild(8).gameObject.SetActive(false); 
 
     }
 
     public void ChairPolaroid()
     {
-        //if (MugCollected == true)
-        // {
-        itemJournal.transform.GetChild(9).gameObject.SetActive(true); //coffee entry
-                                                                      //coatAud.SetActive(true);
-                                                                      //coat.Stop();
+        if (ChairCollected == true)
+        {
+            itemJournal.transform.GetChild(9).gameObject.SetActive(true);
 
-        // }
+        }
     }
 
     public void ChairOff()
     {
-        itemJournal.transform.GetChild(9).gameObject.SetActive(false); //coffee entry
+        itemJournal.transform.GetChild(9).gameObject.SetActive(false); 
 
     }
 
     public void HammerPolaroid()
     {
-        //if (MugCollected == true)
-        // {
-        itemJournal.transform.GetChild(10).gameObject.SetActive(true); //coffee entry
-                                                                       //coatAud.SetActive(true);
-                                                                       //coat.Stop();
+        if (HammerCollected == true)
+        {
+            itemJournal.transform.GetChild(10).gameObject.SetActive(true);
 
-        // }
+        }
     }
 
     public void HammerOff()
     {
-        itemJournal.transform.GetChild(10).gameObject.SetActive(false); //coffee entry
+        itemJournal.transform.GetChild(10).gameObject.SetActive(false); 
 
     }
 
     public void ShoePolaroid()
     {
-        //if (MugCollected == true)
-        // {
-        itemJournal.transform.GetChild(11).gameObject.SetActive(true); //coffee entry
-                                                                       //coatAud.SetActive(true);
-                                                                       //coat.Stop();
+        if (ShoeCollected == true)
+        {
+            itemJournal.transform.GetChild(11).gameObject.SetActive(true);
 
-        // }
+        }
     }
 
     public void ShoeOff()
     {
-        itemJournal.transform.GetChild(11).gameObject.SetActive(false); //coffee entry
+        itemJournal.transform.GetChild(11).gameObject.SetActive(false); 
 
     }
 
     public void BallPolaroid()
     {
-        //if (MugCollected == true)
-        // {
-        itemJournal.transform.GetChild(12).gameObject.SetActive(true); //coffee entry
-                                                                       //coatAud.SetActive(true);
-                                                                       //coat.Stop();
+        if (BallCollected == true)
+        {
+            itemJournal.transform.GetChild(12).gameObject.SetActive(true);
 
-        // }
+        }
     }
 
     public void BallOff()
     {
-        itemJournal.transform.GetChild(12).gameObject.SetActive(false); //coffee entry
+        itemJournal.transform.GetChild(12).gameObject.SetActive(false); 
 
     }
 
     public void StickPolaroid()
     {
-        //if (MugCollected == true)
-        // {
-        itemJournal.transform.GetChild(13).gameObject.SetActive(true); //coffee entry
-                                                                       //coatAud.SetActive(true);
-                                                                       //coat.Stop();
+        if (StickCollected == true)
+        {
+            itemJournal.transform.GetChild(13).gameObject.SetActive(true);
 
-        // }
+        }
     }
 
     public void StickOff()
     {
-        itemJournal.transform.GetChild(13).gameObject.SetActive(false); //coffee entry
+        itemJournal.transform.GetChild(13).gameObject.SetActive(false);
+
+    }
+
+    public void SoapPolaroid()
+    {
+        if (SoapCollected == true)
+        {
+            itemJournal.transform.GetChild(14).gameObject.SetActive(true);
+
+        }
+    }
+
+    public void SoapOff()
+    {
+        itemJournal.transform.GetChild(14).gameObject.SetActive(false); 
+
+    }
+
+    public void TowelPolaroid()
+    {
+        if (TowelCollected == true)
+        {
+            itemJournal.transform.GetChild(15).gameObject.SetActive(true);
+
+        }
+    }
+
+    public void TowelOff()
+    {
+        itemJournal.transform.GetChild(15).gameObject.SetActive(false); 
+
+    }
+
+    public void CornPolaroid()
+    {
+        if (CornCollected == true)
+        {
+            itemJournal.transform.GetChild(16).gameObject.SetActive(true);
+
+        }
+    }
+
+    public void CornOff()
+    {
+        itemJournal.transform.GetChild(16).gameObject.SetActive(false); 
+
+    }
+
+    public void PlatesPolaroid()
+    {
+        if (PlatesCollected == true)
+        {
+            itemJournal.transform.GetChild(17).gameObject.SetActive(true);
+
+        }
+    }
+
+    public void PlatesOff()
+    {
+        itemJournal.transform.GetChild(17).gameObject.SetActive(false);
+
+    }
+
+    public void ForksPolaroid()
+    {
+        if (ForksCollected == true)
+        {
+            itemJournal.transform.GetChild(18).gameObject.SetActive(true);
+
+        }
+    }
+
+    public void ForksOff()
+    {
+        itemJournal.transform.GetChild(18).gameObject.SetActive(false);
+
+    }
+
+    public void SpoonsPolaroid()
+    {
+        if (SpoonsCollected == true)
+        {
+            itemJournal.transform.GetChild(19).gameObject.SetActive(true);
+
+        }
+    }
+
+    public void SpoonsOff()
+    {
+        itemJournal.transform.GetChild(19).gameObject.SetActive(false); 
 
     }
 }

@@ -156,7 +156,7 @@ public class DialogueManager : MonoBehaviour
         {
             Dad.SetActive(false);
             Mom.SetActive(true);
-            currentLine = "That should help keep you warm!";
+            currentLine = "That should help keep you warm! I also noticed that Angeline’s old naahkiipioni was falling apart, so I thought we could surprise her with a nice new one. I have some work to take care of here, so could you drop off this new naahkiipioni for me?";
             tasksInBook = tasksInBook.Replace("Mom needs me to find my alencihkana\n", "");
             tasksInBook = tasksInBook.Replace("I think I saw the alencihkana on the counter\n", "");
             dialogue.text = currentLine;
