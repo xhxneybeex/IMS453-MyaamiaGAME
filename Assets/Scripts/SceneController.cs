@@ -20,7 +20,7 @@ public class SceneController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -39,20 +39,21 @@ public class SceneController : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene("Interior_PlayerHouse");
     }
 
-    public void YesExit() {
-        Application.Quit();
+    public void YesExit()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("StartMenu");
     }
 
     public void NoExit()
     {
-      //  exitScreen.SetActive(false);
+        exitScreen.SetActive(false);
     }
 
     public void OpenSettings()
     {
         settingsScreen.SetActive(true);
     }
-    
+
     public void CloseSettings()
     {
         settingsScreen.SetActive(false);
