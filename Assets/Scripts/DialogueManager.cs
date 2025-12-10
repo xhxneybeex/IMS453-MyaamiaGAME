@@ -10,14 +10,14 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private string[] myLines;
     [SerializeField] private GameObject dialogueUI;
     [SerializeField] private GameObject notificationIcon;
-    
+
     [SerializeField] private TMPro.TextMeshProUGUI dialogue;
     [SerializeField] private TMPro.TextMeshProUGUI ToDoText;
 
     public Sprite[] portraits;
-    
+
     public TMPro.TextMeshProUGUI tasks;
-    
+
     [SerializeField] GameObject Portrait;
     //[SerializeField] public GameObject Portrait2;
 
@@ -29,7 +29,7 @@ public class DialogueManager : MonoBehaviour
 
     public string currentLine = "Oh, hi. Isn’t it so hard getting up in the morning? I always need something to wake me up. I really need my kociihsaapowi minehkwaakani, but it takes so much energy to get up. Could you bring it to me? I think I left it on the atoohpooni?";
 
-    public static string tasksInBook  = "";
+    public static string tasksInBook = "";
     public string currentChar = "";
     [SerializeField] private TMPro.TextMeshProUGUI charName;
 
@@ -48,7 +48,11 @@ public class DialogueManager : MonoBehaviour
     public static bool talkedToMarco = false;
     public static bool talkedToCaroline = false;
     public static bool talkedToTony2 = false;
-    
+    public GameObject Mom1;
+    public GameObject Mom2;
+    public GameObject Tony1;
+    public GameObject Tony2;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -60,6 +64,11 @@ public class DialogueManager : MonoBehaviour
         }
         tasks.text = tasksInBook;
         Debug.Log(tasksInBook);
+
+        Mom1 = GameObject.Find("MomSomewhere");
+        Mom2 = GameObject.Find("Mom2");
+        Tony1 = GameObject.Find("Tony");
+        Tony2 = GameObject.Find("Tony2");
     }
 
     // Update is called once per frame
@@ -161,7 +170,8 @@ public class DialogueManager : MonoBehaviour
                 dialogue.text = currentLine;
                 interactionEnabled = false;
                 talkedToMom = true;
-            } else if (InventoryManager.GlovesCollected == true)
+            }
+            else if (InventoryManager.GlovesCollected == true)
             {
                 currentLine = "That should help keep you warm! I also noticed that Angeline’s old naahkiipioni was falling apart, so I thought we could surprise her with a nice new one. I have some work to take care of here, so could you drop off this new naahkiipioni for me?";
                 tasksInBook = tasksInBook.Replace("Mom needs me to find my alencihkana\n", "");
@@ -169,8 +179,10 @@ public class DialogueManager : MonoBehaviour
                 ResetToDoText();
                 dialogue.text = currentLine;
                 interactionEnabled = false;
+                Mom1.SetActive(false);
+                Mom2.SetActive(true);
             }
-            
+
         }
 
         else if (character.Equals("Dad"))
@@ -217,7 +229,7 @@ public class DialogueManager : MonoBehaviour
                 }
                 dialogue.text = currentLine;
                 interactionEnabled = false;
-                talkedToDrew = true;                
+                talkedToDrew = true;
             }
             else if (InventoryManager.HammerCollected == true)
             {
@@ -252,7 +264,7 @@ public class DialogueManager : MonoBehaviour
                 tasksInBook = tasksInBook.Replace("I think I saw Larry's kociihsaapowi somewhere in his house\n", "");
                 ResetToDoText();
                 dialogue.text = currentLine;
-                interactionEnabled = false;                
+                interactionEnabled = false;
             }
         }
 
@@ -267,7 +279,10 @@ public class DialogueManager : MonoBehaviour
                 ResetToDoText();
                 dialogue.text = currentLine;
                 interactionEnabled = false;
-            } else
+                Tony1.SetActive(false);
+                Tony2.SetActive(true);
+            }
+            else
             {
                 currentLine = "Oh, hello, kid! Maybe you can help me! I’m trying to figure out the perfect recipe for a dish for this year’s Summer gathering. It’s never too early to start preparing, and perfection takes time! But I’m at a bit of a loss… the flavors aren’t coming together without a little wiihkapaakani and wiihsakaakani! I just can’t find my shakers anywhere!";
                 if (talkedToTony == false)
@@ -279,7 +294,7 @@ public class DialogueManager : MonoBehaviour
                 interactionEnabled = false;
                 talkedToTony = true;
             }
-            
+
         }
 
         else if (character.Equals("Betsy"))
@@ -296,7 +311,8 @@ public class DialogueManager : MonoBehaviour
                 dialogue.text = currentLine;
                 interactionEnabled = false;
 
-            } else
+            }
+            else
             {
                 //Portrait2.SetActive(true);
                 //Portrait.SetActive(false);
@@ -315,7 +331,7 @@ public class DialogueManager : MonoBehaviour
         else if (character.Equals("Russel"))
         {
             characterNotif = "Russel";
-            
+
             if (InventoryManager.RugCollected == true)
             {
                 //Portrait2.SetActive(true);
@@ -327,7 +343,8 @@ public class DialogueManager : MonoBehaviour
                 dialogue.text = currentLine;
                 interactionEnabled = false;
 
-            } else
+            }
+            else
             {
                 //Portrait2.SetActive(true);
                 //Portrait.SetActive(false);
@@ -346,7 +363,7 @@ public class DialogueManager : MonoBehaviour
         else if (character.Equals("Angeline"))
         {
             characterNotif = "Angeline";
-            
+
             if (InventoryManager.BrushCollected == true)
             {
                 currentLine = "Ah, I’m saved! Now that I look presentable, I can make sure everything is on track for the Summer gathering. Your continued help is much appreciated!";
@@ -356,7 +373,8 @@ public class DialogueManager : MonoBehaviour
                 dialogue.text = currentLine;
                 interactionEnabled = false;
 
-            } else
+            }
+            else
             {
                 currentLine = "The Summer gathering will be here before we know it, and there’s so much to be done! The community needs someone to keep everything on track - but I can’t possibly go out with my hair in this state! I’ll be the laughingstock of the town! Child, have you seen a piiwahaakani anywhere that could solve my crisis?";
                 if (talkedToAngeline == false)
@@ -373,7 +391,7 @@ public class DialogueManager : MonoBehaviour
         else if (character.Equals("Sam"))
         {
             characterNotif = "Sam";
-            
+
             if (InventoryManager.BlanketCollected == true)
             {
                 currentLine = "That’s Ryan’s waapimotayi alright! And he’s finally quieted down! Now we can both get some rest. Thank you!";
@@ -383,7 +401,8 @@ public class DialogueManager : MonoBehaviour
                 dialogue.text = currentLine;
                 interactionEnabled = false;
 
-            } else
+            }
+            else
             {
                 currentLine = "Little Ryan has been crying nonstop… I think he must be missing his favorite waapimotayi, but I’m not sure where it could be… if you see a cozy blue waapimotayi, would you bring it here?";
                 if (talkedToSam == false)
@@ -411,7 +430,8 @@ public class DialogueManager : MonoBehaviour
                 dialogue.text = currentLine;
                 interactionEnabled = false;
 
-            } else
+            }
+            else
             {
                 currentLine = "I noticed that Angeline’s old naahkiipioni was falling apart, so I thought we could surprise her with a nice new one. I have some work to take care of here, so could you drop off this new naahkiipioni for me?";
                 if (talkedToMom2 == false)
@@ -428,14 +448,15 @@ public class DialogueManager : MonoBehaviour
         else if (character.Equals("Spot"))
         {
             characterNotif = "Spot";
-            
+
             if (InventoryManager.ShoeCollected == true && InventoryManager.BallCollected == true)
             {
                 currentLine = "Hey, thanks for the tasty shoe, bucko. Yeah, I can talk. But keep this between us, okie dokie?";
                 dialogue.text = currentLine;
                 interactionEnabled = false;
 
-            } else if (InventoryManager.ShoeCollected == true)
+            }
+            else if (InventoryManager.ShoeCollected == true)
             {
                 currentLine = "Woof! (He looks grateful, and digs up a pakwaahkoni for you!";
                 InventoryManager.BallCollected = true;
@@ -445,7 +466,8 @@ public class DialogueManager : MonoBehaviour
                 dialogue.text = currentLine;
                 interactionEnabled = false;
 
-            } else
+            }
+            else
             {
                 currentLine = "Woof! (He looks hungry for a mahkisini to chew on…)";
                 if (talkedToSpot == false)
@@ -462,7 +484,7 @@ public class DialogueManager : MonoBehaviour
         else if (character.Equals("Judy"))
         {
             characterNotif = "Judy";
-            
+
             if (InventoryManager.SoapCollected == true && InventoryManager.TowelCollected == true)
             {
                 currentLine = "Hey, that’s just what I needed! You’re the best! Time to get squeaky clean!";
@@ -472,7 +494,8 @@ public class DialogueManager : MonoBehaviour
                 dialogue.text = currentLine;
                 interactionEnabled = false;
 
-            } else
+            }
+            else
             {
                 currentLine = "My parents say I can’t do any of the fun stuff at the gathering while I’m all messy. I like being messy, but I also really like the gathering, so I guess I should get cleaned up! But I’m too messy to go in the house to get clean! I can use a hose for water, but to really get clean, I need some waapahaakani, and a kišiinkweehaakani to dry off!";
                 if (talkedToJudy == false)
@@ -498,7 +521,8 @@ public class DialogueManager : MonoBehaviour
                 dialogue.text = currentLine;
                 interactionEnabled = false;
 
-            } else
+            }
+            else
             {
                 currentLine = "We’re almost ready for the big lacrosse game! Only problem is, I think I left my pakitahaakani at home. I’m making sure the field is ready - could you maybe bring me my pakitahaakani?";
                 if (talkedToMarco == false)
@@ -524,7 +548,8 @@ public class DialogueManager : MonoBehaviour
                 dialogue.text = currentLine;
                 interactionEnabled = false;
 
-            } else
+            }
+            else
             {
                 currentLine = "I can’t wait to try Tony’s meal for this year! But every good meal needs a good side - and you can’t go wrong with miincipi. I promised I’d send some to the feast site, but I’ve just been so busy here, I can’t find the time to go myself. Could you bring it over there?";
                 if (talkedToCaroline == false)
@@ -551,7 +576,8 @@ public class DialogueManager : MonoBehaviour
                 dialogue.text = currentLine;
                 interactionEnabled = false;
 
-            } else
+            }
+            else
             {
                 currentLine = "It’s finally time for everyone to try my latest masterpiece, my culinary concerto! But this remarkable meal is no mere finger food, no! The table must be set! Think you can put some šinkilaakana, neewikoleekia, and kookaana at each seat?";
                 if (talkedToTony2 == false)
@@ -574,7 +600,7 @@ public class DialogueManager : MonoBehaviour
 
     public Sprite ChangePortrait(string character)
     {
-        switch (character) 
+        switch (character)
         {
             case "Mom":
                 return portraits[8];
@@ -611,46 +637,60 @@ public class DialogueManager : MonoBehaviour
         if (character.Equals("Dad"))
         {
             ToDoText.text = "To Do: Find your keehpakiikinki naapinaakani";
-        } else if (character.Equals("Mom"))
+        }
+        else if (character.Equals("Mom"))
         {
             ToDoText.text = "To Do: Find your alencihkana";
-        } else if (character.Equals("Drew"))
+        }
+        else if (character.Equals("Drew"))
         {
             ToDoText.text = "To Do: Find a Pakantaakani for Drew";
-        } else if (character.Equals("Tony"))
+        }
+        else if (character.Equals("Tony"))
         {
             ToDoText.text = "To Do: Find some wiihkapaakani and wiihsakaakani for Tony";
-        } else if (character.Equals("Larry"))
+        }
+        else if (character.Equals("Larry"))
         {
             ToDoText.text = "To Do: Find Larry's kociihsaapowi";
-        } else if (character.Equals("Betsy"))
+        }
+        else if (character.Equals("Betsy"))
         {
             ToDoText.text = "To Do: Find Betsy's paahpahaakana";
-        } else if (character.Equals("Russel"))
+        }
+        else if (character.Equals("Russel"))
         {
             ToDoText.text = "To Do: Find Betsy's stolen wilenaahkhtaakani for Russel";
-        } else if (character.Equals("Angeline"))
+        }
+        else if (character.Equals("Angeline"))
         {
             ToDoText.text = "To Do: Find a piiwahaakani for Angeline";
-        } else if (character.Equals("Sam"))
+        }
+        else if (character.Equals("Sam"))
         {
             ToDoText.text = "To Do: Find a waapimotayi for Sam";
-        } else if (character.Equals("Mom2"))
+        }
+        else if (character.Equals("Mom2"))
         {
             ToDoText.text = "To Do: Find a naahkiipioni for Mom";
-        } else if (character.Equals("Spot"))
+        }
+        else if (character.Equals("Spot"))
         {
             ToDoText.text = "To Do: Find a mahkisini for Spot";
-        } else if (character.Equals("Judy"))
+        }
+        else if (character.Equals("Judy"))
         {
             ToDoText.text = "To Do: Find a waapahaakani and a kišiinkweehaakani for Judy";
-        } else if (character.Equals("Marco"))
+        }
+        else if (character.Equals("Marco"))
         {
             ToDoText.text = "To Do: Find a pakitahaakani Marco";
-        } else if (character.Equals("Caroline"))
+        }
+        else if (character.Equals("Caroline"))
         {
             ToDoText.text = "To Do: Find some miincipi for Caroline";
-        } else if (character.Equals("Tony2"))
+        }
+        else if (character.Equals("Tony2"))
         {
             ToDoText.text = "To Do: Find some šinkilaakana, neewikoleekia, and kookaana";
         }
