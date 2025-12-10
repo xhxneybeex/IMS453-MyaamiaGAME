@@ -14,9 +14,11 @@ public class BridgeLogic : MonoBehaviour
             && InventoryManager.SaltCollected && InventoryManager.PepperCollected && InventoryManager.CoffeeCollected && InventoryManager.KeysCollected
             && InventoryManager.BlanketCollected && InventoryManager.ChairCollected && InventoryManager.ShoeCollected)
         {
+            GameObject.Find("BridgeBarrier").SetActive(false);
             gameObject.SetActive(true);
         } else
         {
+            GameObject.Find("BridgeBarrier").SetActive(true);
             gameObject.SetActive(false);
         }
     }
