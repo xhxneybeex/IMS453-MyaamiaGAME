@@ -155,7 +155,7 @@ public class InventoryManager : MonoBehaviour
     void Start()
     {
         InventoryHUD.SetActive(false);
-        ui = GetComponent<UI>();
+       // ui = GetComponent<UI>();
     }
 
     // Update is called once per frame
