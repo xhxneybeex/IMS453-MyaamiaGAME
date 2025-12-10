@@ -219,7 +219,6 @@ public class ItemPickup : MonoBehaviour
             Debug.Log("towel collected was set to true");
         }
 
-
         gameObject.SetActive(false);
     }
 
@@ -229,6 +228,7 @@ public class ItemPickup : MonoBehaviour
         if (inventoryM.InventoryHUD.activeInHierarchy == false)
         {
             Pickup();
+            InventoryManager.itemsCollected++;
             Debug.Log("iT WORKED");
         }
         /*if (Physics.Raycast(camera.transform.position, camera.transform.TransformDirection(Vector3.up), out hit, Mathf.Max(5)))

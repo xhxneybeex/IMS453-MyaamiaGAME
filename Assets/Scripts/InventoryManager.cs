@@ -69,6 +69,7 @@ public class InventoryManager : MonoBehaviour
     public static bool StickCollected = false;
     public static bool SoapCollected = false;
     public static bool TowelCollected = false;
+    public static int itemsCollected = 0;
 
 
     //public InventoryItemController iic;
@@ -170,6 +171,105 @@ public class InventoryManager : MonoBehaviour
 
         Debug.Log("two current pages are set: " + currentTwoPages);
 
+        if (itemsCollected < 3)
+        {
+            ui.transform.GetChild(0).gameObject.SetActive(true);
+            ui.transform.GetChild(1).gameObject.SetActive(false);
+            ui.transform.GetChild(2).gameObject.SetActive(false);
+
+            if (itemsCollected == 0)
+            {
+                ui.transform.GetChild(3).gameObject.SetActive(true);
+                ui.transform.GetChild(4).gameObject.SetActive(false);
+                ui.transform.GetChild(5).gameObject.SetActive(false);
+                ui.transform.GetChild(6).gameObject.SetActive(false);
+            }
+            else if (itemsCollected == 1)
+            {
+                ui.transform.GetChild(3).gameObject.SetActive(false);
+                ui.transform.GetChild(4).gameObject.SetActive(true);
+                ui.transform.GetChild(5).gameObject.SetActive(false);
+                ui.transform.GetChild(6).gameObject.SetActive(false);
+            }
+            else if (itemsCollected == 2)
+            {
+                ui.transform.GetChild(3).gameObject.SetActive(false);
+                ui.transform.GetChild(4).gameObject.SetActive(false);
+                ui.transform.GetChild(5).gameObject.SetActive(true);
+                ui.transform.GetChild(6).gameObject.SetActive(false);
+            }
+        }
+        else if (itemsCollected > 2 && itemsCollected < 9)
+        {
+            ui.transform.GetChild(0).gameObject.SetActive(false);
+            ui.transform.GetChild(1).gameObject.SetActive(true);
+            ui.transform.GetChild(2).gameObject.SetActive(false);
+
+            if (itemsCollected == 3 || itemsCollected == 7)
+            {
+                ui.transform.GetChild(3).gameObject.SetActive(false);
+                ui.transform.GetChild(4).gameObject.SetActive(false);
+                ui.transform.GetChild(5).gameObject.SetActive(false);
+                ui.transform.GetChild(6).gameObject.SetActive(true);
+            }
+            else if (itemsCollected == 4 || itemsCollected == 8)
+            {
+                ui.transform.GetChild(3).gameObject.SetActive(true);
+                ui.transform.GetChild(4).gameObject.SetActive(false);
+                ui.transform.GetChild(5).gameObject.SetActive(false);
+                ui.transform.GetChild(6).gameObject.SetActive(false);
+            }
+            else if (itemsCollected == 5)
+            {
+                ui.transform.GetChild(3).gameObject.SetActive(false);
+                ui.transform.GetChild(4).gameObject.SetActive(true);
+                ui.transform.GetChild(5).gameObject.SetActive(false);
+                ui.transform.GetChild(6).gameObject.SetActive(false);
+            }
+            else if (itemsCollected == 6)
+            {
+                ui.transform.GetChild(3).gameObject.SetActive(false);
+                ui.transform.GetChild(4).gameObject.SetActive(false);
+                ui.transform.GetChild(5).gameObject.SetActive(true);
+                ui.transform.GetChild(6).gameObject.SetActive(false);
+            }
+
+        }
+        else
+        {
+            ui.transform.GetChild(0).gameObject.SetActive(false);
+            ui.transform.GetChild(1).gameObject.SetActive(false);
+            ui.transform.GetChild(2).gameObject.SetActive(true);
+
+            if (itemsCollected == 9 || itemsCollected == 13 || itemsCollected == 17)
+            {
+                ui.transform.GetChild(3).gameObject.SetActive(false);
+                ui.transform.GetChild(4).gameObject.SetActive(false);
+                ui.transform.GetChild(5).gameObject.SetActive(false);
+                ui.transform.GetChild(6).gameObject.SetActive(true);
+            }
+            else if (itemsCollected == 10 || itemsCollected == 14 || itemsCollected == 18)
+            {
+                ui.transform.GetChild(3).gameObject.SetActive(true);
+                ui.transform.GetChild(4).gameObject.SetActive(false);
+                ui.transform.GetChild(5).gameObject.SetActive(false);
+                ui.transform.GetChild(6).gameObject.SetActive(false);
+            }
+            else if (itemsCollected == 11 || itemsCollected == 15 || itemsCollected == 19)
+            {
+                ui.transform.GetChild(3).gameObject.SetActive(false);
+                ui.transform.GetChild(4).gameObject.SetActive(true);
+                ui.transform.GetChild(5).gameObject.SetActive(false);
+                ui.transform.GetChild(6).gameObject.SetActive(false);
+            }
+            else if (itemsCollected == 12 || itemsCollected == 16 || itemsCollected == 20)
+            {
+                ui.transform.GetChild(3).gameObject.SetActive(false);
+                ui.transform.GetChild(4).gameObject.SetActive(false);
+                ui.transform.GetChild(5).gameObject.SetActive(true);
+                ui.transform.GetChild(6).gameObject.SetActive(false);
+            }
+        }
 
     }
 
@@ -697,7 +797,7 @@ public class InventoryManager : MonoBehaviour
 
     public void CoatOff()
     {
-        itemJournal.transform.GetChild(1).gameObject.SetActive(false); 
+        itemJournal.transform.GetChild(1).gameObject.SetActive(false);
 
     }
 
@@ -712,7 +812,7 @@ public class InventoryManager : MonoBehaviour
 
     public void CoffeeOff()
     {
-        itemJournal.transform.GetChild(2).gameObject.SetActive(false); 
+        itemJournal.transform.GetChild(2).gameObject.SetActive(false);
 
     }
 
@@ -727,7 +827,7 @@ public class InventoryManager : MonoBehaviour
 
     public void KeysOff()
     {
-        itemJournal.transform.GetChild(3).gameObject.SetActive(false); 
+        itemJournal.transform.GetChild(3).gameObject.SetActive(false);
 
     }
 
@@ -742,7 +842,7 @@ public class InventoryManager : MonoBehaviour
 
     public void RugOff()
     {
-        itemJournal.transform.GetChild(4).gameObject.SetActive(false); 
+        itemJournal.transform.GetChild(4).gameObject.SetActive(false);
 
     }
 
@@ -757,7 +857,7 @@ public class InventoryManager : MonoBehaviour
 
     public void SaltOff()
     {
-        itemJournal.transform.GetChild(5).gameObject.SetActive(false); 
+        itemJournal.transform.GetChild(5).gameObject.SetActive(false);
 
     }
 
@@ -772,7 +872,7 @@ public class InventoryManager : MonoBehaviour
 
     public void PepperOff()
     {
-        itemJournal.transform.GetChild(6).gameObject.SetActive(false); 
+        itemJournal.transform.GetChild(6).gameObject.SetActive(false);
 
     }
 
@@ -787,7 +887,7 @@ public class InventoryManager : MonoBehaviour
 
     public void HairOff()
     {
-        itemJournal.transform.GetChild(7).gameObject.SetActive(false); 
+        itemJournal.transform.GetChild(7).gameObject.SetActive(false);
 
     }
 
@@ -802,7 +902,7 @@ public class InventoryManager : MonoBehaviour
 
     public void BlanketOff()
     {
-        itemJournal.transform.GetChild(8).gameObject.SetActive(false); 
+        itemJournal.transform.GetChild(8).gameObject.SetActive(false);
 
     }
 
@@ -817,7 +917,7 @@ public class InventoryManager : MonoBehaviour
 
     public void ChairOff()
     {
-        itemJournal.transform.GetChild(9).gameObject.SetActive(false); 
+        itemJournal.transform.GetChild(9).gameObject.SetActive(false);
 
     }
 
@@ -832,7 +932,7 @@ public class InventoryManager : MonoBehaviour
 
     public void HammerOff()
     {
-        itemJournal.transform.GetChild(10).gameObject.SetActive(false); 
+        itemJournal.transform.GetChild(10).gameObject.SetActive(false);
 
     }
 
@@ -847,7 +947,7 @@ public class InventoryManager : MonoBehaviour
 
     public void ShoeOff()
     {
-        itemJournal.transform.GetChild(11).gameObject.SetActive(false); 
+        itemJournal.transform.GetChild(11).gameObject.SetActive(false);
 
     }
 
@@ -862,7 +962,7 @@ public class InventoryManager : MonoBehaviour
 
     public void BallOff()
     {
-        itemJournal.transform.GetChild(12).gameObject.SetActive(false); 
+        itemJournal.transform.GetChild(12).gameObject.SetActive(false);
 
     }
 
@@ -892,7 +992,7 @@ public class InventoryManager : MonoBehaviour
 
     public void SoapOff()
     {
-        itemJournal.transform.GetChild(14).gameObject.SetActive(false); 
+        itemJournal.transform.GetChild(14).gameObject.SetActive(false);
 
     }
 
@@ -907,7 +1007,7 @@ public class InventoryManager : MonoBehaviour
 
     public void TowelOff()
     {
-        itemJournal.transform.GetChild(15).gameObject.SetActive(false); 
+        itemJournal.transform.GetChild(15).gameObject.SetActive(false);
 
     }
 
@@ -922,7 +1022,7 @@ public class InventoryManager : MonoBehaviour
 
     public void CornOff()
     {
-        itemJournal.transform.GetChild(16).gameObject.SetActive(false); 
+        itemJournal.transform.GetChild(16).gameObject.SetActive(false);
 
     }
 
@@ -967,7 +1067,7 @@ public class InventoryManager : MonoBehaviour
 
     public void SpoonsOff()
     {
-        itemJournal.transform.GetChild(19).gameObject.SetActive(false); 
+        itemJournal.transform.GetChild(19).gameObject.SetActive(false);
 
     }
 }
