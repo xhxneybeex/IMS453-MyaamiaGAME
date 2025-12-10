@@ -31,6 +31,7 @@ public class DialogueManager : MonoBehaviour
 
     public static string tasksInBook  = "";
     public string currentChar = "";
+    [SerializeField] private TMPro.TextMeshProUGUI charName;
 
     public static bool talkedToMom = false;
     public static bool talkedToDad = false;
@@ -42,6 +43,9 @@ public class DialogueManager : MonoBehaviour
     public static bool talkedToAngeline = false;
     public static bool talkedToSam = false;
     public static bool talkedToMom2 = false;
+    public static bool talkedToSpot = false;
+    public static bool talkedToJudy = false;
+    public static bool talkedToMarco = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -136,6 +140,7 @@ public class DialogueManager : MonoBehaviour
         dialogueUI.SetActive(true);
         tasksInBook = tasksInBook.Replace("No current or past tasks", "");
         Portrait.GetComponent<Image>().sprite = ChangePortrait(character);
+        charName.text = character;
         //interactionEnabled = false;
 
         if (character.Equals("Mom"))
@@ -387,6 +392,7 @@ public class DialogueManager : MonoBehaviour
         else if (character.Equals("Mom2"))
         {
             characterNotif = "Mom2";
+            charName.text = "Mom";
             Portrait.GetComponent<Image>().sprite = ChangePortrait("Mom");
             if (InventoryManager.ChairCollected == true)
             {
@@ -407,6 +413,91 @@ public class DialogueManager : MonoBehaviour
                 dialogue.text = currentLine;
                 interactionEnabled = false;
                 talkedToMom2 = true;
+            }
+        }
+
+        else if (character.Equals("Spot"))
+        {
+            characterNotif = "Spot";
+            
+            if (InventoryManager.ShoeCollected == true && InventoryManager.StickCollected == true)
+            {
+                currentLine = "Hey, thanks for the tasty shoe, bucko. Yeah, I can talk. But keep this between us, okie dokie?";
+                dialogue.text = currentLine;
+                interactionEnabled = false;
+
+            } else if (InventoryManager.ShoeCollected == true)
+            {
+                currentLine = "Woof! (He looks grateful, and digs up a pakwaahkoni for you!";
+                InventoryManager.StickCollected = true;
+                tasksInBook = tasksInBook.Replace("Spot wants me to find a mahkisini\n", "");
+                ResetToDoText();
+                dialogue.text = currentLine;
+                interactionEnabled = false;
+
+            } else
+            {
+                currentLine = "Woof! (He looks hungry for a mahkisini to chew on…)";
+                if (talkedToSpot == false)
+                {
+                    tasksInBook += "Spot wants me to find a mahkisini\n";
+                    notificationIcon.SetActive(true);
+                }
+                dialogue.text = currentLine;
+                interactionEnabled = false;
+                talkedToSpot = true;
+            }
+        }
+
+        else if (character.Equals("Judy"))
+        {
+            characterNotif = "Judy";
+            
+            if (InventoryManager.SoapCollected == true && InventoryManager.TowelCollected == true)
+            {
+                currentLine = "Hey, that’s just what I needed! You’re the best! Time to get squeaky clean!";
+                tasksInBook = tasksInBook.Replace("Judy wants me to find a waapahaakani and a kišiinkweehaakani\n", "");
+                ResetToDoText();
+                dialogue.text = currentLine;
+                interactionEnabled = false;
+
+            } else
+            {
+                currentLine = "My parents say I can’t do any of the fun stuff at the gathering while I’m all messy. I like being messy, but I also really like the gathering, so I guess I should get cleaned up! But I’m too messy to go in the house to get clean! I can use a hose for water, but to really get clean, I need some waapahaakani, and a kišiinkweehaakani to dry off!";
+                if (talkedToJudy == false)
+                {
+                    tasksInBook += "Judy wants me to find a waapahaakani and a kišiinkweehaakani\n";
+                    notificationIcon.SetActive(true);
+                }
+                dialogue.text = currentLine;
+                interactionEnabled = false;
+                talkedToJudy = true;
+            }
+        }
+
+        else if (character.Equals("Marco"))
+        {
+            characterNotif = "Marco";
+            
+            if (InventoryManager.StickCollected == true)
+            {
+                currentLine = "Thanks";
+                tasksInBook = tasksInBook.Replace("Marco wants me to find a pakitahaakani\n", "");
+                ResetToDoText();
+                dialogue.text = currentLine;
+                interactionEnabled = false;
+
+            } else
+            {
+                currentLine = "We’re almost ready for the big lacrosse game! Only problem is, I think I left my pakitahaakani at home. I’m making sure the field is ready - could you maybe bring me my pakitahaakani?";
+                if (talkedToMarco == false)
+                {
+                    tasksInBook += "Marco wants me to find a pakitahaakani\n";
+                    notificationIcon.SetActive(true);
+                }
+                dialogue.text = currentLine;
+                interactionEnabled = false;
+                talkedToMarco = true;
             }
         }
         ShowTextNotification(characterNotif);
@@ -483,6 +574,15 @@ public class DialogueManager : MonoBehaviour
         } else if (character.Equals("Mom2"))
         {
             ToDoText.text = "To Do: Find a naahkiipioni for Mom";
+        } else if (character.Equals("Spot"))
+        {
+            ToDoText.text = "To Do: Find a mahkisini for Spot";
+        } else if (character.Equals("Judy"))
+        {
+            ToDoText.text = "To Do: Find a waapahaakani and a kišiinkweehaakani for Judy";
+        } else if (character.Equals("Marco"))
+        {
+            ToDoText.text = "To Do: Find a pakitahaakani Marco";
         }
     }
 

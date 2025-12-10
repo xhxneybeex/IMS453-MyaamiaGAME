@@ -138,6 +138,22 @@ public class Giveitem : MonoBehaviour
         {
             currentChar = "Sam";
         }
+        else if (this.gameObject.name.ToString() == "Mom2")
+        {
+            currentChar = "Mom2";
+        }
+        else if (this.gameObject.name.ToString() == "Spot")
+        {
+            currentChar = "Spot";
+        }
+        else if (this.gameObject.name.ToString() == "Judy")
+        {
+            currentChar = "Judy";
+        }
+        else if (this.gameObject.name.ToString() == "Marco")
+        {
+            currentChar = "Marco";
+        }
     }
     private void OnTriggerExit()
     {
