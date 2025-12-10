@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4809366303653937120}
   - component: {fileID: 4919281671475512641}
   m_Layer: 5
-  m_Name: Mom
+  m_Name: Portrait
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25,7 +25,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6175998830267511959}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 4.7, y: 2.85, z: 5.1256}
   m_ConstrainProportionsScale: 0
@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 142ffb8cea271f14f9ccad3d63962f28, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 38078ca122be56b42a676c486c6b83cf, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

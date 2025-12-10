@@ -15,7 +15,17 @@ public class AudioManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        PlayTrack(trackOnEntry);
+        if (SceneManager.GetActiveScene().name != "Town_Exterior")
+        {
+            if (SceneManager.GetActiveScene().name == "MainMenu" || SceneManager.GetActiveScene().name == "Ending")
+            {
+                trackOnEntry = 0;
+            } else
+            {
+                trackOnEntry = 3;
+            }
+                PlayTrack(trackOnEntry);
+        }
     }
 
     // Update is called once per frame
@@ -42,5 +52,4 @@ public class AudioManager : MonoBehaviour
         sfx.clip = sfxTracks[track];
         sfx.Play();
     }
-    
 }

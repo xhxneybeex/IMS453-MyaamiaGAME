@@ -9,7 +9,7 @@ public class SceneController : MonoBehaviour
     [SerializeField] private bool to2DScene = false;
     public static bool is2DScene = false;
     public GameObject exitScreen;
-    public GameObject settingsScreen;
+    public GameObject settingsScreen; 
 
     void Start()
     {
@@ -23,11 +23,15 @@ public class SceneController : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter()
+    private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("AAAAA");
-        SceneManager.LoadScene(sceneToLoad);
-        is2DScene = to2DScene;
+        if (other.CompareTag("Player"))
+        {
+            Debug.Log("AAAAA");
+            SceneManager.LoadScene(sceneToLoad);
+            is2DScene = to2DScene;
+        }
+        
     }
 
     public void StartGame()
