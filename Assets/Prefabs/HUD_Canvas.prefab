@@ -3109,7 +3109,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 64402bf4719b06e4eb7b759759e49ed8, type: 3}
   - {fileID: 21300000, guid: 1cde4fc37b427134490a73ce4a0e1779, type: 3}
   tasks: {fileID: 7915818510155862810}
-  Portrait: {fileID: 6462752566974213891}
+  Portrait: {fileID: 0}
   interactionEnabled: 0
   enterClicked: 0
   characterNotif: Larry
@@ -4890,11 +4890,6 @@ MonoBehaviour:
 --- !u!224 &5520831282680677546 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3237351433671697816, guid: f7aab7db9c02f8044863e5905be7bb91, type: 3}
-  m_PrefabInstance: {fileID: 6949211691486912818}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &6462752566974213891 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4161537166044581425, guid: f7aab7db9c02f8044863e5905be7bb91, type: 3}
   m_PrefabInstance: {fileID: 6949211691486912818}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &6975605657663382456 stripped

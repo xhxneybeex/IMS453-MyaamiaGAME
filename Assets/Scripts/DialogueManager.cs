@@ -432,7 +432,7 @@ public class DialogueManager : MonoBehaviour
             } else if (InventoryManager.ShoeCollected == true)
             {
                 currentLine = "Woof! (He looks grateful, and digs up a pakwaahkoni for you!";
-                InventoryManager.StickCollected = true;
+                InventoryManager.BallCollected = true;
                 tasksInBook = tasksInBook.Replace("Spot wants me to find a mahkisini\n", "");
                 ResetToDoText();
                 dialogue.text = currentLine;
