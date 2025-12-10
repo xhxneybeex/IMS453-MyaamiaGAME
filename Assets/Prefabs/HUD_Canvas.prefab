@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1118348650083043827
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1629,7 +1629,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 3254105130170522082}
         m_TargetAssemblyTypeName: SceneController, Assembly-CSharp
         m_MethodName: NoExit
         m_Mode: 1
@@ -2408,7 +2408,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 3254105130170522082}
         m_TargetAssemblyTypeName: SceneController, Assembly-CSharp
         m_MethodName: YesExit
         m_Mode: 1
@@ -3121,6 +3121,7 @@ GameObject:
   - component: {fileID: 7553847831326459693}
   - component: {fileID: 7136657329546165512}
   - component: {fileID: 2698501385895745563}
+  - component: {fileID: 3254105130170522082}
   m_Layer: 5
   m_Name: HUD_Canvas
   m_TagString: Untagged
@@ -3242,6 +3243,22 @@ MonoBehaviour:
   pauseMenu: {fileID: 136207163258083361}
   settingsMenu: {fileID: 0}
   inventoryManager: {fileID: 0}
+--- !u!114 &3254105130170522082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8838794914346975184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34423b226754fb040aaadbf6719d383d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SceneController
+  sceneToLoad: 
+  to2DScene: 0
+  exitScreen: {fileID: 7201070280848073264}
+  settingsScreen: {fileID: 0}
 --- !u!1 &8881398604422343706
 GameObject:
   m_ObjectHideFlags: 0
