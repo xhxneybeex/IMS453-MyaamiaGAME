@@ -224,6 +224,29 @@ public class ItemHints : MonoBehaviour
             ih.transform.GetChild(18).gameObject.SetActive(false);
             ih.transform.GetChild(19).gameObject.SetActive(false);
 
+        } else if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("JudyHouseInterior"))
+        {
+            ih.transform.GetChild(0).gameObject.SetActive(false);
+            ih.transform.GetChild(1).gameObject.SetActive(false);
+            ih.transform.GetChild(2).gameObject.SetActive(false);
+            ih.transform.GetChild(3).gameObject.SetActive(false);
+            ih.transform.GetChild(4).gameObject.SetActive(false);
+            ih.transform.GetChild(5).gameObject.SetActive(false);
+            ih.transform.GetChild(6).gameObject.SetActive(false);
+            ih.transform.GetChild(7).gameObject.SetActive(true);
+            ih.transform.GetChild(8).gameObject.SetActive(true);
+            ih.transform.GetChild(9).gameObject.SetActive(true);
+            ih.transform.GetChild(10).gameObject.SetActive(false);
+            ih.transform.GetChild(11).gameObject.SetActive(false);
+            ih.transform.GetChild(12).gameObject.SetActive(false);
+            ih.transform.GetChild(13).gameObject.SetActive(false);
+            ih.transform.GetChild(14).gameObject.SetActive(false);
+            ih.transform.GetChild(15).gameObject.SetActive(false);
+            ih.transform.GetChild(16).gameObject.SetActive(false);
+            ih.transform.GetChild(17).gameObject.SetActive(false);
+            ih.transform.GetChild(18).gameObject.SetActive(false);
+            ih.transform.GetChild(19).gameObject.SetActive(false);
+
         }
     }
 }
