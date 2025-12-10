@@ -1,9 +1,19 @@
 fileFormatVersion: 2
-guid: 3f9a3bacf8ce5d140906f4d3a3e9c76a
+guid: d61f59e7200879549bdcbad15d7b7469
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Market_Legs_and_Table
+    second: {fileID: 2800000, guid: 4842dcfdac3523348b81f9328d19fa45, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Market_Roof_Blue
+    second: {fileID: 2800000, guid: e2d93a034425d244fb5cd511a414b8c8, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
