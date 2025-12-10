@@ -202,7 +202,6 @@ public class DialogueManager : MonoBehaviour
                 dialogue.text = currentLine;
                 interactionEnabled = false;
             }
-            
         }
 
         else if (character.Equals("Drew"))
@@ -250,6 +249,7 @@ public class DialogueManager : MonoBehaviour
             {
                 currentLine = "Ah, that’s the stuff! Nothing like some kociihsaapowi to really wake me up. Now I feel ready to face the day! Looks like my plants could use a morning pick-me-up, too. I’d better take care of that!";
                 tasksInBook = tasksInBook.Replace("Larry needs me to find his kociihsaapowi\n", "");
+                tasksInBook = tasksInBook.Replace("I think I saw Larry's kociihsaapowi somewhere in his house\n", "");
                 ResetToDoText();
                 dialogue.text = currentLine;
                 interactionEnabled = false;                
@@ -263,6 +263,7 @@ public class DialogueManager : MonoBehaviour
             {
                 currentLine = "Ah, that’s just what I need! I am inspired! A dash of this, a sprinkle of that… this dish will be unparalleled! Allow my culinary genius to stew for a bit, and when Summer comes, we shall feast!";
                 tasksInBook = tasksInBook.Replace("Tony needs me to find his wiihkapaakani and wiihsakaakani\n", "");
+                tasksInBook = tasksInBook.Replace("I think the wiihkapaakani and wiihsakaakani were in Tony's kitchen.\n", "");
                 ResetToDoText();
                 dialogue.text = currentLine;
                 interactionEnabled = false;
@@ -290,6 +291,7 @@ public class DialogueManager : MonoBehaviour
                 //Portrait.SetActive(false);
                 currentLine = "Finally, a kid who knows how to show their elders some respect! But you didn’t catch the thief, eh? And while you were gone, they struck again! My wilenaahkhtaakani is nowhere to be seen, and the floor looks positively barren without it. I’ll catch that thief yet, I tell you…";
                 tasksInBook = tasksInBook.Replace("Betsy needs me to find her paahpahaakana\n", "");
+                tasksInBook = tasksInBook.Replace("I think the paahpahaakana is in Drew's house\n", "");
                 ResetToDoText();
                 dialogue.text = currentLine;
                 interactionEnabled = false;
@@ -320,6 +322,7 @@ public class DialogueManager : MonoBehaviour
                 //Portrait.SetActive(false);
                 currentLine = "Thanks for helping me return that wilenaahkhtaakani. I like to pull pranks on Old Lady Betsy, but I don’t want her to feel bad!";
                 tasksInBook = tasksInBook.Replace("Russel wants me to return Betsy's wilenaahkhtaakani\n", "");
+                tasksInBook = tasksInBook.Replace("I think I saw the wilenaahkhtaakani in Drew's house\n", "");
                 ResetToDoText();
                 dialogue.text = currentLine;
                 interactionEnabled = false;
@@ -348,6 +351,7 @@ public class DialogueManager : MonoBehaviour
             {
                 currentLine = "Ah, I’m saved! Now that I look presentable, I can make sure everything is on track for the Summer gathering. Your continued help is much appreciated!";
                 tasksInBook = tasksInBook.Replace("Angeline wants me to find her a piiwahaakani\n", "");
+                tasksInBook = tasksInBook.Replace("I think I saw a piiwahaakani in Judy's house\n", "");
                 ResetToDoText();
                 dialogue.text = currentLine;
                 interactionEnabled = false;
@@ -374,6 +378,7 @@ public class DialogueManager : MonoBehaviour
             {
                 currentLine = "That’s Ryan’s waapimotayi alright! And he’s finally quieted down! Now we can both get some rest. Thank you!";
                 tasksInBook = tasksInBook.Replace("Sam wants me to find her a waapimotayi\n", "");
+                tasksInBook = tasksInBook.Replace("I think I saw a waapimotayi in Drew's house\n", "");
                 ResetToDoText();
                 dialogue.text = currentLine;
                 interactionEnabled = false;
@@ -401,6 +406,7 @@ public class DialogueManager : MonoBehaviour
             {
                 currentLine = "Thanks for making the delivery!";
                 tasksInBook = tasksInBook.Replace("Mom wants me to find a naahkiipioni\n", "");
+                tasksInBook = tasksInBook.Replace("There's a naahkiipioni in my house.\n", "");
                 ResetToDoText();
                 dialogue.text = currentLine;
                 interactionEnabled = false;
@@ -423,7 +429,7 @@ public class DialogueManager : MonoBehaviour
         {
             characterNotif = "Spot";
             
-            if (InventoryManager.ShoeCollected == true && InventoryManager.StickCollected == true)
+            if (InventoryManager.ShoeCollected == true && InventoryManager.BallCollected == true)
             {
                 currentLine = "Hey, thanks for the tasty shoe, bucko. Yeah, I can talk. But keep this between us, okie dokie?";
                 dialogue.text = currentLine;
@@ -434,6 +440,7 @@ public class DialogueManager : MonoBehaviour
                 currentLine = "Woof! (He looks grateful, and digs up a pakwaahkoni for you!";
                 InventoryManager.BallCollected = true;
                 tasksInBook = tasksInBook.Replace("Spot wants me to find a mahkisini\n", "");
+                tasksInBook = tasksInBook.Replace("I think I saw a mahkisini in Tony's house\n", "");
                 ResetToDoText();
                 dialogue.text = currentLine;
                 interactionEnabled = false;
@@ -460,6 +467,7 @@ public class DialogueManager : MonoBehaviour
             {
                 currentLine = "Hey, that’s just what I needed! You’re the best! Time to get squeaky clean!";
                 tasksInBook = tasksInBook.Replace("Judy wants me to find a waapahaakani and a kišiinkweehaakani\n", "");
+                tasksInBook = tasksInBook.Replace("I think I saw a waapahaakani and a kišiinkweehaakani in Judy's house\n", "");
                 ResetToDoText();
                 dialogue.text = currentLine;
                 interactionEnabled = false;
@@ -485,6 +493,7 @@ public class DialogueManager : MonoBehaviour
             {
                 currentLine = "Thanks";
                 tasksInBook = tasksInBook.Replace("Marco wants me to find a pakitahaakani\n", "");
+                tasksInBook = tasksInBook.Replace("I think I saw a pakitahaakani in Judy's house\n", "");
                 ResetToDoText();
                 dialogue.text = currentLine;
                 interactionEnabled = false;
@@ -510,6 +519,7 @@ public class DialogueManager : MonoBehaviour
             {
                 currentLine = "Perfect, thank you!";
                 tasksInBook = tasksInBook.Replace("Caroline wants me to find some miincipi\n", "");
+                tasksInBook = tasksInBook.Replace("I think I saw some miincipi in Tony's house\n", "");
                 ResetToDoText();
                 dialogue.text = currentLine;
                 interactionEnabled = false;
@@ -536,6 +546,7 @@ public class DialogueManager : MonoBehaviour
             {
                 currentLine = "Now everyone will be able to enjoy my masterpiece without making a mess! Thank you!";
                 tasksInBook = tasksInBook.Replace("Tony wants me to find some šinkilaakana, neewikoleekia, and kookaana\n", "");
+                tasksInBook = tasksInBook.Replace("kookaana, šinkilaakana, and Neewikoleekia were in Tony's house\n", "");
                 ResetToDoText();
                 dialogue.text = currentLine;
                 interactionEnabled = false;
