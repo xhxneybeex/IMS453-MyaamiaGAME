@@ -46,6 +46,9 @@ public class DialogueManager : MonoBehaviour
     public static bool talkedToSpot = false;
     public static bool talkedToJudy = false;
     public static bool talkedToMarco = false;
+    public static bool talkedToCaroline = false;
+    public static bool talkedToTony2 = false;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -478,7 +481,6 @@ public class DialogueManager : MonoBehaviour
         else if (character.Equals("Marco"))
         {
             characterNotif = "Marco";
-            
             if (InventoryManager.StickCollected == true)
             {
                 currentLine = "Thanks";
@@ -498,6 +500,57 @@ public class DialogueManager : MonoBehaviour
                 dialogue.text = currentLine;
                 interactionEnabled = false;
                 talkedToMarco = true;
+            }
+        }
+
+        else if (character.Equals("Caroline"))
+        {
+            characterNotif = "Caroline";
+            if (InventoryManager.CornCollected == true)
+            {
+                currentLine = "Perfect, thank you!";
+                tasksInBook = tasksInBook.Replace("Caroline wants me to find some miincipi\n", "");
+                ResetToDoText();
+                dialogue.text = currentLine;
+                interactionEnabled = false;
+
+            } else
+            {
+                currentLine = "I can’t wait to try Tony’s meal for this year! But every good meal needs a good side - and you can’t go wrong with miincipi. I promised I’d send some to the feast site, but I’ve just been so busy here, I can’t find the time to go myself. Could you bring it over there?";
+                if (talkedToCaroline == false)
+                {
+                    tasksInBook += "Caroline wants me to find some miincipi\n";
+                    notificationIcon.SetActive(true);
+                }
+                dialogue.text = currentLine;
+                interactionEnabled = false;
+                talkedToCaroline = true;
+            }
+        }
+        else if (character.Equals("Tony2"))
+        {
+            characterNotif = "Tony2";
+            charName.text = "Tony";
+            Portrait.GetComponent<Image>().sprite = ChangePortrait("Tony");
+            if (InventoryManager.ForksCollected == true && InventoryManager.PlatesCollected == true && InventoryManager.SpoonsCollected == true)
+            {
+                currentLine = "Now everyone will be able to enjoy my masterpiece without making a mess! Thank you!";
+                tasksInBook = tasksInBook.Replace("Tony wants me to find some šinkilaakana, neewikoleekia, and kookaana\n", "");
+                ResetToDoText();
+                dialogue.text = currentLine;
+                interactionEnabled = false;
+
+            } else
+            {
+                currentLine = "It’s finally time for everyone to try my latest masterpiece, my culinary concerto! But this remarkable meal is no mere finger food, no! The table must be set! Think you can put some šinkilaakana, neewikoleekia, and kookaana at each seat?";
+                if (talkedToTony2 == false)
+                {
+                    tasksInBook += "Tony wants me to find some šinkilaakana, neewikoleekia, and kookaana\n";
+                    notificationIcon.SetActive(true);
+                }
+                dialogue.text = currentLine;
+                interactionEnabled = false;
+                talkedToTony2 = true;
             }
         }
         ShowTextNotification(characterNotif);
@@ -583,6 +636,12 @@ public class DialogueManager : MonoBehaviour
         } else if (character.Equals("Marco"))
         {
             ToDoText.text = "To Do: Find a pakitahaakani Marco";
+        } else if (character.Equals("Caroline"))
+        {
+            ToDoText.text = "To Do: Find some miincipi for Caroline";
+        } else if (character.Equals("Tony2"))
+        {
+            ToDoText.text = "To Do: Find some šinkilaakana, neewikoleekia, and kookaana";
         }
     }
 

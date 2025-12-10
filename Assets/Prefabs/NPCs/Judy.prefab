@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4502313886751428101}
   - component: {fileID: 6365175198453534123}
   - component: {fileID: 691409174539769707}
+  - component: {fileID: 6483797690074031813}
   m_Layer: 0
   m_Name: Judy
   m_TagString: Untagged
@@ -130,3 +131,24 @@ MonoBehaviour:
   timesWalkedUpToMom: 0
   timesWalkedUpToDad: 0
   timesWalkedUpToDrew: 0
+--- !u!65 &6483797690074031813
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4242292036633943}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.32, y: 0.36, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
