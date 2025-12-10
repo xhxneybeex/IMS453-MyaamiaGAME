@@ -236,7 +236,7 @@ public class ItemHints : MonoBehaviour
             ih.transform.GetChild(7).gameObject.SetActive(true);
             ih.transform.GetChild(8).gameObject.SetActive(true);
             ih.transform.GetChild(9).gameObject.SetActive(true);
-            ih.transform.GetChild(10).gameObject.SetActive(false);
+            ih.transform.GetChild(10).gameObject.SetActive(true);
             ih.transform.GetChild(11).gameObject.SetActive(false);
             ih.transform.GetChild(12).gameObject.SetActive(false);
             ih.transform.GetChild(13).gameObject.SetActive(false);
