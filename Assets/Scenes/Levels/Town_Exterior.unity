@@ -28725,11 +28725,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5983639333486294685, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
   m_PrefabInstance: {fileID: 370841694123326433}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &370841694123326436 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1547736164579869447, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
-  m_PrefabInstance: {fileID: 370841694123326433}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5371113961728574208
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28810,7 +28805,7 @@ PrefabInstance:
     - target: {fileID: 624819153388382661, guid: 88bdf5943942e29459753f5835c5267c, type: 3}
       propertyPath: Notif
       value: 
-      objectReference: {fileID: 370841694123326436}
+      objectReference: {fileID: 1135082}
     - target: {fileID: 624819153388382661, guid: 88bdf5943942e29459753f5835c5267c, type: 3}
       propertyPath: right
       value: 
