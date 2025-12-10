@@ -421,8 +421,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32
-  m_fontSizeBase: 32
+  m_fontSize: 26
+  m_fontSizeBase: 26
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3109,7 +3109,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 64402bf4719b06e4eb7b759759e49ed8, type: 3}
   - {fileID: 21300000, guid: 1cde4fc37b427134490a73ce4a0e1779, type: 3}
   tasks: {fileID: 7915818510155862810}
-  Portrait: {fileID: 0}
+  Portrait: {fileID: 6462752566974213891}
   interactionEnabled: 0
   enterClicked: 0
   characterNotif: Larry
@@ -3252,7 +3252,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UI
   journalMenu: {fileID: 77254128766095720}
   pauseMenu: {fileID: 136207163258083361}
-  settingsMenu: {fileID: 0}
+  settingsMenu: {fileID: 7201070280848073264}
   inventoryManager: {fileID: 0}
 --- !u!114 &3254105130170522082
 MonoBehaviour:
@@ -3268,7 +3268,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SceneController
   sceneToLoad: 
   to2DScene: 0
-  exitScreen: {fileID: 7201070280848073264}
+  exitScreen: {fileID: 136207163258083361}
   settingsScreen: {fileID: 0}
 --- !u!1 &8881398604422343706
 GameObject:
@@ -4860,6 +4860,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5974850351603768562, guid: f7aab7db9c02f8044863e5905be7bb91, type: 3}
+      propertyPath: m_fontSize
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 5974850351603768562, guid: f7aab7db9c02f8044863e5905be7bb91, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 24
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4890,6 +4898,11 @@ MonoBehaviour:
 --- !u!224 &5520831282680677546 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3237351433671697816, guid: f7aab7db9c02f8044863e5905be7bb91, type: 3}
+  m_PrefabInstance: {fileID: 6949211691486912818}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6462752566974213891 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4161537166044581425, guid: f7aab7db9c02f8044863e5905be7bb91, type: 3}
   m_PrefabInstance: {fileID: 6949211691486912818}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &6975605657663382456 stripped

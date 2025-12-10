@@ -6562,11 +6562,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7358165642102762454, guid: 0bd90a3a55c8fc5409aa9bd2f79e8667, type: 3}
   m_PrefabInstance: {fileID: 475476864}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &480694589 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6462752566974213891, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
-  m_PrefabInstance: {fileID: 370841694123326433}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &499947341
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28696,10 +28691,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1305350816}
     - target: {fileID: 503026303024866662, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
-      propertyPath: Portrait
-      value: 
-      objectReference: {fileID: 480694589}
-    - target: {fileID: 503026303024866662, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
       propertyPath: itemGiving
       value: 
       objectReference: {fileID: 1256179492}
@@ -28823,26 +28814,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1305350816}
-    - target: {fileID: 3646334094136344000, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
-      propertyPath: m_fontSize
-      value: 24
-      objectReference: {fileID: 0}
-    - target: {fileID: 3646334094136344000, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 24
-      objectReference: {fileID: 0}
     - target: {fileID: 3690737563829717899, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1305350816}
-    - target: {fileID: 3877123227234045737, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
-      propertyPath: m_fontSize
-      value: 26
-      objectReference: {fileID: 0}
-    - target: {fileID: 3877123227234045737, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 26
-      objectReference: {fileID: 0}
     - target: {fileID: 4126148221599635644, guid: 7d6737d4a3d06d745ad9e92582e7c7c0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
