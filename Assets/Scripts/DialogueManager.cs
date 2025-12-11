@@ -406,7 +406,7 @@ public class DialogueManager : MonoBehaviour
             }
             else
             {
-                currentLine = "Little Ryan has been crying nonstop… I think he must be missing his favorite waapimotayi, but I’m not sure where it could be… if you see a cozy blue waapimotayi, would you bring it here?";
+                currentLine = "Little Ryan has been crying nonstop… I think he must be missing his favorite waapimotayi, but I’m not sure where it could be… if you see a cozy pink waapimotayi, would you bring it here?";
                 if (talkedToSam == false)
                 {
                     tasksInBook += "Sam wants me to find her a waapimotayi\n";
@@ -687,7 +687,7 @@ public class DialogueManager : MonoBehaviour
         }
         else if (character.Equals("Marco"))
         {
-            ToDoText.text = "To Do: Find a pakitahaakani Marco";
+            ToDoText.text = "To Do: Find a pakitahaakani for Marco";
         }
         else if (character.Equals("Caroline"))
         {
