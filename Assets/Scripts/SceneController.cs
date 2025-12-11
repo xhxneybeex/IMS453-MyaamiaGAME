@@ -33,9 +33,12 @@ public class SceneController : MonoBehaviour
             if (to2DScene)
             {
                 PlayerController.lastEntryPoint = other.transform.position;
+                PlayerPrefs.SetFloat("X", PlayerController.lastEntryPoint.x);
+                PlayerPrefs.SetFloat("Y", PlayerController.lastEntryPoint.y);
+                PlayerPrefs.SetFloat("Z", PlayerController.lastEntryPoint.z);
             }
         }
-        
+
     }
 
     public void StartGame()
