@@ -62,4 +62,9 @@ public class SceneController : MonoBehaviour
     {
         settingsScreen.SetActive(false);
     }
+
+    public void ExitGameEntirely()
+    {
+        Application.Quit();
+    }
 }
