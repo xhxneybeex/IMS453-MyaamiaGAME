@@ -181,8 +181,8 @@ public class DialogueManager : MonoBehaviour
                 ResetToDoText();
                 dialogue.text = currentLine;
                 interactionEnabled = false;
-                Mom1.SetActive(false);
-                Mom2.SetActive(true);
+                //Mom1.SetActive(false);
+               // Mom2.SetActive(true);
             }
 
         }

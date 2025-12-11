@@ -138,6 +138,10 @@ MonoBehaviour:
   isPlates: 0
   isForks: 0
   isSpoons: 0
+  isBrush: 0
+  isStick: 0
+  isSoap: 0
+  isTowel: 0
 --- !u!65 &9028711527356399727
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -157,5 +161,5 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.15418546, y: 0.14165363, z: 174.44234}
-  m_Center: {x: 0.004324182, y: 0.008555196, z: 6.820358}
+  m_Size: {x: 0.09481163, y: 0.118367955, z: 174.44234}
+  m_Center: {x: -0.0015814025, y: -0.0016336668, z: 6.820357}
