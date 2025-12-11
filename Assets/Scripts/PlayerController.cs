@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour
 
     private CharacterController controller;
     private Animator animator;
+    public static PlayerController Instance { get; private set; }
+
 
     public float speed = 3f;
     public bool movementEnabled = true;
@@ -24,11 +26,9 @@ public class PlayerController : MonoBehaviour
         if ((SceneManager.GetActiveScene().name == "Level_1_Exterior") || (SceneManager.GetActiveScene().name == "Level_2_Exterior") || (SceneManager.GetActiveScene().name == "Town_Exterior"))
         {
             SceneController.is2DScene = false;
-            PlayerPrefs.SetFloat("X", lastEntryPoint.x);
-            PlayerPrefs.SetFloat("Y", lastEntryPoint.y);
-            PlayerPrefs.SetFloat("Z", lastEntryPoint.z);
             gameObject.transform.position = new Vector3(PlayerPrefs.GetFloat("X"), PlayerPrefs.GetFloat("Y"), PlayerPrefs.GetFloat("Z") - 1); // Move player in front of most recent door
-        } else
+        }
+        else
         {
             SceneController.is2DScene = true;
         }
