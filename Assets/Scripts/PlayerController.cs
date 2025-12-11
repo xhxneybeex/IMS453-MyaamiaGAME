@@ -15,6 +15,8 @@ public class PlayerController : MonoBehaviour
     private Vector2 lastMoveDir = Vector2.down; // default facing down
     [SerializeField] private SceneController sceneController;
 
+    public static Vector3 lastEntryPoint = new Vector3(8.866600036621094f, 0.37659740447998049f, -4.867871284484863f); // Player house
+
     void Awake()
     {
         controller = GetComponent<CharacterController>();
@@ -22,6 +24,7 @@ public class PlayerController : MonoBehaviour
         if ((SceneManager.GetActiveScene().name == "Level_1_Exterior") || (SceneManager.GetActiveScene().name == "Level_2_Exterior") || (SceneManager.GetActiveScene().name == "Town_Exterior"))
         {
             SceneController.is2DScene = false;
+            gameObject.transform.position = new Vector3(lastEntryPoint.x, lastEntryPoint.y, lastEntryPoint.z - 1); // Move player in front of most recent door
         } else
         {
             SceneController.is2DScene = true;
@@ -60,7 +63,7 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("IsMoving", isMoving);
 
         // Optional debug:
-        Debug.Log($"animX={animX}, animY={animY}, isMoving={isMoving}");
+        // Debug.Log($"animX={animX}, animY={animY}, isMoving={isMoving}");
 
         Camera.main.transform.localRotation = Quaternion.Euler(20f, 0f, 0f);
         Camera.main.transform.localPosition = new Vector3(0f, 3.1f, -7.63f);

@@ -9,7 +9,7 @@ public class SceneController : MonoBehaviour
     [SerializeField] private bool to2DScene = false;
     public static bool is2DScene = false;
     public GameObject exitScreen;
-    public GameObject settingsScreen; 
+    public GameObject settingsScreen;
 
     void Start()
     {
@@ -30,6 +30,10 @@ public class SceneController : MonoBehaviour
             Debug.Log("AAAAA");
             SceneManager.LoadScene(sceneToLoad);
             is2DScene = to2DScene;
+            if (to2DScene)
+            {
+                PlayerController.lastEntryPoint = other.transform.position;
+            }
         }
         
     }

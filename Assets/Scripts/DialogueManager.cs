@@ -318,7 +318,7 @@ public class DialogueManager : MonoBehaviour
             {
                 //Portrait2.SetActive(true);
                 //Portrait.SetActive(false);
-                currentLine = "They all say I’m crazy, I know they do… you probably think I’m crazy. The crazy old lady lost her paahpahaakana again, hm? No! There’s a thief, I tell you! A thief has stolen my paahpahaakana, and now I can’t open my own door! Ooh, that nasty thief…";
+                currentLine = "They all say I’m crazy, I know they do… you probably think I’m crazy. The crazy old lady lost her paahpahaakana again, hm? No! There’s a thief, I tell you! A thief has stolen my paahpahaakana, and now I can’t lock my own door! Ooh, that nasty thief…";
                 if (talkedToBetsy == false)
                 {
                     tasksInBook += "Betsy needs me to find her paahpahaakana\n";
@@ -581,7 +581,7 @@ public class DialogueManager : MonoBehaviour
             }
             else
             {
-                currentLine = "It’s finally time for everyone to try my latest masterpiece, my culinary concerto! But this remarkable meal is no mere finger food, no! The table must be set! Think you can put some šinkilaakana, neewikoleekia, and kookaana at each seat?";
+                currentLine = "It’s finally time for everyone to try my latest masterpiece, my culinary concerto! But this remarkable meal is no mere finger food, no! The table must be set! Think you can find some šinkilaakana, neewikoleekia, and kookaana?";
                 if (talkedToTony2 == false)
                 {
                     tasksInBook += "Tony wants me to find some šinkilaakana, neewikoleekia, and kookaana\n";
