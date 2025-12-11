@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 688f7f3f840e9f84187089f626bc5168
+guid: 91f52f02fcac6b64b9ede49d1c21252d
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
@@ -8,7 +8,12 @@ ModelImporter:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Bench_Panel
-    second: {fileID: 2800000, guid: 3b20963d8e4d0c748acf047575a717c2, type: 3}
+    second: {fileID: 2800000, guid: ea5ebfa9013d7ec4080351b02db4a0a3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Bench_Top
+    second: {fileID: 2800000, guid: 0cf070af87bc73e4d808175b4d061270, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0

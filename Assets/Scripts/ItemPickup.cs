@@ -15,6 +15,8 @@ public class ItemPickup : MonoBehaviour
 
     [SerializeField] public static bool thisHasBeenCollected = false;
 
+    private AudioManager audioMan;
+
     //player house
     public bool isGloves;
     public bool isCoat;
@@ -49,6 +51,7 @@ public class ItemPickup : MonoBehaviour
     private void Awake()
     {
         playerController = GetComponent<PlayerController>();
+        audioMan = GameObject.Find("AudioManager").GetComponent<AudioManager>();
         camera = Camera.main;
         if (InventoryManager.CoatCollected == true && isCoat == true)
         {
@@ -126,6 +129,7 @@ public class ItemPickup : MonoBehaviour
     void Pickup()
     {
         InventoryManager.Instance.Add(Item);
+        audioMan.PlaySFX(0);
         thisHasBeenCollected = true;
 
         if (isGloves)

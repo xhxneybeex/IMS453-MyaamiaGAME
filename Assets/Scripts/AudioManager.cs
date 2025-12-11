@@ -17,7 +17,7 @@ public class AudioManager : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name != "Town_Exterior")
         {
-            if (SceneManager.GetActiveScene().name == "MainMenu" || SceneManager.GetActiveScene().name == "Ending")
+            if (SceneManager.GetActiveScene().name == "StartMenu" || SceneManager.GetActiveScene().name == "Ending")
             {
                 trackOnEntry = 0;
             } else
@@ -48,7 +48,7 @@ public class AudioManager : MonoBehaviour
     {
         // TRACKS:
         // 0: Item Get
-        // 1: Word Learned
+        // 1: Task Update
         sfx.clip = sfxTracks[track];
         sfx.Play();
     }

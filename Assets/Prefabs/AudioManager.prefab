@@ -249,5 +249,5 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 113d3b60fcff2e145a040dd2f5727ca8, type: 3}
   sfxTracks:
   - {fileID: 8300000, guid: 02eaeef803fbe59419b65efcd3ae8de6, type: 3}
-  - {fileID: 8300000, guid: ff9d587be0814444286d52ddfdb36775, type: 3}
+  - {fileID: 8300000, guid: b1178fdce3d4fd94fba91d098362e1db, type: 3}
   trackOnEntry: 1

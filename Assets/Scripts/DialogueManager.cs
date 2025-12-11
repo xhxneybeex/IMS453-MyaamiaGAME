@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class DialogueManager : MonoBehaviour
 {
     [SerializeField] public InventoryManager inventoryManager;
+    private AudioManager audioMan;
 
     [SerializeField] public Giveitem itemGiving;
     [SerializeField] private string[] myLines;
@@ -56,6 +57,7 @@ public class DialogueManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        audioMan = GameObject.Find("AudioManager").GetComponent<AudioManager>();
         dialogueUI.SetActive(false);
         Portrait.SetActive(false);
         if (tasksInBook == "")
@@ -634,6 +636,7 @@ public class DialogueManager : MonoBehaviour
     }
     public void ShowTextNotification(String character)
     {
+        audioMan.PlaySFX(1);
         if (character.Equals("Dad"))
         {
             ToDoText.text = "To Do: Find your keehpakiikinki naapinaakani";
